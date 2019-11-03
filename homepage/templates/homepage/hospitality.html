@@ -1,0 +1,1168 @@
+  {% load static %}
+{% load staticfiles %}
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>
+            HOSPITALITY | SHILP'18
+    </title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-------------------------------------------------------------------------------------meta tags-------------------------------------------------------------------------------------------------------->
+    <meta name="language" 				   content="en-us" />
+    <meta name="description" 			   content="Shilp is the Annual Fest of Civil Engineering IIT (BHU) Varanasi ">
+    <meta http-equiv="Content-Type" 	   content="text/html; charset=UTF-8">
+    <meta name="keywords" 				   content="Shilp, Shilp 2018, Civil Engineering, IIT (BHU), IIT">
+    <meta name="distribution" 			   content="Global" />
+    <meta name="rating" 				   content="General" />
+	<meta name="author" 				   content="Shilp Tech Team" >
+
+   <!----------------------------------------------------------------------------------------- open graph meta tags----------------------------------------------------------------------------------------->
+    <meta property="og:url"                content="http://shilpiitbhu.org/" />
+    <meta property="og:title"              content="Shilp 2018" />
+    <meta property="og:description"        content="Shilp is the Annual Fest of Civil Engineering IIT (BHU) Varanasi" />
+    <meta property="og:image"              content="https://res.cloudinary.com/shilp/image/upload/v1527310423/background.jpg" />
+	<meta property="og:type" 			   content="website">
+    
+ 
+       
+    
+
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
+    <link rel="icon" type="image/ico" href="https://res.cloudinary.com/shilp/image/upload/v1536338292/mobile/Asset.png"/ media="none" onload="if(media!='all')media='all'">
+
+    <link rel="shortcut icon" type="image/ico" href="Asset.png"/>  
+    <link rel="stylesheet" type="text/css" href="{% static "hospitality/style1.css" %}">
+    <!--[if lt IE 10]>
+    <link rel="stylesheet" href="/css/pages/style-ie9-d1ec7543669d5f57de994248b9544228.css">
+    <![endif]-->
+  <link rel="stylesheet" type="text/css" href="{% static "hospitality/style2.css" %}">
+
+
+    	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Open%20Sans' rel='stylesheet' type='text/css' />
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <style type="text/css"> 
+            .global-template h1,
+.global-template h2,
+.global-template h3,
+.global-template h4,
+.global-template h5 {
+    font-family: 'Open Sans', sans-serif; font-size: 2rem;
+}
+
+.global-template h2 {
+color: #fed136
+}
+
+.global-template h1 {
+color: #ffffff
+}
+
+.global-template p {
+color: #b0b0b0; text-align: center;
+}
+
+.global-template ul {
+color: #b0b0b0
+}
+
+.global-template ol {
+color: #b0b0b0
+}
+             .custom-font {
+            font-family: 'Open Sans', sans-serif;
+            }
+            
+                 .color-0,
+                 .color-0.custom-color {
+                    color: #fed136;
+                }
+            
+                 .color-0-background,
+                 .color-0-background.custom-color {
+                    background-color: #fed136;
+                }
+            
+                 .color-0-hover-opacity:hover,
+                 .color-0-hover-opacity.custom-color:hover {
+                    background-color: rgba(254, 209, 54, 0.8)
+                }
+            
+                 .color-0-border,
+                 .color-0-border.custom-color {
+                    border-color: #fed136;
+                }
+            
+                 .color-0-border-important,
+                 .color-0-border-important.custom-color {
+                    border-color: #fed136;
+                }
+            
+                 .color-0-hover:hover,
+                 .color-0-hover.custom-color:hover {
+                    color: #fed136;
+                }
+            
+                 .color-1,
+                 .dropdown-menu > li > a.color-1,
+                 .color-1.custom-color,
+                 .dropdown-menu > li > a.color-1.custom-color {
+                color: #fed136;
+                }
+            
+                 .color-1-background,
+                 .color-1-background.custom-color {
+                background-color: #fed136;
+                }
+            
+                 .color-1-hover-opacity:hover,
+                 .color-1-hover-opacity.custom-color:hover {
+                background-color: rgba(254, 209, 54, 0.8)
+                }
+            
+                 .color-1-background-opacity,
+                 .color-1-background-opacity.custom-color {
+                background-color: rgba(254, 209, 54, 0.2);
+                }
+            
+                 .color-1-border,
+                 .color-1-border.custom-color {
+                border-color: #fed136;
+                }
+            
+                 .color-1-border-important,
+                 .color-1-border-important.custom-color {
+                border-color: #fed136;
+                }
+            
+                 .color-1-selected.selected,
+                 .color-1-selected.custom-color.selected,
+                 .dropdown-menu > li > a.color-1,
+                 .dropdown-menu > li > a.color-1.custom-color {
+                color: #fed136;
+                }
+            
+                 .color-1-hover:hover,
+                 .color-1-hover.custom-color:hover,
+                 .dropdown-menu > li > a.color-1-hover:hover,
+                 .dropdown-menu > li > a.color-1-hover.custom-color:hover {
+                color: #fed136;
+                }
+            
+                 .me-menu-button:hover i {
+                color: #fed136;
+                }
+            
+             .color-2,
+             .color-2.custom-color,
+             .dropdown-menu > li > a.color-2,
+             .dropdown-menu > li > a.color-2.custom-color {
+            color: #121212;
+            }
+            
+             .color-2-background,
+             .color-2-background.custom-color {
+                background-color: #121212;
+            }
+            
+             .color-2-selected.selected,
+             .color-2-selected.custom-color.selected,
+             .dropdown-menu > li > a.color-2-selected.selected,
+             .dropdown-menu > li > a.color-2-selected.custom-color.selected {
+                color: #121212;
+            }
+            
+             .color-2-border,
+             .color-2-border.custom-color {
+            border-color: #121212;
+            }
+            
+             .color-3,
+             .color-3.custom-color,
+             .color-3-selected.selected,
+             .color-3-selected.custom-color.selected,
+             .dropdown-menu > li > a.color-3,
+             .dropdown-menu > li > a.color-3.custom-color {
+            color: #b0b0b0;
+            }
+            
+             .color-3-background,
+             .color-3-background.custom-color,
+             .color-3-background-selected.selected,
+             .color-3-background-selected.custom-color.selected {
+            background-color: #b0b0b0;;
+            }
+            
+             .color-3-border,
+             .color-3-border.custom-color {
+            border-color: #b0b0b0;
+            }
+            
+             .color-4,
+             .color-4.custom-color {
+            color: #f2f2f2;
+            }
+            
+             .color-4-background,
+             .color-4-background.custom-color {
+                background-color: #f2f2f2;
+            }
+            
+             .color-4-border,
+             .color-4-border.custom-color {
+            border-color: #f2f2f2;
+            }
+            
+             .color-4-left-triangle:before,
+             .color-4-left-triangle.custom-color:before {
+                border-color: transparent;
+                border-top-color: #f2f2f2;
+            }
+            
+             .color-4-left-triangle:after,
+             .color-4-left-triangle.custom-color:after {
+                border-color: transparent;
+                border-left-color: #f2f2f2;
+            }
+            
+             .color-4-right-triangle:before,
+             .color-4-right-triangle.custom-color:before {
+            border-color: transparent;
+            border-bottom-color: #f2f2f2;
+            }
+            
+             .color-4-right-triangle:after,
+             .color-4-right-triangle.custom-color:after {
+            border-color: transparent;
+            border-right-color: #f2f2f2;
+            }
+            
+                 .color-5,
+                 .color-5.custom-color,
+                 .dropdown-menu > li > a.color-5,
+                 .dropdown-menu > li > a.color-5.custom-color {
+                    color: #ffffff;
+                }
+            
+                 .color-5-background,
+                 .color-5-background.custom-color {
+                    background-color: #ffffff;
+                }
+            
+                 .color-5-border,
+                 .color-5-border.custom-color {
+                    border-color: #ffffff;
+                }
+            
+                 .color-5-background-opacity,
+                 .color-5-background-opacity.custom-color {
+                    background-color: rgba(255, 255, 255, 0.85)
+                }
+            
+                 .color-5-left-triangle:before,
+                 .color-5-left-triangle.custom-color:before {
+                    border-color: transparent;
+                    border-top-color: #ffffff;
+                }
+            
+                 .color-5-left-triangle:after,
+                 .color-5-left-triangle.custom-color:after {
+                    border-color: transparent;
+                    border-left-color: #ffffff;
+                }
+            
+                 .color-5-right-triangle:before,
+                 .color-5-right-triangle.custom-color:before {
+                    border-color: transparent;
+                    border-bottom-color: #ffffff;
+                }
+            
+                 .color-5-right-triangle:after,
+                 .color-5-right-triangle.custom-color:after {
+                    border-color: transparent;
+                    border-right-color: #ffffff;
+            }
+            
+             .widget-main-view,
+             .ticket-form label:not(.error),
+             .ticket-form h2,
+             .ticket-form h5,
+             .registration-footer label:not(.error) {
+            color: #b0b0b0;
+            }
+            
+    .navColors .color-0,
+    .navColors .color-0.custom-color {
+        color: #000000;
+    }
+
+    .navColors .color-0-background,
+    .navColors .color-0-background.custom-color {
+        background-color: #000000;
+    }
+
+    .navColors .color-0-hover-opacity:hover,
+    .navColors .color-0-hover-opacity.custom-color:hover {
+        background-color: rgba(0, 0, 0, 0.8)
+    }
+
+    .navColors .color-0-border,
+    .navColors .color-0-border.custom-color {
+        border-color: #000000;
+    }
+
+    .navColors .color-0-border-important,
+    .navColors .color-0-border-important.custom-color {
+        border-color: #000000;
+    }
+
+    .navColors .color-0-hover:hover,
+    .navColors .color-0-hover.custom-color:hover {
+        color: #000000;
+    }
+
+    .navColors .color-1,
+    .navColors .dropdown-menu > li > a.color-1,
+    .navColors .color-1.custom-color,
+    .navColors .dropdown-menu > li > a.color-1.custom-color {
+    color: #000000;
+    }
+
+    .navColors .color-1-background,
+    .navColors .color-1-background.custom-color {
+    background-color: #000000;
+    }
+
+    .navColors .color-1-hover-opacity:hover,
+    .navColors .color-1-hover-opacity.custom-color:hover {
+    background-color: rgba(0, 0, 0, 0.8)
+    }
+
+    .navColors .color-1-background-opacity,
+    .navColors .color-1-background-opacity.custom-color {
+    background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .navColors .color-1-border,
+    .navColors .color-1-border.custom-color {
+    border-color: #000000;
+    }
+
+    .navColors .color-1-border-important,
+    .navColors .color-1-border-important.custom-color {
+    border-color: #000000;
+    }
+
+    .navColors .color-1-selected.selected,
+    .navColors .color-1-selected.custom-color.selected,
+    .navColors .dropdown-menu > li > a.color-1,
+    .navColors .dropdown-menu > li > a.color-1.custom-color {
+    color: #000000;
+    }
+
+    .navColors .color-1-hover:hover,
+    .navColors .color-1-hover.custom-color:hover,
+    .navColors .dropdown-menu > li > a.color-1-hover:hover,
+    .navColors .dropdown-menu > li > a.color-1-hover.custom-color:hover {
+    color: #000000;
+    }
+
+    .navColors .me-menu-button:hover i {
+    color: #000000;
+    }
+
+.navColors .color-2,
+.navColors .color-2.custom-color,
+.navColors .dropdown-menu > li > a.color-2,
+.navColors .dropdown-menu > li > a.color-2.custom-color {
+color: #ffffff;
+}
+
+.navColors .color-2-background,
+.navColors .color-2-background.custom-color {
+    background-color: #ffffff;
+}
+
+.navColors .color-2-selected.selected,
+.navColors .color-2-selected.custom-color.selected,
+.navColors .dropdown-menu > li > a.color-2-selected.selected,
+.navColors .dropdown-menu > li > a.color-2-selected.custom-color.selected {
+    color: #ffffff;
+}
+
+.navColors .color-2-border,
+.navColors .color-2-border.custom-color {
+border-color: #ffffff;
+}
+
+.navColors .color-3,
+.navColors .color-3.custom-color,
+.navColors .color-3-selected.selected,
+.navColors .color-3-selected.custom-color.selected,
+.navColors .dropdown-menu > li > a.color-3,
+.navColors .dropdown-menu > li > a.color-3.custom-color {
+color: #000000;
+}
+
+.navColors .color-3-background,
+.navColors .color-3-background.custom-color,
+.navColors .color-3-background-selected.selected,
+.navColors .color-3-background-selected.custom-color.selected {
+background-color: #000000;;
+}
+
+.navColors .color-3-border,
+.navColors .color-3-border.custom-color {
+border-color: #000000;
+}
+
+.navColors .color-4,
+.navColors .color-4.custom-color {
+color: #fccd00;
+}
+
+.navColors .color-4-background,
+.navColors .color-4-background.custom-color {
+    background-color: #fccd00;
+}
+
+.navColors .color-4-border,
+.navColors .color-4-border.custom-color {
+border-color: #fccd00;
+}
+
+.navColors .color-4-left-triangle:before,
+.navColors .color-4-left-triangle.custom-color:before {
+    border-color: transparent;
+    border-top-color: #fccd00;
+}
+
+.navColors .color-4-left-triangle:after,
+.navColors .color-4-left-triangle.custom-color:after {
+    border-color: transparent;
+    border-left-color: #fccd00;
+}
+
+.navColors .color-4-right-triangle:before,
+.navColors .color-4-right-triangle.custom-color:before {
+border-color: transparent;
+border-bottom-color: #fccd00;
+}
+
+.navColors .color-4-right-triangle:after,
+.navColors .color-4-right-triangle.custom-color:after {
+border-color: transparent;
+border-right-color: #fccd00;
+}
+
+    .navColors .color-5,
+    .navColors .color-5.custom-color,
+    .navColors .dropdown-menu > li > a.color-5,
+    .navColors .dropdown-menu > li > a.color-5.custom-color {
+        color: #1565c0;
+    }
+
+    .navColors .color-5-background,
+    .navColors .color-5-background.custom-color {
+        background-color: #1565c0;
+    }
+
+    .navColors .color-5-border,
+    .navColors .color-5-border.custom-color {
+        border-color: #1565c0;
+    }
+
+    .navColors .color-5-background-opacity,
+    .navColors .color-5-background-opacity.custom-color {
+        background-color: rgba(255, 205, 0, 0.85)
+    }
+
+    .navColors .color-5-left-triangle:before,
+    .navColors .color-5-left-triangle.custom-color:before {
+        border-color: transparent;
+        border-top-color: #1565c0;
+    }
+
+    .navColors .color-5-left-triangle:after,
+    .navColors .color-5-left-triangle.custom-color:after {
+        border-color: transparent;
+        border-left-color: #1565c0;
+    }
+
+    .navColors .color-5-right-triangle:before,
+    .navColors .color-5-right-triangle.custom-color:before {
+        border-color: transparent;
+        border-bottom-color: #1565c0;
+    }
+
+    .navColors .color-5-right-triangle:after,
+    .navColors .color-5-right-triangle.custom-color:after {
+        border-color: transparent;
+        border-right-color: #1565c0;
+}
+
+.navColors .widget-main-view,
+.navColors .ticket-form label:not(.error),
+.navColors .ticket-form h2,
+.navColors .ticket-form h5,
+.navColors .registration-footer label:not(.error) {
+color: #000000;
+}
+
+    </style>
+
+    <style class="js-sections-style">
+            .section-270790 .custom-space-top { padding-top: 100px; }
+.section-270790 .custom-space-bottom { padding-bottom: 0px; }
+.element-822107,a.element-822107,p.element-822107,.element-822107 p,.element-822107 h1,.element-822107 h2,.element-822107 h3,.element-822107 h4,.element-822107 h5,.element-822107 h6,.element-822107 .btn,.element-822107 .custom-font,.element-822107.count-number { font-family: 'Open Sans', sans-serif; font-weight: normal; font-size: 75px; }
+.section-284556 .custom-space-top { padding-top: 20px; }
+.section-284556 .custom-space-bottom { padding-bottom: 0px; }
+.element-872295,a.element-872295,p.element-872295,.element-872295 p,.element-872295 h1,.element-872295 h2,.element-872295 h3,.element-872295 h4,.element-872295 h5,.element-872295 h6,.element-872295 .btn,.element-872295 .custom-font,.element-872295.count-number { font-family: 'Open Sans', sans-serif; font-size: 20px; }
+.section-270926 .custom-space-top { padding-top: 0px; }
+.section-270926 .custom-space-bottom { padding-bottom: 0px; }
+.element-822612,a.element-822612,p.element-822612,.element-822612 p,.element-822612 h1,.element-822612 h2,.element-822612 h3,.element-822612 h4,.element-822612 h5,.element-822612 h6,.element-822612 .btn,.element-822612 .custom-font,.element-822612.count-number { font-family: 'Open Sans', sans-serif; font-weight: normal; font-size: 36px; }
+.section-270924 .custom-space-top { padding-top: 0px; }
+.section-270924 .custom-space-bottom { padding-bottom: 0px; }
+
+            .section-270790 .atom-sectionMain { background-color: #f2f2f2; }
+.section-270790 .element-822107 .atom-main { color: rgba(74,74,74,1); }
+
+
+
+
+.section-284556 .atom-sectionMain { background-color: rgba(255,255,255,1); }
+.section-284556 .element-872295 .atom-main { color: rgba(0,0,0,1); }
+
+
+
+
+.section-270926 .atom-sectionMain { background-color: #1565c0; }
+.section-270926 .element-822612 .atom-main { color: rgba(0,0,0,1); }
+
+
+
+
+.section-270924 .atom-sectionMain { background-color: rgba(255,255,255,1); }
+.section-270924 .element-822598 .atom-main { color: #b0b0b0; }
+
+
+	/* Contact Section
+		--------------------------------*/
+		#contact {
+		  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+		  padding: 60px 0;
+		  overflow: hidden;
+		  background-color: #333333;
+		}
+
+		#contact .contact-about h3 {
+		  font-size: 36px;
+		  margin: 0 0 10px 0;
+		  padding: 0;
+		  line-height: 1;
+		  font-family: "Montserrat", sans-serif;
+		  font-weight: 300;
+		  letter-spacing: 3px;
+		  text-transform: uppercase;
+		  color: #1dc8cd;
+		}
+
+		#contact .contact-about p {
+		  font-size: 14px;
+		  line-height: 24px;
+		  font-family: "Montserrat", sans-serif;
+		  color: #fff;
+		}
+
+		#contact .social-links {
+		  padding-bottom: 20px;
+		}
+
+		#contact .social-links a {
+		  font-size: 18px;
+		  display: inline-block;
+		  background: #888;
+		  color: #1dc8cd;
+		  line-height: 1;
+		  padding: 8px 0;
+		  margin-right: 4px;
+		  border-radius: 50%;
+		  text-align: center;
+		  width: 36px;
+		  height: 36px;
+		  transition: 0.3s;
+		  border: 1px solid #1dc8cd;
+		}
+
+		#contact .social-links a:hover {
+		  background: #1dc8cd;
+		  color: #888;
+		}
+
+		#contact .info {
+		  color: #fff;
+		}
+
+		#contact .info i {
+		  font-size: 32px;
+		  color: #1dc8cd;
+		  float: left;
+		  line-height: 1;
+		}
+
+		#contact .info p {
+		  padding: 0 0 10px 42px;
+		  line-height: 28px;
+		  font-size: 14px;
+		}
+
+
+    </style>
+
+    
+   
+</head>
+<body class="home color-4-background"
+      data-server-rendered="true" style="overflow-x: hidden; background-color: #ffffff">
+
+  <header class="navColors" >
+        <div class="global-template section-206801" data-server-rendered="true" data-model-id="206801">
+            <nav class="template-nav navbar navbar-default  custom-color color-2-background">
+                <div class="container-fluid" >
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header make-relative">
+                <div class="header-top-me hidden-sm hidden-md hidden-lg   hide ">
+                    
+                    <div class="more-tabs-dropdown dropdown-tip me-btn-holder">
+                        <button data-toggle="dropdown" class="link-button" aria-haspopup="true">
+                            <div class="noselect">
+                                <div class="me-messages">
+                                    <div class="me-messages-badge notifications hide"></div>
+                                    <div class="me-menu-button me-menu-notifications">
+                                        <i class="fa icon-notification"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                    
+                        <ul class="dropdown-menu me-dropdown-notifications" role="menu">
+                            <li><a class="navigation-dropdown-li notifications-list">
+                                <span class="notifications-message-empty-text ">No notifications yet.</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                    
+                    
+                    <div class="more-tabs-dropdown dropdown-tip me-btn-holder">
+                        <button data-toggle="dropdown" class="link-button" aria-haspopup="true">
+                            <div class="me-menu-show-dropdown noselect">
+                                <img alt="user photo"
+                                     src="{% static "index/avatar_1.png" %}"
+                                     class="me-menu-button me-menu-photo">
+                                <b class="caret"></b>
+                            </div>
+                        </button>
+                    
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a tabindex="0" class="navigation-dropdown-li"
+                                   href="/settings/profile">Edit
+                                Profile</a></li>
+                            <li><a tabindex="0" class="navigation-dropdown-li"
+                                   href="/settings">Settings</a>
+                            </li>
+                            <li><a tabindex="0" class="navigation-dropdown-li me-menu-invite" target="_blank">Invite Friends</a></li>
+                            <li><a tabindex="0" class="navigation-dropdown-li me-menu-tutorial">See Tutorial</a></li>
+                            <li><a tabindex="0" class="navigation-dropdown-li me-menu-sign-out">Sign Out</a></li>
+                        </ul>
+                    </div>                </div>
+             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar custom-color color-5-background"></span>
+                <span class="icon-bar custom-color color-5-background"></span>
+                <span class="icon-bar custom-color color-5-background"></span>
+            </button>
+            <span class="navbar-brand visible-xs visible-sm custom-color color-5 col-xs-7 navbar-brand-logo" style="height: 65px; width: 80px;">
+                <div class="image-container-item">
+                    <img name="logo-url" src="{% static "index/Asset.png" %}" alt="logo image" style="margin-bottom: 25px">
+                </div>		
+            </span>
+           <div class="hidden-lg hidden-md hidden-sm">
+                <a href="/">
+                    <h4 style="padding-top: 15px; padding-right:0px; padding-left: 25px;"><b>SHILP 2018</b></h4>
+                </a>
+            </div>
+        </div>
+
+        <div class="collapse navbar-collapse custom-color color-1-border" id="bs-example-navbar-collapse-1" style="max-height: 100%">
+            <ul class="nav navbar-nav show-more-tab">
+                <li class="hidden-sm hidden-xs" style="padding-right: 0px; padding-top: 7px;">
+                    <div id="logo" class="pull-left">
+                        <img name="logo-url" src="{% static "index/Asset.png" %}" alt="logo image" style="max-width: 50px; height: auto;margin-bottom: 25px;">
+                    </div>
+                </li>
+               <li class="hidden-sm hidden-xs">
+                    <a href="/" style="padding: 0px;">
+                        <h4 style="padding-top: 15px; padding-right:45px; padding-left: 25px; font-size: 2rem"><b>SHILP 2018</b></h4>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-button-wrapper " href="/" style="padding-right: 5px;">
+                        <div class="nav-menu-btn custom-color color-5 color-1-border color-5-hover color-1-selected  selected ">Home</div>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-button-wrapper " href="/allevents#comp" style="padding-right: 5px;">
+                        <div class="nav-menu-btn custom-color color-5 color-1-border color-5-hover color-1-selected ">Competition</div>
+                    </a>
+                </li>
+                <li>
+                              <!--  <a class="nav-button-wrapper " href="/questionnaire/registration">
+                                    <div class="nav-menu-btn custom-color color-5 color-1-border color-5-hover color-1-selected ">Quiz Registration</div>
+                                </a>
+                            </li>-->
+                <li>
+                    <a class="nav-button-wrapper " href="/team" style="padding-right: 5px;">
+                        <div class="nav-menu-btn custom-color color-5 color-1-border color-5-hover color-1-selected ">TEAM</div>
+                    </a>
+                </li>
+            	
+                <li>
+                    <a class="nav-button-wrapper " href="/ca" style="padding-right: 5px;">
+                        <div class="nav-menu-btn custom-color color-5 color-1-border color-5-hover color-1-selected ">CA PORTAL</div>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-button-wrapper " href="/hospi" style="padding-right: 5px;">
+                        <div class="nav-menu-btn custom-color color-5 color-1-border color-5-hover color-1-selected ">Hospitality</div>
+                    </a>
+                </li>
+                
+                <li >
+                    <a class="nav-button-wrapper " href="/login" >
+                        <div class="nav-menu-btn custom-color color-5 color-1-border color-5-hover color-1-selected "
+                        style="border-radius: 10px ;padding: 0px 10px; background-color: #1565c0; color: #fff">{%if if_auth %} Dashboard {%else%}Log in {%endif%}</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+        </nav></div>
+</header>
+
+<div class="tutorial-popup"></div>
+<div class="auth-view hide">
+    <div data-iframe-height class="auth-view-box ">
+        <div class="auth-view-box-join-view">    <div class="sign-up-wrapper expand-box expand-box-open ">
+    
+            <div class="auth-wrapper-signin">
+                Registered User? <a><span class="switch-sign-up-login-link custom-color color-1">Login</span></a>
+            </div>
+    
+            <section class="auth-view-box-join">
+                
+    
+                <div class="welcome-message-container">
+                    
+                </div>
+    
+                <div class="sign-up-box expand-box sign-up-email-password expand-box-open sign-up-cls">
+                    <input type="text" name="primaryEmail" placeholder="Email Address"
+                           value="" title="primary email">
+                    <span class="standard-form-error error-primaryEmail margin-left-none"></span>
+                    <input type="password" name="password" placeholder="Set Password" title="password">
+                    <span class="standard-form-error error-password margin-left-none"></span>
+                    <div class="login-box-midsize-text forgot-password">
+                        <a class="forgot-password-link custom-color color-1">Forgot Password?</a>
+                    </div>
+                    <a class="button ladda-button button-big-blue sign-up-email-password-button custom-color color-1-background"
+                       data-style="slide-up"><span class="ladda-label">Sign Up</span></a>
+                </div>
+     <div class="row">
+            <div class="col-lg-6 about-img wow fadeInLeft">
+              <img src="https://res.cloudinary.com/shilp/image/upload/v1532451945/CA/about-img.jpg" alt="">
+            </div>
+            </section>
+        </div>
+    
+    
+        <div class="login-wrapper expand-box expand-box-open hide">
+    
+            <div class="auth-wrapper-signin">
+                New User? <a><span class="switch-sign-up-login-link custom-color color-1">Sign Up</span></a>
+            </div>
+            <section class="auth-view-box-join">
+                <div class="welcome-message-container">
+                    
+                </div>
+    
+                <div class="expand-box expand-box-open">
+    
+                    <div class="sign-up-box sign-up-email-password qa-community-login-form sign-in-cls">
+                        <input type="text" name="primaryEmail" placeholder="Email Address"
+                               value="" title="primary email">
+                        <span class="standard-form-error error-primaryEmail margin-left-none"></span>
+                        <input type="password" name="password" placeholder="Password" title="password">
+                        <span class="standard-form-error error-password margin-left-none"></span>
+                        <div class="login-box-midsize-text forgot-password">
+                            <a class="forgot-password-link custom-color color-1">Forgot Password?</a>
+                        </div>
+                        <a class="button ladda-button button-big-blue sign-in-email-password-button custom-color color-1-background"
+                           data-style="slide-up"><span class="ladda-label">Login</span></a>
+                    </div>
+                </div>
+                <div class="login-error-wrapper"></div>
+                <img src="bizzabo-loader.gif" width="48" height="40" class="loading hide" alt="loader image">
+    
+            </section>
+        </div>
+    
+    </div>
+    </div>
+</div>
+<div  >
+<div class="main-view footer-padding no-loader"
+     style="opacity: 1;padding-bottom: 0px;">
+     <div class="home-page travel-custom-css custom-custom-css 1336198-custom-css " data-server-rendered="true">
+        <ul class="sections-holder" data-server-rendered="true" style="padding-right: 0px; padding-left: 0px">
+                    <div class="global-template section-270790" data-server-rendered="true" data-model-id="270790">    <div  style="background-repeat: no-repeat;background-size: cover;background-position: center top ;background-image: url("https://res.cloudinary.com/shilp/image/upload/v1537528812/college.jpg"); ">
+        <img src="https://res.cloudinary.com/shilp/image/upload/v1537528812/college.jpg" style="width: 100% ;height : 100%;">
+    </div>
+</div>
+</ul>
+</div>
+</div>
+
+
+                    <div class="global-template section-284556" data-server-rendered="true" data-model-id="284556">    <div class="atom-sectionMain rowHolder html-container  fr-view"
+    >
+    <div class="
+        atom-sectionSecondary
+        main-app-container
+        custom-space-top
+        custom-space-bottom
+        html-container
+        image-containimage-contain-padding
+    ">
+    <div class="element-872295 col-xs-12 text-center form-group wow fadeInUp margin-top-medium">
+    	<link href="https://fonts.googleapis.com/css?family=Kanit:500" rel="stylesheet">
+        <h1 class="atom-main custom-font" style="color: #1565c0; font-size: 40px; font-family: 'Kanit', sans-serif; padding-left: 20px; padding-right: 10px">Introduction</h1>
+        <em style="text-align: center; color: #F50b07">*Atithi Devo Bhava*</em>
+        
+       <h6 style="font-size: 15px;">Well this motto runs in heart of each and every Indian. We at Shilp, IIT (BHU), Varanasi, welcome you at the ‘Abode of Lord Shiva’. With the overwhelming crowd arriving here, the hospitality of guests is our prime focus.
+<br>We, at Shilp are constantly striving to provide each and everyone of you the best facilities, fulfilling your needs, primarily for accommodation and your security.</br>
+<br>Along with accommodation facilities for our participants, we would be providing them both mess and canteen, serving them a variety of cuisine catering needs of every plate.</br>
+ <br>We would pull out all the stops to make your stay comfortable, so that you can cherish these memories.</br>
+After you are done with the exciting events of shilp you can have a tour of this mesmerizing holy city banares also known as kashi flourished on the bank of river ganga.
+<br>Eagerly awaiting for your arrival at Shilp’18. Feel free to give any suggestion or query.</br></h6>
+    </div>
+            
+                    </div>
+            </div>
+   <div class="global-template section-270926" data-server-rendered="true" data-model-id="270926">    <div class="atom-sectionMain rowHolder html-container  fr-view">
+    <div class="
+        atom-sectionSecondary
+        main-app-container
+        custom-space-top
+        custom-space-bottom
+        html-container
+        image-containimage-contain-padding">
+    <div class="element-822612 col-xs-12 text-center form-group wow fadeInUp margin-top-medium">
+        <h3 class="atom-main custom-font" style="color: white; font-family: 'Kanit', sans-serif;">How To Reach IIT(BHU),Varanasi  </h3>
+    </div>
+           
+        <div class="col-xs-12 "></div>
+    </div>
+</div>
+</div>
+                    <div class="global-template section-270924" data-server-rendered="true" data-model-id="270924">    <div class="atom-sectionMain rowHolder html-container  fr-view"
+    >
+    <div class="
+        atom-sectionSecondary
+        main-app-container
+        custom-space-top
+        custom-space-bottom
+        html-container
+        image-containimage-contain-padding
+    ">
+    <div class="element-822598 col-xs-12 text-center form-group wow fadeInUp ">
+        <h2 class="atom-main custom-font"></h2>
+    </div>
+            <div class="element-822606  margin-bottom-medium col-xs-12 col-sm-4 ">
+                    <div class="atom-main col-xs-12 global-template">
+                        <p><strong><span style="color: rgb(18, 18, 18); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 17px; text-align: center;">From Airpot to IIT(BHU):&nbsp;</span></strong></p> 
+<p><span style="color: rgb(18, 18, 18); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; line-height: 20px;text-align: center;">BHU Campus is about 35 kms. from Varanasi (Babatpur) Airport. The taxi charges from Airport to BHU Campus are about INR 600/-.</span></p><br><br><br><br><br><br><br><br><br><br>
+<p><iframe src="https://www.google.com/maps/embed?pb=!1m24!1m8!1m3!1d163159.82488410306!2d82.82460762129375!3d25.359413019855587!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x398fd5ae98d33961%3A0xe0a6882ef87ef5a7!2sLal+Bahadur+Shastri+International+Airport%2C+Babatpur%2C+Uttar+Pradesh!3m2!1d25.448767699999998!2d82.8567959!4m5!1s0x398e322a674513af%3A0x4021dea55ac9085f!2sCivil+Engineering+Department+IIT+BHU%2C+Varanasi%2C+Uttar+Pradesh!3m2!1d25.263121899999998!2d82.9918663!5e0!3m2!1sen!2sin!4v1537343485467" width="300" height="450" frameborder="0"  style="border:0;" allowfullscreen=""></iframe></p> 
+<p><br /><br /></p>
+                    </div>
+            </div>
+            <div class="element-822600  margin-bottom-medium col-xs-12 col-sm-4 ">
+                    <div class="atom-main col-xs-12 global-template">
+                        <p><strong><span style="color: rgb(18, 18, 18); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 17px; line-height: 20px;text-align: center;">From Varanasi Cantt. (Junction) Railway Station to IIT(BHU):</span></strong></p> 
+<p><span style="color: rgb(18, 18, 18); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; line-height: 20px">BHU Campus is about 10 kms. from Varanasi Cantt. railway Station. Round the clock Auto/ Taxi services are available from Varanasi Cantt. Railway Station to BHU (Lanka). The tentative charges are: for reserve auto Rs. 120-150/-, shared auto Rs. 20/-till BHU(lanka). After reaching to BHU (lanka gate)you need to change the auto to roam around the campus of bhu and reach your accommodation hostel visvesariyya hostel ,near Hyderabad gate (hg)which cost you  10 rupees. and for Taxi Rs. 300/- to 350/-.</span></p> 
+<p><iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d57714.09766174618!2d82.95034533350959!3d25.299798914979267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x398e2dbfc355d889%3A0xaa55a9ef2b061b79!2sVaranasi+Cantt%2C+Varanasi%2C+Uttar+Pradesh!3m2!1d25.332352699999998!2d82.9689738!4m5!1s0x398e322a674513af%3A0x4021dea55ac9085f!2sCivil+Engineering+Department+IIT+BHU%2C+Varanasi%2C+Uttar+Pradesh!3m2!1d25.263121899999998!2d82.9918663!5e0!3m2!1sen!2sin!4v1537344089061" width="300" height="450" frameborder="0" style="border:0" allowfullscreen></iframe><br /><br /></p>
+                    </div>
+            </div>
+            <div class="element-822601  margin-bottom-medium col-xs-12 col-sm-4 ">
+                    <div class="atom-main col-xs-12 global-template">
+                        <p><strong><span style="color: rgb(18, 18, 18); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 17px; line-height: 20px; text-align: center;">From Mughalsarai Railway Station to IIT(BHU):&nbsp;</span></strong></p> 
+<p><span style="color: rgb(18, 18, 18); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 15px; line-height: 20px; text-align: center">BHU Campus is about 20 kms. from Mughalsarai Railway Station. Round the clock Auto/ Taxi services are available from Mughalsarai Railway Station to BHU(Lanka). The tentative charges are: for reserve auto Rs. 200/-, shared auto Rs. 35/- till BHU(lanka). After reaching to BHU (lanka gate)you need to change the auto to roam around the campus of bhu and reach your accommodation hostel visvesariyya hostel ,near Hyderabad gate (hg)which cost you  10 rupees. and for Taxi Rs. 300/- to 350/-.</span></p> 
+<p><iframe src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d115462.37715009098!2d82.99129247092779!3d25.26388072589169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e6!4m5!1s0x398e3ae2d9355229%3A0x9215de3e4e8f08a9!2sPT.+Deen+Dayal+Upadhyaya+Junction!3m2!1d25.278462599999997!2d83.1199829!4m5!1s0x398e322a674513af%3A0x4021dea55ac9085f!2sCivil+Engineering+Department+IIT+BHU%2C+Varanasi%2C+Uttar+Pradesh!3m2!1d25.263121899999998!2d82.9918663!5e0!3m2!1sen!2sin!4v1537344393483" width="300" height="450" frameborder="0" style="border:0" allowfullscreen></iframe></p> 
+
+                    </div>
+            </div>
+        <div class="col-xs-12 "></div>
+    </div>
+</div>
+</div>
+        </ul>
+</div>
+ 
+<div class="global-template section-270926" data-server-rendered="true" data-model-id="270926">    <div class="atom-sectionMain rowHolder html-container  fr-view">
+    <div class="
+        atom-sectionSecondary
+        main-app-container
+        custom-space-top
+        custom-space-bottom
+        html-container
+        image-containimage-contain-padding">
+    <div class="element-822612 col-xs-12 text-center form-group wow fadeInUp margin-top-medium">
+        <h3 class="atom-main custom-font" style="color: white; font-family: 'Kanit', sans-serif;">Places to visit in Varanasi </h3>
+    </div>
+           
+        <div class="col-xs-12 "></div>
+    </div>
+</div>
+</div>
+ 
+<div class="global-template section-284556" data-server-rendered="true" data-model-id="284556">    <div class="atom-sectionMain rowHolder html-container  fr-view">
+    <div class="
+        atom-sectionSecondary
+        main-app-container
+        custom-space-top
+        custom-space-bottom
+        html-container
+        image-containimage-contain-padding">
+    <div class="global-template section-270926" data-server-rendered="true" data-model-id="270926">    <div class="atom-sectionMain rowHolder html-container  fr-view" style="background-color: #fff;">
+    
+    <div class="element-872295 col-xs-12 text-center form-group wow fadeInUp margin-top-medium" style="padding: 40px">
+       
+        <h3 class="atom-main custom-font">  Taking participation in shilp gives you opportunity to visit prominent places in Varanasi like some of these :</h3><br><br>
+    </div>
+            <div class="element-872307  margin-bottom-medium col-xs-12">
+
+                    <div class="atom-main col-xs-12 global-template">
+                    	
+                    	<div class="col-sm-6 col-xs-12">
+                    	<p><a href="#"><img src="{% static "hospitality/vish.jpg" %}"   style="width: 300px;" class="fr-fic fr-dib" /></a></p>
+                    	</div>
+                    	<div class="col-sm-6 col-xs-12">
+                    		<p style="text-align: center;"><strong><span style="color: rgb(18, 18, 18); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 3.3rem;">New Vishwanath Temple</span></strong></p> <br>
+                    	<p style="text-align: center;"><span style="color: rgb(0, 0, 0); font-size: 1.5rem; line-height: 20px">Situated in the premises of Banaras Hindu University (BHU), New Vishwanath Temple is definitely a must visit in Varanasi. In fact, it is a temple complex which consists of 7 temples. The Shiva temple is situated on the ground floor, whereas Durga temple and Lakshmi Narayan temple are located on the first floor. The architecture of the temple is inspired by the old Vishwanath Temple and the structure is made of white marbles. The walls of the temple are adorned with the text of Gita.</span></p> 
+						</div>  
+						<br> 
+
+
+                    </div>
+            </div>
+              <div class="element-872307  margin-bottom-medium col-xs-12">
+
+                    <div class="atom-main col-xs-12 global-template">
+                    	
+                    	<div class="col-sm-6 hidden-xs">
+                    		<p style="text-align: center;"><strong><span style="color: rgb(18, 18, 18); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 3rem;">Sarnath</span></strong></p> <br>
+                    	<p style="text-align: center;"><span style="color: rgb(0, 0, 0); font-size: 1.5rem; line-height: 20px">	The Deer Park is a major attraction in Sarnath; it is believed it is the place where Buddha visited in 528 BC to preach Dharmachakra .  The central monument here is Dhamekh Stupa,  where Buddha delivered his first sermon to five disciples. In Sarnath, one can also visit the Archaeological Museum that displays a wonderful collection of Buddhist artifacts. The major attraction here is the Ashokan Lion Capital in polished sandstone.</span></p> 
+						</div> 
+                    	<div class="col-sm-6 col-xs-12 ">
+                    	<p><a href="#"><img src="{% static "hospitality/sar.jpg" %}"   style="width: 300px;" class="fr-fic fr-dib" /></a></p>
+                    	</div>
+						<br> 
+						<div class="col-xs-12 hidden-sm hidden-md hidden-lg hidden-xl">
+                    		<p style="text-align: center;"><strong><span style="color: rgb(18, 18, 18); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 3rem;">Sarnath</span></strong></p> <br>
+                    	<p style="text-align: center;"><span style="color: rgb(0, 0, 0); font-size: 1.5rem; line-height: 20px">	The Deer Park is a major attraction in Sarnath; it is believed it is the place where Buddha visited in 528 BC to preach Dharmachakra .  The central monument here is Dhamekh Stupa,  where Buddha delivered his first sermon to five disciples. In Sarnath, one can also visit the Archaeological Museum that displays a wonderful collection of Buddhist artifacts. The major attraction here is the Ashokan Lion Capital in polished sandstone.</span></p> 
+						</div> 
+
+                    </div>
+            </div>
+       
+             <div class="element-872307  margin-bottom-medium col-xs-12">
+
+                    <div class="atom-main col-xs-12 global-template">
+                    	
+                    	<div class="col-sm-6 col-xs-12">
+                    	<p><a href="#"><img src="{% static "hospitality/l.jpg" %} "  style="width: 300px;" class="fr-fic fr-dib" /></a></p>
+                    	</div>
+                    	<div class="col-sm-6 col-xs-12">
+                    		<p style="text-align: center; "><strong><span style="color: rgb(18, 18, 18); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 3.3rem;">	Lakhaniya  Dari Waterfalls</span></strong></p> <br>
+                    	<p style="text-align: center;"><span style="color: rgb(0, 0, 0); font-size: 1.5rem; line-height: 25px">This waterfall is a kind of hidden treasure in a jungle! It is located in Chandrprabha wild life sanctuary which is around 60 mts drive from Varanasi</span></p> 
+						</div>  
+						<br> 
+
+
+                    </div>
+            </div>
+              <div class="element-872307  margin-bottom-medium col-xs-12">
+
+                    <div class="atom-main col-xs-12 global-template">
+                    	
+                    	<div class="col-sm-6 hidden-xs">
+                    		<p style="text-align: center;"><strong><span style="color: rgb(18, 18, 18); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 3rem;">Gangaa Aarti</span></strong></p> <br>
+                    	<p style="text-align: center;"><span style="color: rgb(0, 0, 0); font-size: 1.5rem; line-height: 20px">Dashashwamedh Ghat is the main ghat in Varanasi on the Ganga River. It is located close to Vishwanath Temple and is probably the most spectacular ghat. Two Hindu legends are associated with it: According to one, Lord Brahma created it to welcome Lord Shiva. According to another legend, Lord Brahma sacrificed ten horses during Dasa-Ashwamedha yajna performed here.</span></p> 
+						</div> 
+                    	<div class="col-sm-6 col-xs-12">
+                    	<p><a ><img src="{% static "hospitality/g.jpg" %}"   style="width: 300px;" class="fr-fic fr-dib" /></a></p>
+                    	</div>
+                    	 <div class=" col-xs-12  hidden-sm hidden-md hidden-lg hidden-xl">
+                    		<p style="text-align: center;"><strong><span style="color: rgb(18, 18, 18); font-family: &quot;Open Sans&quot;, sans-serif; font-size: 3rem;">Gangaa Aarti</span></strong></p> <br>
+                    	<p style="text-align: center;"><span style="color: rgb(0, 0, 0); font-size: 1.5rem; line-height: 20px">Dashashwamedh Ghat is the main ghat in Varanasi on the Ganga River. It is located close to Vishwanath Temple and is probably the most spectacular ghat. Two Hindu legends are associated with it: According to one, Lord Brahma created it to welcome Lord Shiva. According to another legend, Lord Brahma sacrificed ten horses during Dasa-Ashwamedha yajna performed here.</span></p> 
+						</div>
+						<br> 
+
+
+                    </div>
+            </div>
+           
+            	
+
+            
+        <div class="col-xs-12 "></div>
+    </div>
+</div>
+</div>
+<div class="global-template section-270926" data-server-rendered="true" data-model-id="270926">    <div class="atom-sectionMain rowHolder html-container  fr-view">
+    <div class="
+        atom-sectionSecondary
+        main-app-container
+        custom-space-top
+        custom-space-bottom
+        html-container
+        image-containimage-contain-padding">
+    <div class="element-822612 col-xs-12 text-center form-group wow fadeInUp margin-top-medium">
+        <h3 class="atom-main custom-font" style="color: white; font-family: 'Kanit', sans-serif;">Instructions </h3>
+    </div>
+           
+        <div class="col-xs-12 "></div>
+    </div>
+</div>
+</div>
+           <div class="global-template section-284556" data-server-rendered="true" data-model-id="284556">    <div class="atom-sectionMain rowHolder html-container  fr-view"
+    >
+    <div class="
+        atom-sectionSecondary
+        main-app-container
+        custom-space-top
+        custom-space-bottom
+        html-container
+        image-containimage-contain-padding
+    ">
+    <div class=" container-fluid element-872295 col-xs-12 text-center form-group wow fadeInUp margin-top-medium"
+     style="padding: 60px">
+       
+        
+       <h6 style="font-size: 15px; text-align: left;">*Accommodation will be provided from <strong>October 4th evening</strong><br><br>
+             * You’re required to report at the hospitality desk at <strong>Visvesvaraya Hostel</strong>  as soon as you arrive at the campus.<br><br>
+            *All student participants must carry their valid College <strong>photo ID card</strong>. Others must bring their valid photo identity for the purpose of entry. People without valid photo identity card will not be allowed inside the campus during Shilp.<br>  <br>  *        The fee for hospitality registration is <strong>INR 300 for 3 days</strong>
+         And INR 100 per day for meal (including breakfast , lunch ,dinner)<br><br>
+            *Please bring <strong>2 passport sized photographs</strong>.<br><br>
+            *Facilities provided:
+             Lodging from <strong>4th to 7th </strong> of october <br><br>*Security of laptops and other belongings will be the responsibility of participants only. Shilp will not be responsible for any loss or damage to the belongings of the participants.<br><br>*Participants are to bring along all the material required for the respective events.<br><br>*Kindly note that the accommodation is strictly on a shared basis and any requests for individual rooms or any complaints in this regard shall not be entertained.<br><br>*Random checks would be made to avoid any illegal stay at the campus. Any team failing to produce their receipts of accommodation would be heavily fined and disqualified.<br><br>*<strong style="color: #F50b07">Alcohol, Cigarettes, drugs, any intoxicants, sharp objects and explosives </strong> of any kind are strictly <strong>prohibited </strong> inside the campus. Any other item if deemed unsafe will be prohibited. The decision of Shilp team will be final in case of any disputes.<br><br>*There are SBI and Bank of Baroda ATMs inside the campus. There’s also an AXIS bank ATM just outside the campus, near Hyderabad Gate.
+
+</h6>
+    </div>
+            
+                    </div>
+            </div>
+                <div class="global-template section-284556" data-server-rendered="true" data-model-id="284556">    <div class="atom-sectionMain rowHolder html-container  fr-view"
+    >
+    <div class="
+        atom-sectionSecondary
+        main-app-container
+        custom-space-top
+        custom-space-bottom
+        html-container
+        image-containimage-contain-padding
+    ">
+    <div class="element-872295 col-xs-12 text-center form-group wow fadeInUp margin-top-medium">
+        <h1 class="atom-main custom-font" style="color: #1565c0; font-size: 40px; font-family: 'Kanit', sans-serif;">CONTACT US </h1><br>
+ <div class="element-872307  margin-bottom-medium col-xs-12">
+
+                    <div class="atom-main col-xs-12 global-template">
+                    	
+                    	
+                    	<div class="col-sm-6 col-xs-12">
+                    	<p><a href="#"><img src="https://res.cloudinary.com/shilp/image/upload/v1535863749/Team/Tushar_Mahant_Hospitalilty_head_-min.jpg" style="width: 300px; height: 430px;" class="fr-fic fr-dib" /></a></p>
+                    	 <h3> <strong style="color: black"> Tushar Mahant : <br> 8112292072</strong></h3>
+                    	</div>
+                    	<div class="col-sm-6 col-xs-12">
+                    	<p><a href="#"><img src="https://res.cloudinary.com/shilp/image/upload/v1535863749/Team/Shubham_gupta_hospitality_-min.jpg" style="width: 300px; height: 430px; " class="fr-fic fr-dib" /></a></p>
+                    	 <h3> <strong style="color: black"> Shubham Gupta : <br> 9838118955</strong></h3>
+                    	</div>
+                    	 
+						<br> 
+</div>
+						</div>
+                    </div>
+                </div>
+            
+<!--==========================Contact Section ============================-->
+<section id="contact">
+
+	<div class="container-fluid">
+		<div class="row wow fadeInUp">
+
+			<div class="col-lg-4 col-md-4 text-center">
+				<div class="contact-about">
+					<h3 style="color: grey;">Shilp 2018</h3>
+					<p style="color: white;">Technical Fest of Civil Engineering Department,<br>
+					Indian Institute of Technology Varanasi</p>
+					<div>
+						<a href="http://www.shilpiitbhu.org/" class="facebook"><i class="fa fa-globe" style="font-size:28px;"></i></a>
+						<a href="https://www.facebook.com/shilpiitbhu/" class="facebook"><i class="fa fa-facebook" style="font-size:28px; padding-left: 20px;"></i></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-8 col-md-8" style="padding-top: 20px; color: white;">
+				<div class="info row">
+
+					<div class="col-md-4 text-center">
+						<i class="fa fa-map-marker" style="color: white; padding-left: 40px" aria-hidden="true"></i>
+						<p style="color: white;">IIT(BHU)<br>Varanasi, 221005</p>
+					</div>
+
+					<div class="col-md-4 text-center">
+						<i class="fa fa-envelope" style="color: white; padding-left: 40px" aria-hidden="true"></i>
+						<p style="color: white;">shilp@iitbhu.ac.in</p>
+					</div>
+
+					<div class="col-md-4 text-center">
+						<i class="fa fa-phone" style="color: white; padding-left: 40px;" aria-hidden="true"></i>
+						<p style="color: white;">+91 9696358440</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- <script type="text/javascript" src="{% static "index/bzconf" %}"></script>
+ -->
+ <script type="script2"></script>
+
+    <script type="script1" charset="utf-8"></script>
+
+ <!-- jQuery library -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</body>
+</html>

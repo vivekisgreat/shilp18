@@ -1,0 +1,37 @@
+
+/*specific pages container*/
+.home-custom-css{}
+.community-custom-css{}
+.agenda-custom-css{}
+.speakers-custom-css{}
+
+/*main container of each section*/
+.main-app-container {}
+
+/*
+call-to-action buttons e.g:
+Register, Join The Community etc
+*/
+.btn-register {}
+
+/*Top navigation bar container*/
+.template-nav {}
+
+/*Top navigation bar items container*/
+#bs-example-navbar-collapse-1 {}
+
+/*social share buttons container*/
+.social-share-button {}
+
+/*social share buttons per social network*/
+.social-share-button.facebook {}
+.social-share-button.twitter {}
+.social-share-button.linkedin {}
+.social-share-button.google {}
+
+/* correcting display video on background */
+
+.header .main-app-container {
+  padding-top: 770px;
+  height: 1080px;
+}

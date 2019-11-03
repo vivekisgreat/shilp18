@@ -1,0 +1,11 @@
+{% extends 'ca/base.html' %}
+
+{% block content %}
+    <div class="ca">
+        {% if user.is_authenticated %}
+     <a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+        {% endif %}
+        <h1>{{ ca.name }}</h1>
+        <p>{{ ca.email|linebreaksbr }}</p>
+    </div>
+{% endblock %}

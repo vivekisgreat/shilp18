@@ -1,0 +1,1461 @@
+{% load static %}
+{% load staticfiles %}
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <title>
+            Team | Shilp'18
+    </title>
+    
+    
+     <meta name="language" 				   content="en-us" />
+	<meta name="description" 			   content="Shilp is the Annual Fest of Civil Engineering IIT (BHU) Varanasi ">
+	<meta http-equiv="Content-Type" 	   content="text/html; charset=UTF-8">
+	<meta name="keywords" 				   content="Shilp, Shilp 2018, Civil Engineering, IIT (BHU), IIT">
+	<meta name="distribution" 			   content="Global" />
+	<meta name="rating" 				   content="General" />
+	<meta name="author" 				   content="Shilp Tech Team" >
+
+	<!----------------------------------------------------------------------------------------- open graph meta tags---------------------------------------------------------------------------------------->
+	<meta property="og:url"                content="http://shilpiitbhu.org/" />
+	<meta property="og:title"              content="Shilp 2018" />
+	<meta property="og:description"        content="Shilp is the Annual Fest of Civil Engineering IIT (BHU) Varanasi" />
+	<meta property="og:image"              content="https://res.cloudinary.com/shilp/image/upload/v1527310423/background.jpg" />
+	<meta property="og:type" 			   content="website">
+
+	
+		
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
+    <link rel="icon" type="image/ico"
+          href="https://res.cloudinary.com/shilp/image/upload/v1527310419/ShilpLogo.png"/>
+    <link rel="shortcut icon" type="image/ico"
+          href="https://res.cloudinary.com/shilp/image/upload/v1527310419/ShilpLogo.png"/>    
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700" rel="stylesheet" type="text/css" media="none" onload="if(media!='all')media='all'">
+    <link rel="stylesheet" type="text/css" href="{% static "index/main.css" %}" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--[if lt IE 10]>
+    <link rel="stylesheet" href="/css/pages/style-ie9-a86dd876c30069fedf5bd7385aa8ef11.css">
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="{% static "allevents/animate.css" %}">
+	 \
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet" media="none" onload="if(media!='all')media='all'">
+    
+	
+
+    <style type="text/css">
+    .global-template .speaker-details .inner div{
+        padding: 0px;
+    }
+
+            .global-template h1,
+.global-template h2,
+.global-template h3,
+.global-template h4,
+.global-template h5 {
+    font-family: 'Bree Serif', sans-serif !important;
+}
+
+.global-template h2 {
+color: #1565c0;
+}
+
+.global-template h1 {
+color: #ffffff
+}
+
+.global-template p {
+color: #b0b0b0
+}
+
+.global-template ul {
+color: #b0b0b0
+}
+
+.global-template ol {
+color: #b0b0b0
+}
+             .custom-font {
+            font-family: 'Open Sans', sans-serif;
+            }
+            
+                 .color-0,
+                 .color-0.custom-color {
+                    color:#1565c0 ;
+                }
+            
+                 .color-0-background,
+                 .color-0-background.custom-color {
+                    background-color: #1565c0 ;
+                }
+            
+                 .color-0-hover-opacity:hover,
+                 .color-0-hover-opacity.custom-color:hover {
+                    background-color: #1565c0;
+                }
+            
+                 .color-0-border,
+                 .color-0-border.custom-color {
+                    border-color:#1565c0;
+                }
+            
+                 .color-0-border-important,
+                 .color-0-border-important.custom-color {
+                    border-color: #1565c0;;
+                }
+            
+                 .color-0-hover:hover,
+                 .color-0-hover.custom-color:hover {
+                    color: #1565c0;;
+                }
+            
+                 .color-1,
+                 .dropdown-menu > li > a.color-1,
+                 .color-1.custom-color,
+                 .dropdown-menu > li > a.color-1.custom-color {
+                color: #1565c0;;
+                }
+            
+                 .color-1-background,
+                 .color-1-background.custom-color {
+                background-color: #1565c0;
+                }
+            
+                 .color-1-hover-opacity:hover,
+                 .color-1-hover-opacity.custom-color:hover {
+                background-color: #1565c0;
+                }
+            
+                 .color-1-background-opacity,
+                 .color-1-background-opacity.custom-color {
+                background-color: #1565c0;
+                }
+            
+                 .color-1-border,
+                 .color-1-border.custom-color {
+                border-color: #1565c0;;
+                }
+            
+                 .color-1-border-important,
+                 .color-1-border-important.custom-color {
+                border-color: #1565c0;;
+                }
+            
+                 .color-1-selected.selected,
+                 .color-1-selected.custom-color.selected,
+                 .dropdown-menu > li > a.color-1,
+                 .dropdown-menu > li > a.color-1.custom-color {
+                color: #1565c0;
+                }
+            
+                 .color-1-hover:hover,
+                 .color-1-hover.custom-color:hover,
+                 .dropdown-menu > li > a.color-1-hover:hover,
+                 .dropdown-menu > li > a.color-1-hover.custom-color:hover {
+                color: #1565c0;
+                }
+            
+                 .me-menu-button:hover i {
+                color: #1565c0;
+                }
+            
+             .color-2,
+             .color-2.custom-color,
+             .dropdown-menu > li > a.color-2,
+             .dropdown-menu > li > a.color-2.custom-color {
+            color: #121212;
+            }
+            
+             .color-2-background,
+             .color-2-background.custom-color {
+                background-color: #121212;
+            }
+            
+             .color-2-selected.selected,
+             .color-2-selected.custom-color.selected,
+             .dropdown-menu > li > a.color-2-selected.selected,
+             .dropdown-menu > li > a.color-2-selected.custom-color.selected {
+                color: #121212;
+            }
+            
+             .color-2-border,
+             .color-2-border.custom-color {
+            border-color: #121212;
+            }
+            
+             .color-3,
+             .color-3.custom-color,
+             .color-3-selected.selected,
+             .color-3-selected.custom-color.selected,
+             .dropdown-menu > li > a.color-3,
+             .dropdown-menu > li > a.color-3.custom-color {
+            color: #b0b0b0;
+            }
+            
+             .color-3-background,
+             .color-3-background.custom-color,
+             .color-3-background-selected.selected,
+             .color-3-background-selected.custom-color.selected {
+            background-color: #b0b0b0;;
+            }
+            
+             .color-3-border,
+             .color-3-border.custom-color {
+            border-color: #b0b0b0;
+            }
+            
+             .color-4,
+             .color-4.custom-color {
+            color: #f2f2f2;
+            }
+            
+             .color-4-background,
+             .color-4-background.custom-color {
+                background-color: #f2f2f2;
+            }
+            
+             .color-4-border,
+             .color-4-border.custom-color {
+            border-color: #f2f2f2;
+            }
+            
+             .color-4-left-triangle:before,
+             .color-4-left-triangle.custom-color:before {
+                border-color: transparent;
+                border-top-color: #f2f2f2;
+            }
+            
+             .color-4-left-triangle:after,
+             .color-4-left-triangle.custom-color:after {
+                border-color: transparent;
+                border-left-color: #f2f2f2;
+            }
+            
+             .color-4-right-triangle:before,
+             .color-4-right-triangle.custom-color:before {
+            border-color: transparent;
+            border-bottom-color: #f2f2f2;
+            }
+            
+             .color-4-right-triangle:after,
+             .color-4-right-triangle.custom-color:after {
+            border-color: transparent;
+            border-right-color: #f2f2f2;
+            }
+            
+                 .color-5,
+                 .color-5.custom-color,
+                 .dropdown-menu > li > a.color-5,
+                 .dropdown-menu > li > a.color-5.custom-color {
+                    color: #ffffff;
+                }
+            
+                 .color-5-background,
+                 .color-5-background.custom-color {
+                    background-color: #ffffff;
+                }
+            
+                 .color-5-border,
+                 .color-5-border.custom-color {
+                    border-color: #ffffff;
+                }
+            
+                 .color-5-background-opacity,
+                 .color-5-background-opacity.custom-color {
+                    background-color: rgba(255, 255, 255, 0.85)
+                }
+            
+                 .color-5-left-triangle:before,
+                 .color-5-left-triangle.custom-color:before {
+                    border-color: transparent;
+                    border-top-color: #ffffff;
+                }
+            
+                 .color-5-left-triangle:after,
+                 .color-5-left-triangle.custom-color:after {
+                    border-color: transparent;
+                    border-left-color: #ffffff;
+                }
+            
+                 .color-5-right-triangle:before,
+                 .color-5-right-triangle.custom-color:before {
+                    border-color: transparent;
+                    border-bottom-color: #ffffff;
+                }
+            
+                 .color-5-right-triangle:after,
+                 .color-5-right-triangle.custom-color:after {
+                    border-color: transparent;
+                    border-right-color: #ffffff;
+            }
+            
+             .widget-main-view,
+             .ticket-form label:not(.error),
+             .ticket-form h2,
+             .ticket-form h5,
+             .registration-footer label:not(.error) {
+            color: #b0b0b0;
+            }
+            
+    .navColors .color-0,
+    .navColors .color-0.custom-color {
+        color: #000000;
+    }
+
+    .navColors .color-0-background,
+    .navColors .color-0-background.custom-color {
+        background-color: #000000;
+    }
+
+    .navColors .color-0-hover-opacity:hover,
+    .navColors .color-0-hover-opacity.custom-color:hover {
+        background-color: rgba(0, 0, 0, 0.8)
+    }
+
+    .navColors .color-0-border,
+    .navColors .color-0-border.custom-color {
+        border-color: #1565c0;
+    }
+
+    .navColors .color-0-border-important,
+    .navColors .color-0-border-important.custom-color {
+        border-color: #1565c0;
+    }
+
+    .navColors .color-0-hover:hover,
+    .navColors .color-0-hover.custom-color:hover {
+        color: #1565c0;
+    }
+
+    .navColors .color-1,
+    .navColors .dropdown-menu > li > a.color-1,
+    .navColors .color-1.custom-color,
+    .navColors .dropdown-menu > li > a.color-1.custom-color {
+    color: #1565c0;
+    }
+
+    .navColors .color-1-background,
+    .navColors .color-1-background.custom-color {
+    background-color: #1565c0;
+    }
+
+    .navColors .color-1-hover-opacity:hover,
+    .navColors .color-1-hover-opacity.custom-color:hover {
+    background-color: rgba(0, 0, 0, 0.8)
+    }
+
+    .navColors .color-1-background-opacity,
+    .navColors .color-1-background-opacity.custom-color {
+    background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    .navColors .color-1-border,
+    .navColors .color-1-border.custom-color {
+    border-color: #1565c0;
+    }
+
+    .navColors .color-1-border-important,
+    .navColors .color-1-border-important.custom-color {
+    border-color:#1565c0;
+    }
+
+    .navColors .color-1-selected.selected,
+    .navColors .color-1-selected.custom-color.selected,
+    .navColors .dropdown-menu > li > a.color-1,
+    .navColors .dropdown-menu > li > a.color-1.custom-color {
+    color: #1565c0;
+    }
+
+    .navColors .color-1-hover:hover,
+    .navColors .color-1-hover.custom-color:hover,
+    .navColors .dropdown-menu > li > a.color-1-hover:hover,
+    .navColors .dropdown-menu > li > a.color-1-hover.custom-color:hover {
+    color: #1565c0;
+    }
+
+    .navColors .me-menu-button:hover i {
+    color: #1565c0;
+    }
+
+.navColors .color-2,
+.navColors .color-2.custom-color,
+.navColors .dropdown-menu > li > a.color-2,
+.navColors .dropdown-menu > li > a.color-2.custom-color {
+color: #ffffff;
+}
+
+.navColors .color-2-background,
+.navColors .color-2-background.custom-color {
+    background-color: #ffffff;
+}
+
+.navColors .color-2-selected.selected,
+.navColors .color-2-selected.custom-color.selected,
+.navColors .dropdown-menu > li > a.color-2-selected.selected,
+.navColors .dropdown-menu > li > a.color-2-selected.custom-color.selected {
+    color: #ffffff;
+}
+
+.navColors .color-2-border,
+.navColors .color-2-border.custom-color {
+border-color: #ffffff;
+}
+
+.navColors .color-3,
+.navColors .color-3.custom-color,
+.navColors .color-3-selected.selected,
+.navColors .color-3-selected.custom-color.selected,
+.navColors .dropdown-menu > li > a.color-3,
+.navColors .dropdown-menu > li > a.color-3.custom-color {
+color: #000000;
+}
+
+.navColors .color-3-background,
+.navColors .color-3-background.custom-color,
+.navColors .color-3-background-selected.selected,
+.navColors .color-3-background-selected.custom-color.selected {
+background-color: #000000;;
+}
+
+.navColors .color-3-border,
+.navColors .color-3-border.custom-color {
+border-color: #000000;
+}
+
+.navColors .color-4,
+.navColors .color-4.custom-color {
+color: #fccd00;
+}
+
+.navColors .color-4-background,
+.navColors .color-4-background.custom-color {
+    background-color: #fccd00;
+}
+
+.navColors .color-4-border,
+.navColors .color-4-border.custom-color {
+border-color: #fccd00;
+}
+
+.navColors .color-4-left-triangle:before,
+.navColors .color-4-left-triangle.custom-color:before {
+    border-color: transparent;
+    border-top-color: #fccd00;
+}
+
+.navColors .color-4-left-triangle:after,
+.navColors .color-4-left-triangle.custom-color:after {
+    border-color: transparent;
+    border-left-color: #fccd00;
+}
+
+.navColors .color-4-right-triangle:before,
+.navColors .color-4-right-triangle.custom-color:before {
+border-color: transparent;
+border-bottom-color: #fccd00;
+}
+
+.navColors .color-4-right-triangle:after,
+.navColors .color-4-right-triangle.custom-color:after {
+border-color: transparent;
+border-right-color: #fccd00;
+}
+
+    .navColors .color-5,
+    .navColors .color-5.custom-color,
+    .navColors .dropdown-menu > li > a.color-5,
+    .navColors .dropdown-menu > li > a.color-5.custom-color {
+        color:#000000;
+    }
+
+    .navColors .color-5-background,
+    .navColors .color-5-background.custom-color {
+        background-color: #000000;
+    }
+
+    .navColors .color-5-border,
+    .navColors .color-5-border.custom-color {
+        border-color: #000000;
+    }
+
+    .navColors .color-5-background-opacity,
+    .navColors .color-5-background-opacity.custom-color {
+        background-color: rgba(255, 205, 0, 0.85)
+    }
+
+    .navColors .color-5-left-triangle:before,
+    .navColors .color-5-left-triangle.custom-color:before {
+        border-color: transparent;
+        border-top-color: #000000;
+    }
+
+    .navColors .color-5-left-triangle:after,
+    .navColors .color-5-left-triangle.custom-color:after {
+        border-color: transparent;
+        border-left-color: #000000;
+    }
+
+    .navColors .color-5-right-triangle:before,
+    .navColors .color-5-right-triangle.custom-color:before {
+        border-color: transparent;
+        border-bottom-color: #000000;
+    }
+
+    .navColors .color-5-right-triangle:after,
+    .navColors .color-5-right-triangle.custom-color:after {
+        border-color: transparent;
+        border-right-color: #000000;
+}
+
+.navColors .widget-main-view,
+.navColors .ticket-form label:not(.error),
+.navColors .ticket-form h2,
+.navColors .ticket-form h5,
+.navColors .registration-footer label:not(.error) {
+color: #000000;
+}
+	#contact {
+		  box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+		  padding: 60px 0;
+		  overflow: hidden;
+		  background-color: #333333;
+		}
+		#contact .contact-about h3 {
+		  font-size: 36px;
+		  margin: 0 0 10px 0;
+		  padding: 0;
+		  line-height: 1;
+		  font-family: "Montserrat", sans-serif;
+		  font-weight: 300;
+		  letter-spacing: 3px;
+		  text-transform: uppercase;
+		  
+		}
+		#contact .contact-about p {
+		  font-size: 14px;
+		  line-height: 24px;
+		  font-family: "Montserrat", sans-serif;
+		  color: #fff;
+		}
+		#contact .social-links {
+		  padding-bottom: 20px;
+		}
+		#contact .social-links a {
+		  font-size: 18px;
+		  display: inline-block;
+		  background: #888;
+		  
+		  line-height: 1;
+		  padding: 8px 0;
+		  margin-right: 4px;
+		  border-radius: 50%;
+		  text-align: center;
+		  width: 36px;
+		  height: 36px;
+		  transition: 0.3s;
+		  border: 1px solid #fff;
+		}
+		#contact .social-links a:hover {
+		  background: #fff;
+		  color: #888;
+		}
+		#contact .info {
+		  color: #fff;
+		}
+		#contact .info i {
+		  font-size: 32px;
+		  color: #fff;
+		  float: left;
+		  line-height: 1;
+		}
+		#contact .info p {
+		  padding: 0 0 10px 42px;
+		  line-height: 28px;
+		  font-size: 14px;
+		}
+		.border{border:2px solid black;
+		padding-left:5px; padding-right:5px;}
+
+    </style>
+
+    <style class="js-sections-style">
+            .section-244900 .custom-space-top { padding-top: 45px; }
+.section-244900 .custom-space-bottom { padding-bottom: 45px; }
+.element-729519,a.element-729519,p.element-729519,.element-729519 p,.element-729519 h1,.element-729519 h2,.element-729519 h3,.element-729519 h4,.element-729519 h5,.element-729519 h6,.element-729519 .btn,.element-729519 .custom-font,.element-729519.count-number { font-family: 'Open Sans', sans-serif; font-weight: normal; font-size: 36px; }
+.element-729520,a.element-729520,p.element-729520,.element-729520 p,.element-729520 h1,.element-729520 h2,.element-729520 h3,.element-729520 h4,.element-729520 h5,.element-729520 h6,.element-729520 .btn,.element-729520 .custom-font,.element-729520.count-number { font-weight: normal; }
+.section-289296 .custom-space-top { padding-top: 0px; }
+.section-289296 .custom-space-bottom { padding-bottom: 0px; }
+.element-889067,a.element-889067,p.element-889067,.element-889067 p,.element-889067 h1,.element-889067 h2,.element-889067 h3,.element-889067 h4,.element-889067 h5,.element-889067 h6,.element-889067 .btn,.element-889067 .custom-font,.element-889067.count-number { font-weight: normal; font-size: 36px; }
+.section-291225 .custom-space-top { padding-top: 0px; }
+.section-291225 .custom-space-bottom { padding-bottom: 0px; }
+.element-896201,a.element-896201,p.element-896201,.element-896201 p,.element-896201 h1,.element-896201 h2,.element-896201 h3,.element-896201 h4,.element-896201 h5,.element-896201 h6,.element-896201 .btn,.element-896201 .custom-font,.element-896201.count-number { font-family: 'Open Sans', sans-serif; font-weight: normal; }
+.section-299208 .custom-space-top { padding-top: 45px; }
+.section-299208 .custom-space-bottom { padding-bottom: 45px; }
+
+            .section-244900 .atom-sectionMain { background-color: #1565c0; }
+.section-244900 .element-729519 .atom-main { color:rgba(255,255,255); }
+.section-244900 .element-729520 .atom-main { background-color: #494949; }
+.section-244900 .element-729520 .atom-fullname { color: #ffffff; }
+.section-244900 .element-729520 .atom-text1 { color: #ffffff; }
+.section-244900 .element-729520 .atom-text2 { color: #ffffff; }
+.section-289296 .atom-sectionMain { background-color: rgba(255,255,255,1); }
+.section-289296 .element-889067 .atom-main { color: rgba(0,0,0,1); }
+
+
+
+
+.section-291225 .atom-sectionMain { background-color: rgba(255,255,255,1); }
+.section-291225 .element-896201 .atom-main { color: rgba(0,0,0,1); }
+
+
+
+
+.section-299208 .atom-sectionMain { background-color: #494949; }
+.section-299208 .atom-text { color: #1565c0; }
+.section-299208 .atom-highlight { color: #1565c0; }
+
+
+    </style><!-- 
+    		    <link rel="stylesheet" type="text/css" href="{% static "index/customcss.css" %}" /> -->
+				 
+
+<!--     
+<script type="text/javascript">
+function toggleClass(e1) {
+if(e1.className == "more-tabs-dropdown dropdown-tip"){
+
+    e1.className = "more-tabs-dropdown dropdown-tip open";}
+    else{ e1.className = "more-tabs-dropdown dropdown-tip" ;}
+}
+function openMenu(e1) {
+if(e1.className == "navbar-toggle collapsed"){
+
+    e1.className = "navbar-toggle";}
+    else{ e1.className = "navbar-toggle collapsed" ;}
+}
+
+</script>
+ --></head>
+<body class="home color-4-background"
+      data-server-rendered="true" >
+<body class="home color-4-background"
+      data-server-rendered="true">
+
+<header class="navColors">
+        <div class="global-template section-206801" data-server-rendered="true" data-model-id="206801">
+            <nav class="template-nav navbar navbar-default  custom-color color-2-background">
+                <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header make-relative">
+                <div class="header-top-me hidden-sm hidden-md hidden-lg   hide ">
+                    
+                    <div class="more-tabs-dropdown dropdown-tip me-btn-holder">
+                        <button data-toggle="dropdown" class="link-button" aria-haspopup="true">
+                            <div class="noselect">
+                                <div class="me-messages">
+                                    <div class="me-messages-badge notifications hide"></div>
+                                    <div class="me-menu-button me-menu-notifications">
+                                        <i class="fa icon-notification"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                    
+                        <ul class="dropdown-menu me-dropdown-notifications" role="menu">
+                            <li><a class="navigation-dropdown-li notifications-list">
+                                <span class="notifications-message-empty-text ">No notifications yet.</span>
+                            </a></li>
+                        </ul>
+                    </div>
+                    
+                    
+                    <div class="more-tabs-dropdown dropdown-tip me-btn-holder">
+                        <button data-toggle="dropdown" class="link-button" aria-haspopup="true">
+                            <div class="me-menu-show-dropdown noselect">
+                                <img alt="user photo"
+                                     src="{% static "index/avatar_1.png" %}"
+                                     class="me-menu-button me-menu-photo">
+                                <b class="caret"></b>
+                            </div>
+                        </button>
+                    
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a tabindex="0" class="navigation-dropdown-li"
+                                   href="/settings/profile">Edit
+                                Profile</a></li>
+                            <li><a tabindex="0" class="navigation-dropdown-li"
+                                   href="/settings">Settings</a>
+                            </li>
+                            <li><a tabindex="0" class="navigation-dropdown-li me-menu-invite" target="_blank">Invite Friends</a></li>
+                            <li><a tabindex="0" class="navigation-dropdown-li me-menu-tutorial">See Tutorial</a></li>
+                            <li><a tabindex="0" class="navigation-dropdown-li me-menu-sign-out">Sign Out</a></li>
+                        </ul>
+                    </div>                </div>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar custom-color color-5-background"></span>
+                <span class="icon-bar custom-color color-5-background"></span>
+                <span class="icon-bar custom-color color-5-background"></span>
+            </button>
+            <span class="navbar-brand visible-xs visible-sm custom-color color-5 col-xs-7 navbar-brand-logo" style="height: 65px; width: 80px;">
+                <div class="image-container-item">
+                    <a href="/">
+                        <img name="logo-url" src="{% static "index/Asset.png" %}" alt="logo image">
+                    </a>
+                </div>      
+            </span>
+            <div class="hidden-lg hidden-md hidden-sm">
+                <a href="/">
+                    <h4 style="padding-top: 15px; padding-right:0px; padding-left: 25px;"><b>SHILP 2018</b></h4>
+                </a>
+            </div>
+        </div>
+
+        <div class="collapse navbar-collapse custom-color color-1-border" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav show-more-tab">
+                <li class="hidden-sm hidden-xs" style="padding-right: 0px; padding-top: 7px;">
+                    <div id="logo" class="pull-left">
+                        <a href="/">
+                            <img name="logo-url" src="{% static "index/Asset.png" %}" alt="logo image" style="max-width: 50px; height: auto;">
+                        </a>
+                    </div>
+                </li>
+                <li class="hidden-sm hidden-xs">
+                    <a href="/" style="padding: 0px;">
+                        <h4 style="padding-top: 15px; padding-right:45px; padding-left: 25px;"><b>SHILP 2018</b></h4>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-button-wrapper " href="/">
+                        <div class="nav-menu-btn custom-color color-5 color-1-border color-5-hover color-1-selected ">Home</div>
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-button-wrapper " href="/allevents#comp">
+                        <div class="nav-menu-btn custom-color color-5 color-1-border color-5-hover color-1-selected ">Competitions</div>
+                    </a>
+                </li>
+                <li>
+                              <!--  <a class="nav-button-wrapper " href="/questionnaire/registration">
+                                    <div class="nav-menu-btn custom-color color-5 color-1-border color-5-hover color-1-selected ">Quiz Registration</div>
+                                </a>
+                            </li>-->
+                <!-- <li>
+                    <a class="nav-button-wrapper " href="/allevents#panel">
+                        <div class="nav-menu-btn custom-color color-5 color-1-border color-5-hover color-1-selected ">Panel Discussion</div>
+                    </a>
+                </li>-->
+                <li>
+                    <a class="nav-button-wrapper " href="/allevents#work">
+                        <div class="nav-menu-btn custom-color color-5 color-1-border color-5-hover color-1-selected ">Workshop</div>
+                    </a>
+                </li>
+               <!-- <li>
+                    <a class="nav-button-wrapper " href="/allevents#lec">
+                        <div class="nav-menu-btn custom-color color-5 color-1-border color-5-hover color-1-selected ">Lecture series</div>
+                    </a>
+                </li>-->
+                <li style="background-color: white;">
+                    <a class="nav-button-wrapper " href="/hospi">
+                        <div class="nav-menu-btn custom-color color-5 color-1-border color-5-hover color-1-selected ">Hospitality</div>
+                    </a>
+                </li> -->
+
+                <li style="background-color: white;">
+                    <a class="nav-button-wrapper " href="/team">
+                        <div class="nav-menu-btn custom-color color-5 color-1-border color-5-hover color-1-selected selected">Team</div>
+                    </a>
+                </li>
+
+                 <li style="background-color: white;">
+                    <a class="nav-button-wrapper " href="/ca">
+                        <div class="nav-menu-btn custom-color color-5 color-1-border color-5-hover color-1-selected ">CA Portal</div>
+                    </a>
+                </li>
+
+
+                <!-- 
+                <li style="background-color: white;">
+                    <a class="nav-button-wrapper " href="/page/1322451/speakers">
+                        <div class="nav-menu-btn custom-color color-5 color-1-border color-5-hover color-1-selected ">Sponsors</div>
+                    </a>
+                </li> -->
+                <li style="background-color: white;">
+                    <a class="nav-button-wrapper " href="/login">
+                        <div class="nav-menu-btn custom-color color-5 color-1-border color-5-hover color-1-selected " style="border-radius: 10px; padding: 0px 10px; background-color: #1565c0; color: #fff;">{%if if_auth %} Dashboard {%else%}Log in {%endif%}</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+        </nav></div>
+</header>
+
+
+<div class="tutorial-popup"></div>
+<div class="auth-view hide">
+    <div data-iframe-height class="auth-view-box ">
+        <div class="auth-view-box-join-view">    <div class="sign-up-wrapper expand-box expand-box-open ">
+    
+            <div class="auth-wrapper-signin">
+                Registered User? <a><span class="switch-sign-up-login-link custom-color color-1">Login</span></a>
+            </div>
+    
+            <section class="auth-view-box-join">
+                
+    
+                <div class="welcome-message-container">
+                    
+                </div>
+    
+                <div class="sign-up-box expand-box sign-up-email-password expand-box-open sign-up-cls">
+                    <input type="text" name="primaryEmail" placeholder="Email Address"
+                           value="" title="primary email">
+                    <span class="standard-form-error error-primaryEmail margin-left-none"></span>
+                    <input type="password" name="password" placeholder="Set Password" title="password">
+                    <span class="standard-form-error error-password margin-left-none"></span>
+                    <div class="login-box-midsize-text forgot-password">
+                        <a class="forgot-password-link custom-color color-1">Forgot Password?</a>
+                    </div>
+                    <a class="button ladda-button button-big-blue sign-up-email-password-button custom-color color-1-background"
+                       data-style="slide-up"><span class="ladda-label">Sign Up</span></a>
+                </div>
+    
+                <div class="login-error-wrapper"></div>
+                <img src="{% static "index/bizzabo-loader.gif" %}" width="48" height="40" class="loading hide" alt="loader image">
+    
+            </section>
+        </div>
+    
+    </div>
+    </div>
+</div>
+
+<div class="main-view no-loader"
+     style="opacity: 1; background-color: #1565c0;">
+     <div class="home-page speakers-custom-css 1322451-custom-css " data-server-rendered="true" id="comp">
+        <ul class="sections-holder" data-server-rendered="true">
+                    <div class="global-template section-244900" data-server-rendered="true" data-model-id="244900"><div class="atom-sectionMain rowHolder speakers" >
+    <div class="main-app-container custom-space-top custom-space-bottom text-center attendees-faces">
+        <div class="element-729519 col-xs-12 text-center form-group wow fadeInUp">
+            <h2 class="atom-main header custom-font"></h2>
+        </div>
+
+        <div class="col-xs-12 clearfix text-center attendees-faces-holder">
+            <div class="row clearfix speakers-faces-inner">
+                    
+                    <div class="speaker-photo-holder wow fadeInUp" data-wow-delay="0.2s">
+                        <a href="">
+                                <div class="img-circle center-block"
+                                     style="background-image: url(https://res.cloudinary.com/shilp/image/upload/v1535863748/Team/Nitish_Jaiswal_Convener_-min.jpg);"></div>
+                            <div class="speaker-details">
+                                <div class="element-729520">
+                                    <div class="atom-main inner">
+                                        <div class="inner-holder">
+                                            <div class="atom-fullname custom-font speaker-name">Nitish Jaiswal</div>
+                                            <div class="atom-text1 custom-font speaker-title">Convener</div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </a>
+                    </div>
+                    <div class="speaker-photo-holder wow fadeInUp" data-wow-delay="0.2s">
+                        <a href="">
+                                <div class="img-circle center-block"
+                                     style="background-image: url(https://res.cloudinary.com/shilp/image/upload/v1535863750/Team/Vishesh_sinha-min.jpg);"></div>
+                            <div class="speaker-details">
+                                <div class="element-729520">
+                                    <div class="atom-main inner">
+                                        <div class="inner-holder">
+                                            <div class="atom-fullname custom-font speaker-name">Vishesh Sinha</div>
+                                            <div class="atom-text1 custom-font speaker-title">Co-Convener</div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </a>
+                    </div>
+                    
+                    
+                                       
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</ul>
+</div>
+     <div class="home-page speakers-custom-css 1322451-custom-css " data-server-rendered="true" id="work">
+        <ul class="sections-holder" data-server-rendered="true">
+                    <div class="global-template section-244900" data-server-rendered="true" data-model-id="244900"><div class="atom-sectionMain rowHolder speakers" >
+    <div class="main-app-container custom-space-top custom-space-bottom text-center attendees-faces">
+        <div class="element-729519 col-xs-12 text-center form-group wow fadeInUp">
+            <h2 class="atom-main header custom-font">Civil Engineering Society</h2>
+        </div>
+
+        <div class="col-xs-12 clearfix text-center attendees-faces-holder">
+            <div class="row clearfix speakers-faces-inner">
+                    <div class="speaker-photo-holder wow fadeInUp" data-wow-delay="0.1s">
+                        <a href="">
+                                <div class="img-circle center-block"
+                                     style="background-image: url(https://res.cloudinary.com/shilp/image/upload/v1535863747/Team/Aman_sapharia-min.jpg);"></div>
+                            <div class="speaker-details">
+                                <div class="element-729520">
+                                    <div class="atom-main inner">
+                                        <div class="inner-holder">
+                                            <div class="atom-fullname custom-font speaker-name">Aman Sapharia</div>
+                                            <div class="atom-text1 custom-font speaker-title">Vice President</div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </a>
+                    </div>
+                    <div class="speaker-photo-holder wow fadeInUp" data-wow-delay="0.2s">
+                        <a href="">
+                                <div class="img-circle center-block"
+                                     style="background-image: url(https://res.cloudinary.com/shilp/image/upload/v1535956116/Team/aa.jpg);"></div>
+                            <div class="speaker-details">
+                                <div class="element-729520">
+                                    <div class="atom-main inner">
+                                        <div class="inner-holder">
+                                            <div class="atom-fullname custom-font speaker-name">Swastik Sharma</div>
+                                            <div class="atom-text1 custom-font speaker-title">Joint General Secretary</div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </a>
+                    </div>
+                    <div class="speaker-photo-holder wow fadeInUp" data-wow-delay="0.30000000000000004s">
+                        <a href="">
+                                <div class="img-circle center-block"
+                                     style="background-image: url(https://res.cloudinary.com/shilp/image/upload/v1535863747/Team/Anant_yadav-min.jpg);"></div>
+                            <div class="speaker-details">
+                                <div class="element-729520">
+                                    <div class="atom-main inner">
+                                        <div class="inner-holder">
+                                            <div class="atom-fullname custom-font speaker-name">Anant Yadav</div>
+                                            <div class="atom-text1 custom-font speaker-title">General Secretary</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </a>
+                    </div>
+                    
+                    
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</ul>
+</div>
+
+<div class="home-page speakers-custom-css 1322451-custom-css " data-server-rendered="true" id="work">
+        <ul class="sections-holder" data-server-rendered="true">
+                    <div class="global-template section-244900" data-server-rendered="true" data-model-id="244900"><div class="atom-sectionMain rowHolder speakers" >
+    <div class="main-app-container custom-space-top custom-space-bottom text-center attendees-faces">
+        <div class="element-729519 col-xs-12 text-center form-group wow fadeInUp">
+            <h2 class="atom-main header custom-font">CREATIVE</h2>
+        </div>
+
+        <div class="col-xs-12 clearfix text-center attendees-faces-holder">
+            <div class="row clearfix speakers-faces-inner">
+                    <div class="speaker-photo-holder wow fadeInUp" data-wow-delay="0.1s">
+                        <a href="">
+                                <div class="img-circle center-block"
+                                     style="background-image: url(https://res.cloudinary.com/shilp/image/upload/v1536072570/Team/DSC_2041.jpg);"></div>
+                            <div class="speaker-details">
+                                <div class="element-729520">
+                                    <div class="atom-main inner">
+                                        <div class="inner-holder">
+                                            <div class="atom-fullname custom-font speaker-name">Tanuj Dwivedi</div>
+                                            <div class="atom-text1 custom-font speaker-title">Photography Head</div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </a>
+                    </div>
+                    <div class="speaker-photo-holder wow fadeInUp" data-wow-delay="0.2s">
+                        <a href="">
+                                <div class="img-circle center-block"
+                                     style="background-image: url(https://res.cloudinary.com/shilp/image/upload/v1536072570/Team/DSC_1970.jpg);"></div>
+                            <div class="speaker-details">
+                                <div class="element-729520">
+                                    <div class="atom-main inner">
+                                        <div class="inner-holder">
+                                            <div class="atom-fullname custom-font speaker-name">Pushkin Arora</div>
+                                            <div class="atom-text1 custom-font speaker-title">Design Head</div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </a>
+                    </div>
+                    <div class="speaker-photo-holder wow fadeInUp" data-wow-delay="0.30000000000000004s">
+                        <a href="">
+                                <div class="img-circle center-block"
+                                     style="background-image: url(https://res.cloudinary.com/shilp/image/upload/v1535863748/Team/Rohan_Nathiley_Content_Team_-min.jpg);"></div>
+                            <div class="speaker-details">
+                                <div class="element-729520">
+                                    <div class="atom-main inner">
+                                        <div class="inner-holder">
+                                            <div class="atom-fullname custom-font speaker-name">Rohan Nathiley</div>
+                                            <div class="atom-text1 custom-font speaker-title">Content Head</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </a>
+                    </div>
+                    
+                    
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</ul>
+</div>
+
+
+<div class="home-page speakers-custom-css 1322451-custom-css " data-server-rendered="true" id="work">
+        <ul class="sections-holder" data-server-rendered="true">
+                    <div class="global-template section-244900" data-server-rendered="true" data-model-id="244900"><div class="atom-sectionMain rowHolder speakers" >
+    <div class="main-app-container custom-space-top custom-space-bottom text-center attendees-faces">
+        <div class="element-729519 col-xs-12 text-center form-group wow fadeInUp">
+            <h2 class="atom-main header custom-font">EVENTS</h2>
+        </div>
+
+        <div class="col-xs-12 clearfix text-center attendees-faces-holder">
+            <div class="row clearfix speakers-faces-inner">
+                    <div class="speaker-photo-holder wow fadeInUp" data-wow-delay="0.1s">
+                        <a href="">
+                                <div class="img-circle center-block"
+                                     style="background-image: url(https://res.cloudinary.com/shilp/image/upload/v1535863747/Team/Abhishek_karn_events_head_-min.jpg);"></div>
+                            <div class="speaker-details">
+                                <div class="element-729520">
+                                    <div class="atom-main inner">
+                                        <div class="inner-holder">
+                                            <div class="atom-fullname custom-font speaker-name">Abhishek Karn</div>
+                                            <div class="atom-text1 custom-font speaker-title">Events Head</div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </a>
+                    </div>
+                    <div class="speaker-photo-holder wow fadeInUp" data-wow-delay="0.2s">
+                        <a href="">
+                                <div class="img-circle center-block"
+                                     style="background-image: url(https://res.cloudinary.com/shilp/image/upload/v1535863748/Team/DSC_1965-min.jpg);"></div>
+                            <div class="speaker-details">
+                                <div class="element-729520">
+                                    <div class="atom-main inner">
+                                        <div class="inner-holder">
+                                            <div class="atom-fullname custom-font speaker-name">Shubham K. Ojha</div>
+                                            <div class="atom-text1 custom-font speaker-title">Events Head</div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </a>
+                    </div>
+                    <div class="speaker-photo-holder wow fadeInUp" data-wow-delay="0.30000000000000004s">
+                        <a href="">
+                                <div class="img-circle center-block"
+                                     style="background-image: url(https://res.cloudinary.com/shilp/image/upload/v1535863749/Team/Vaibhav_Barsaiya_events_head_-min.jpg);"></div>
+                            <div class="speaker-details">
+                                <div class="element-729520">
+                                    <div class="atom-main inner">
+                                        <div class="inner-holder">
+                                            <div class="atom-fullname custom-font speaker-name">Vaibhav Barsaiya</div>
+                                            <div class="atom-text1 custom-font speaker-title">Events Head</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </a>
+                    </div>
+                    
+                    
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</ul>
+</div>
+<div class="home-page speakers-custom-css 1322451-custom-css " data-server-rendered="true" id="work">
+        <ul class="sections-holder" data-server-rendered="true">
+                    <div class="global-template section-244900" data-server-rendered="true" data-model-id="244900"><div class="atom-sectionMain rowHolder speakers" >
+    <div class="main-app-container custom-space-top custom-space-bottom text-center attendees-faces">
+        <div class="element-729519 col-xs-12 text-center form-group wow fadeInUp">
+            <h2 class="atom-main header custom-font">MARKETING</h2>
+        </div>
+
+        <div class="col-xs-12 clearfix text-center attendees-faces-holder">
+            <div class="row clearfix speakers-faces-inner">
+                    <div class="speaker-photo-holder wow fadeInUp" data-wow-delay="0.1s">
+                        <a href="">
+                                <div class="img-circle center-block"
+                                     style="background-image: url(https://res.cloudinary.com/shilp/image/upload/v1535863747/Team/Ashish_ranjan-min.jpg);"></div>
+                            <div class="speaker-details">
+                                <div class="element-729520">
+                                    <div class="atom-main inner">
+                                        <div class="inner-holder">
+                                            <div class="atom-fullname custom-font speaker-name">Ashish Ranjan</div>
+                                            <div class="atom-text1 custom-font speaker-title">Marketing Head</div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </a>
+                    </div>
+                    <div class="speaker-photo-holder wow fadeInUp" data-wow-delay="0.2s">
+                        <a href="">
+                                <div class="img-circle center-block"
+                                     style="background-image: url(https://res.cloudinary.com/shilp/image/upload/v1535863749/Team/Ujjawal_Khare__Marketing_-min.jpg);"></div>
+                            <div class="speaker-details">
+                                <div class="element-729520">
+                                    <div class="atom-main inner">
+                                        <div class="inner-holder">
+                                            <div class="atom-fullname custom-font speaker-name">Ujjwal Khare</div>
+                                            <div class="atom-text1 custom-font speaker-title">Marketing Head</div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </a>
+                    </div>
+                    
+                    
+                    
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</ul>
+</div>
+
+<div class="home-page speakers-custom-css 1322451-custom-css " data-server-rendered="true" id="work">
+        <ul class="sections-holder" data-server-rendered="true">
+                    <div class="global-template section-244900" data-server-rendered="true" data-model-id="244900"><div class="atom-sectionMain rowHolder speakers" >
+    <div class="main-app-container custom-space-top custom-space-bottom text-center attendees-faces">
+        <div class="element-729519 col-xs-12 text-center form-group wow fadeInUp">
+            <h2 class="atom-main header custom-font">PUBLIC RELATIONS</h2>
+        </div>
+
+        <div class="col-xs-12 clearfix text-center attendees-faces-holder">
+            <div class="row clearfix speakers-faces-inner">
+                    <div class="speaker-photo-holder wow fadeInUp" data-wow-delay="0.1s">
+                        <a href="">
+                                <div class="img-circle center-block"
+                                     style="background-image: url(https://res.cloudinary.com/shilp/image/upload/v1535863749/Team/Shubham_kaurav_PR_-min.jpg);"></div>
+                            <div class="speaker-details">
+                                <div class="element-729520">
+                                    <div class="atom-main inner">
+                                        <div class="inner-holder">
+                                            <div class="atom-fullname custom-font speaker-name">Shubham Kaurav</div>
+                                            <div class="atom-text1 custom-font speaker-title">Public Relations Head</div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </a>
+                    </div>
+                    <div class="speaker-photo-holder wow fadeInUp" data-wow-delay="0.2s">
+                        <a href="">
+                                <div class="img-circle center-block"
+                                     style="background-image: url(https://res.cloudinary.com/shilp/image/upload/v1535863747/Team/Aradhya_Mudgal_PR-min.jpg);"></div>
+                            <div class="speaker-details">
+                                <div class="element-729520">
+                                    <div class="atom-main inner">
+                                        <div class="inner-holder">
+                                            <div class="atom-fullname custom-font speaker-name">Aradhya Mudgal</div>
+                                            <div class="atom-text1 custom-font speaker-title">Public Relations Head</div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </a>
+                    </div>
+                    
+                    
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</ul>
+</div>
+
+
+<div class="home-page speakers-custom-css 1322451-custom-css " data-server-rendered="true" id="work">
+        <ul class="sections-holder" data-server-rendered="true">
+                    <div class="global-template section-244900" data-server-rendered="true" data-model-id="244900"><div class="atom-sectionMain rowHolder speakers" >
+    <div class="main-app-container custom-space-top custom-space-bottom text-center attendees-faces">
+        <div class="element-729519 col-xs-12 text-center form-group wow fadeInUp">
+            <h2 class="atom-main header custom-font">PUBLICITY</h2>
+        </div>
+
+        <div class="col-xs-12 clearfix text-center attendees-faces-holder">
+            <div class="row clearfix speakers-faces-inner">
+                    <div class="speaker-photo-holder wow fadeInUp" data-wow-delay="0.1s">
+                        <a href="">
+                                <div class="img-circle center-block"
+                                     style="background-image: url(https://res.cloudinary.com/shilp/image/upload/v1535863749/Team/Suman_Saurabh_Mishra-min.jpg);"></div>
+                            <div class="speaker-details">
+                                <div class="element-729520">
+                                    <div class="atom-main inner">
+                                        <div class="inner-holder">
+                                            <div class="atom-fullname custom-font speaker-name">Suman Saurabh</div>
+                                            <div class="atom-text1 custom-font speaker-title">Publicity Head</div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </a>
+                    </div>
+                    <div class="speaker-photo-holder wow fadeInUp" data-wow-delay="0.2s">
+                        <a href="">
+                                <div class="img-circle center-block"
+                                     style="background-image: url(https://res.cloudinary.com/shilp/image/upload/v1535863748/Team/DSC_1969-min.jpg);"></div>
+                            <div class="speaker-details">
+                                <div class="element-729520">
+                                    <div class="atom-main inner">
+                                        <div class="inner-holder">
+                                            <div class="atom-fullname custom-font speaker-name">Shobhit Tiwari</div>
+                                            <div class="atom-text1 custom-font speaker-title">Publicity Head</div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </a>
+                    </div>
+                    
+                    
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</ul>
+</div>
+
+<div class="home-page speakers-custom-css 1322451-custom-css " data-server-rendered="true" id="work">
+        <ul class="sections-holder" data-server-rendered="true">
+                    <div class="global-template section-244900" data-server-rendered="true" data-model-id="244900"><div class="atom-sectionMain rowHolder speakers" >
+    <div class="main-app-container custom-space-top custom-space-bottom text-center attendees-faces">
+        <div class="element-729519 col-xs-12 text-center form-group wow fadeInUp">
+            <h2 class="atom-main header custom-font">HOSPITALITY</h2>
+        </div>
+
+        <div class="col-xs-12 clearfix text-center attendees-faces-holder">
+            <div class="row clearfix speakers-faces-inner">
+                    <div class="speaker-photo-holder wow fadeInUp" data-wow-delay="0.1s">
+                        <a href="">
+                                <div class="img-circle center-block"
+                                     style="background-image: url(https://res.cloudinary.com/shilp/image/upload/v1535863749/Team/Shubham_gupta_hospitality_-min.jpg);"></div>
+                            <div class="speaker-details">
+                                <div class="element-729520">
+                                    <div class="atom-main inner">
+                                        <div class="inner-holder">
+                                            <div class="atom-fullname custom-font speaker-name">Shubham Gupta</div>
+                                            <div class="atom-text1 custom-font speaker-title">Hospitality Head</div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </a>
+                    </div>
+                    <div class="speaker-photo-holder wow fadeInUp" data-wow-delay="0.2s">
+                        <a href="">
+                                <div class="img-circle center-block"
+                                     style="background-image: url(https://res.cloudinary.com/shilp/image/upload/v1535863749/Team/Tushar_Mahant_Hospitalilty_head_-min.jpg);"></div>
+                            <div class="speaker-details">
+                                <div class="element-729520">
+                                    <div class="atom-main inner">
+                                        <div class="inner-holder">
+                                            <div class="atom-fullname custom-font speaker-name">Tushar Mahant</div>
+                                            <div class="atom-text1 custom-font speaker-title">Hospitality Head</div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </a>
+                    </div>
+                    
+                    
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</ul>
+</div>
+
+<div class="home-page speakers-custom-css 1322451-custom-css " data-server-rendered="true" id="work">
+        <ul class="sections-holder" data-server-rendered="true">
+                    <div class="global-template section-244900" data-server-rendered="true" data-model-id="244900"><div class="atom-sectionMain rowHolder speakers" >
+    <div class="main-app-container custom-space-top custom-space-bottom text-center attendees-faces">
+        <div class="element-729519 col-xs-12 text-center form-group wow fadeInUp">
+            <h2 class="atom-main header custom-font">WEB</h2>
+        </div>
+
+        <div class="col-xs-12 clearfix text-center attendees-faces-holder">
+            <div class="row clearfix speakers-faces-inner">
+                    <div class="speaker-photo-holder wow fadeInUp" data-wow-delay="0.1s">
+                        <a href="">
+                                <div class="img-circle center-block"
+                                     style="background-image: url(https://res.cloudinary.com/shilp/image/upload/v1535863748/Team/Prakash_Tiwari-min.jpg);"></div>
+                            <div class="speaker-details">
+                                <div class="element-729520">
+                                    <div class="atom-main inner">
+                                        <div class="inner-holder">
+                                            <div class="atom-fullname custom-font speaker-name">Prakash Tiwari</div>
+                                            <div class="atom-text1 custom-font speaker-title">Tech Lead</div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </a>
+                    </div>
+                    <div class="speaker-photo-holder wow fadeInUp" data-wow-delay="0.2s">
+                        <a href="">
+                                <div class="img-circle center-block"
+                                     style="background-image: url(https://res.cloudinary.com/shilp/image/upload/v1535863747/Team/Zahle_Khan_web_-min.jpg);"></div>
+                            <div class="speaker-details">
+                                <div class="element-729520">
+                                    <div class="atom-main inner">
+                                        <div class="inner-holder">
+                                            <div class="atom-fullname custom-font speaker-name">Zahle Sakir Khan</div>
+                                            <div class="atom-text1 custom-font speaker-title">Tech Lead</div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </a>
+                    </div>
+                    
+                    
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</ul>
+</div>
+
+
+</div>
+</body>
+     
+                    
+                   
+
+    
+
+</ul>
+<section id="contact">
+
+    <div class="container">
+        <div class="row wow fadeInUp">
+
+        <div class="col-lg-4 col-md-4 text-center">
+          <div class="contact-about">
+            <h3>Shilp 2018</h3>
+            <p>Technical Fest of Civil Engineering Department,<br>
+            Indian Institute of Technology Varanasi</p>
+            <div >
+              <a href="http://www.shilpiitbhu.org/" class="facebook"><i class="fa fa-globe" style="font-size:28px;"></i></a>
+              <a href="https://www.facebook.com/shilpiitbhu/" class="facebook"><i class="fa fa-facebook" style="font-size:28px; padding-left: 20px;"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-8 col-md-8" style="padding-top: 20px;">
+          <div class="info row" >
+
+            <div class="col-md-4 text-center">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <p>IIT(BHU)<br>Varanasi, 221005</p>
+            </div>
+
+            <div class="col-md-4 text-center">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <p>shilp@iitbhu.ac.in</p>
+            </div>
+
+            <div class="col-md-4 text-center">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <p>+91 9696358440</p>
+            </div>
+
+          </div>
+        </div>
+    </div>
+</div>
+</section>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+
+
+
+<!-- <script type="text/javascript" src="{% static "index/classname.js" %}" charset="utf-8"></script> 
+
+ <script type="text/javascript" src="{% static "index/route.js" %}" charset="utf-8"></script> -->
+    
+
+
+</body>
+</html>

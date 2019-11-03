@@ -1,0 +1,133 @@
+
+{%load staticfiles%}
+<!DOCTYPE html>
+<html>
+<head>
+
+  
+  <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href= "{%static "log_reg.css" %}">
+
+    <meta charset="utf-8">
+    <title>
+        Shilp 2018 | IIT(BHU) Varanasi
+    </title><!-- Behavioral Meta Data -->
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"><!-- Core Meta Data -->
+    <meta content="Shilp Tech Team" name="author">
+    <meta content="Under Construction" name="description">
+    <meta content="Shilp, Shilp 2018, Civil Engineering, IIT (BHU), IIT" name="keywords"><!-- Open Graph Meta Data -->
+    <meta content="website">
+    <meta content="index.html"><!-- Twitter Card Meta Data -->
+    <meta content="Shilp 2018 The Annual Fest of Civil Engineering IIT (BHU) Varanasi " name="twitter:card">
+    <meta content="Shilp Tech Team" name="twitter:creator">
+    <meta content="Shilp 2018" name="twitter:title">
+    <meta content="Shilp 2018 The Annual Fest of Civil Engineering IIT (BHU) Varanasi" name="twitter:description">
+
+    <!-- Open Graph Meta Data -->
+    <meta property="og:url"                content="http://shilpiitbhu.org/" />
+    <meta property="og:title"              content="Shilp 2018" />
+    <meta property="og:description"        content="The Annual Fest of Civil Engineering IIT (BHU) Varanasi" />
+    <meta property="og:image"              content="https://res.cloudinary.com/shilp/image/upload/v1527310423/background.jpg" />
+
+    <!-- Favicon -->
+    <meta name="theme-color" content="#0a1623;">
+
+  <link href= "font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{% static "css/log_reg.css" %}>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style type="text/css">
+  .completecentre
+  {
+     margin: auto;
+    width: 100px;
+  }
+  .center1
+  {
+    vertical-align: middle;
+  }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+   <div class="row" style="margin:5% 1%;">
+    <div class="col-md-6 offset-md-3">
+      <div class="panel panel-login center center1">
+        <div class="panel-body" style="background-color: white;">
+          <div class="row">
+            <div class="col-lg-12">
+              <form id="register-form" action="" enctype="multipart/form-data" method="post" style="display: block;font-family: sans-serif;"   >
+                {%csrf_token%}
+                <div class="form-group">
+                  <div class="row" style="padding-bottom: 5%;">
+                    <div class="col-sm-4 text-center">
+                      <img class="img-fluid" src="https://res.cloudinary.com/shilp/image/upload/v1527310419/ShilpLogo.png" style=" max-width: 100px; height: auto;  margin-top: -10%; ">
+                    </div>
+                    <div class="col-sm-8" style="display: flex; justify-content: center; align-items: center; font-size: 1.4rem; text-align: center; font-weight: 600; margin-top: 5%;" >
+                      Login for Questionnaire
+                    </div>
+                  </div>
+                  
+                </div>
+                <!--<div class="form-group"><p style="font-weight: 500;">Enter the name of your team</p></div>
+                  <div class="form-group">
+                  <input type="text" name="fname" id="fname" tabindex="1" class="form-control " placeholder="Name of team" value="" autocomplete="name" required>
+                  <div class="invalid-feedback">
+                    Please enter the name
+                  </div>
+                </div><br>
+                <div class="form-group">
+                 <input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email Address of Leader" value="" autocomplete="email" required  >
+                  <div class="invalid-feedback">
+                    Please enter a valid email-id
+                  </div>
+                </div>-->
+                <p style = "color:red; text-align: center;">{{error}}</p>
+                <div class="form-group">
+                  <label for="username">Team ID</label>
+                  <input type="text" name = "username" tabindex="1" class="form-control" placeholder="Enter your Team ID" value="" autocomplete="name" required>
+                  
+                </div>
+                <div class="form-group">
+                  <label for="username">Password</label>
+                  <input name = "password" type="password" id="txtPassword" class="form-control" placeholder="Password" autocomplete="name" required>
+                  
+                </div>
+                
+              <div class="form-group" style="margin-top: 5%;">
+                <div class="row" style="margin-bottom: 8%;">
+                  <div class="col-sm-6 col-sm-offset-3 completecentre">
+                    <input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" style="border: 1px solid black;" value="Login">
+                  </div>
+                </div>
+                <div class="row text-center"   >
+                    <p style = "text-align: center; margin: auto;"><strong>Please note Questionnaire has a separate <a href="/questionnaire/registration">registration.</a></strong></p>
+                    </div>
+                <div class="row text-center"   >
+                    <p style = "text-align: center; margin: auto;">In case of login error please contact:<span style="color: blue;">admin@shilpiitbhu.org</span>. Please mention your Email ID or Team ID.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      </div>
+  </div>
+</div>
+</div>
+<footer>
+
+</footer>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- JavaScript -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>

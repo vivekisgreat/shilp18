@@ -1,0 +1,1 @@
+web: gunicorn shilp18.wsgi

@@ -1,0 +1,483 @@
+{% load static %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags-->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<meta name="language" 				   content="en-us" />
+	<meta name="description" 			   content="Shilp is the Annual Fest of Civil Engineering IIT (BHU) Varanasi ">
+	<meta http-equiv="Content-Type" 	   content="text/html; charset=UTF-8">
+	<meta name="keywords" 				   content="Shilp, Shilp 2018, Civil Engineering, IIT (BHU), IIT">
+	<meta name="distribution" 			   content="Global" />
+	<meta name="rating" 				   content="General" />
+	<meta name="author" 				   content="Shilp Tech Team" >
+
+	<!----------------------------------------------------------------------------------------- open graph meta tags---------------------------------------------------------------------------------------->
+	<meta property="og:url"                content="http://shilpiitbhu.org/" />
+	<meta property="og:title"              content="Shilp 2018" />
+	<meta property="og:description"        content="Shilp is the Annual Fest of Civil Engineering IIT (BHU) Varanasi" />
+	<meta property="og:image"              content="https://res.cloudinary.com/shilp/image/upload/v1527310423/background.jpg" />
+	<meta property="og:type" 			   content="website">
+
+	<link rel="icon" type="image/ico" href="{% static "images/Asset.png" %}"/>
+	<link rel="shortcut icon" type="image/ico" href="{% static "images/Asset.png" %}"/>	
+
+	<!-- Title Page-->
+
+	<title>Profile</title>
+
+	<!-- Fontfaces CSS-->
+	<link href="{% static "css/font-face.css" %}" rel="stylesheet" media="all">
+	<link href="{% static "vendor/font-awesome-4.7/css/font-awesome.min.css" %}" rel="stylesheet" media="all">
+	<link href="{% static "vendor/font-awesome-5/css/fontawesome-all.min.css" %}" rel="stylesheet" media="all">
+	<link href="{% static "vendor/mdi-font/css/material-design-iconic-font.min.css" %}" rel="stylesheet" media="all">
+
+	<!-- Bootstrap CSS-->
+	<link href="{% static "vendor/bootstrap-4.1/bootstrap.min.css" %}" rel="stylesheet" media="all">
+
+	<!-- Vendor CSS-->
+	<link href="{% static "vendor/animsition/animsition.min.css" %}" rel="stylesheet" media="all">
+	<link href="{% static "vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" %}" rel="stylesheet" media="all">
+	<link href="{% static "vendor/wow/animate.css" %}" rel="stylesheet" media="all">
+	<link href="{% static "vendor/css-hamburgers/hamburgers.min.css" %}" rel="stylesheet" media="all">
+	<link href="{% static "vendor/slick/slick.css" %}" rel="stylesheet" media="all">
+	<link href="{% static "vendor/select2/select2.min.css" %}" rel="stylesheet" media="all">
+	<link href="{% static "vendor/perfect-scrollbar/perfect-scrollbar.css" %}" rel="stylesheet" media="all">
+
+	<!-- Main CSS-->
+	<link href="{% static "css/theme.css" %}" rel="stylesheet" media="all">
+
+
+</head>
+
+<body class="animsition">
+	<div class="page-wrapper">
+		<!-- HEADER MOBILE-->
+		<header class="header-mobile d-block d-lg-none">
+			<div class="header-mobile__bar">
+				<div class="container-fluid">
+					<div class="header-mobile-inner">
+						<button class="hamburger hamburger--slider" type="button">
+							<span class="hamburger-box">
+								<span class="hamburger-inner"></span>
+							</span>
+						</button>
+						<a class="logo" href="/" style="margin: 0px 25%;">
+							<img src="https://res.cloudinary.com/shilp/image/upload/v1535811762/Icons/nn.png" alt="Shilp18" style="max-width: 70%;">
+						</a>
+
+					</div>
+				</div>
+			</div>
+			<nav class="navbar-mobile">
+				<div class="container-fluid">
+					<ul class="navbar-mobile__list list-unstyled" >
+						<li >
+							<a href="/dashboard">
+								<i class="fa fa-user" aria-hidden="true"></i>Profile</a>
+
+							</li>
+							<li>
+								<a href="/dashboard/RegPlan">
+									<i class="fa fa-credit-card" aria-hidden="true"></i>Choose your Plan
+									{% if Profile.plan_locked %}
+									<i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+
+									{% else %}
+									<span class="badge badge-warning">!</span>                                  
+									{% endif %}
+
+
+								</a>
+							</li>
+							<li>
+								<a href="/dashboard/event_reg">
+									<i class="fa fa-calendar-o" aria-hidden="true"></i></i>Event Registration
+									{% if Profile.plan_locked %}
+									{% if Profile.events_locked %}
+									<i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+									{% else %}
+									<span class="badge badge-warning">!</span>
+									{% endif %}         
+									{% endif %}
+								</a>
+							</li>
+							<li>
+								<a href="/dashboard/payment">
+									<i class="fa fa-credit-card" aria-hidden="true"></i></i>Payment
+									{% if Profile.events_locked %}
+									{% if Profile.payment_verified %}
+										<i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+
+										{% else %}
+										<span class="badge badge-warning">!</span>                                  
+										{% endif %}
+										{% endif %}
+								</a>
+							</li>
+							<li>
+								<a href="/dashboard/team_reg">
+									<i class="fa fa-users" aria-hidden="true"></i>Team Registration
+								</a>
+							</li>
+							<li>
+								<a href="/dashboard/help">
+									<i class="fa fa-info-circle" aria-hidden="true"></i>Help
+								</a>
+							</li>
+							
+							<li >
+								<a href="/logout/">
+									<i class="fa fa-info-circle" aria-hidden="true"></i>Logout
+								</a>
+							</li>
+
+						</ul>
+					</div>
+				</nav>
+			</header>
+			<!-- END HEADER MOBILE-->
+
+			<!-- MENU SIDEBAR-->
+			<aside class="menu-sidebar d-none d-lg-block">
+				<div class="logo">
+					<a href="/">
+						<img src="https://res.cloudinary.com/shilp/image/upload/v1535811762/Icons/nn.png" style="width:65%;" alt="{{User.email}}
+						{{Profile.college_name}}" />
+					</a>
+				</div>
+				<div class="menu-sidebar__content js-scrollbar1">
+					<nav class="navbar-sidebar">
+						<ul class="list-unstyled navbar__list">
+							<li >
+								<a href="/dashboard">
+									<i class="fa fa-user" aria-hidden="true"></i>Profile</a>
+
+								</li>
+								<li>
+									<a href="/dashboard/RegPlan">
+										
+										<i class="fa fa-calendar-plus-o" aria-hidden="true"></i>Choose your plan
+										{% if Profile.plan_locked %}
+										<i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+
+										{% else %}
+										<span class="badge badge-warning">!</span>                                  
+										{% endif %}
+
+
+									</a>
+								</li>
+								<li>
+									<a href="/dashboard/event_reg">
+										<i class="fa fa-calendar-o" aria-hidden="true"></i></i>Event Registration
+										{% if Profile.plan_locked %}
+										{% if Profile.events_locked %}
+										<i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+										{% else %}
+										<span class="badge badge-warning">!</span>
+										{% endif %}         
+										{% endif %}
+									</a>
+								</li>
+								<li>
+								<a href="/dashboard/payment">
+									<i class="fa fa-credit-card" aria-hidden="true"></i></i>Payment
+									{% if Profile.events_locked %}
+									{% if Profile.payment_verified %}
+										<i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+
+										{% else %}
+										<span class="badge badge-warning">!</span>                                  
+										{% endif %}
+										{% endif %}
+								</a>
+							</li>
+								<li>
+									<a href="/dashboard/team_reg">
+										<i class="fa fa-users" aria-hidden="true"></i>Team Registration
+									</a>
+								</li>
+								<li>
+									<a href="/dashboard/help">
+										<i class="fa fa-info-circle" aria-hidden="true"></i>Help
+									</a>
+								</li>
+								<li style="padding-top: 30px;">
+									<a href="/logout/" >
+										<i class="fa fa-info-circle" aria-hidden="true"></i>Logout
+									</a>
+								</li>
+
+
+							</ul>
+						</nav>
+					</div>
+				</aside>
+		
+				<!-- END MENU SIDEBAR-->
+
+				<!-- PAGE CONTAINER-->
+				<div class="page-container">
+					<!-- HEADER DESKTOP-->
+
+					<!-- END HEADER DESKTOP-->
+
+					<!-- MAIN CONTENT-->
+					<div class="main-content">
+						<div class="section__content section__content--p30">
+							<div class="container-fluid">
+
+								<div class="row"  >
+									<div class="col-sm-5 " id="profile">
+										<div class="card">
+											<div class="card-body" style="font-size: 1rem">
+												<div class="row container" style="padding-bottom: 30px; font-size: 1rem;">
+													<h3>Profile Details</h3>
+												</div>
+
+												
+												<div class="row" >
+													<div class="col-6 "><b>SHILP ID</b> :</div>
+													<div class="col-6">{{Profile.shilpid}}</div>													
+												</div>
+												<div class="row">
+													<div class="col-6 "><b>Full Name</b> :</div>
+													<div class="col-6">{{Profile.name}}</div>													
+												</div>
+												<div class="row">
+													<div class="col-6 "><b>Sex</b> :</div>
+													<div class="col-6">{{Profile.sex}}</div>													
+												</div>
+												<div class="row">
+													<div class="col-6 "><b>Date of Birth</b> :</div>
+													<div class="col-6">{{Profile.dob}}</div>													
+												</div>
+												<div class="row">
+													<div class="col-6 "><b>Email ID</b> :</div>
+													<div class="col-6">{{Profile.user.email}}</div>													
+												</div>
+												<div class="row">
+													<div class="col-6 "><b>Phone Number</b> :</div>
+													<div class="col-6">+91 {{Profile.mobile_no}}</div>													
+												</div>
+												<div class="row">
+													<div class="col-6 "><b>Class</b> :</div>
+													<div class="col-6">{{Profile.course}}</div>													
+												</div>
+												<div class="row">
+													<div class="col-6 "><b>Year</b> :</div>
+													<div class="col-6">{{Profile.year}}</div>													
+												</div>
+												<div class="row">
+													<div class="col-6 "><b>College Name</b> :</div>
+													<div class="col-6">{{Profile.college_name}}</div>													
+												</div>
+												<div class="row">
+													<div class="col-6 "><b>Campus Ambassador</b> :</div>
+													<div class="col-6">{{Profile.ca_name}}</div>													
+												</div>
+												<!-- <div class="row">
+													<div class="col-6 "><b>T-Shirt</b> :</div>
+													<div class="col-6">
+														{% if Profile.tshirt %}
+														<i class="fa fa-check" aria-hidden="true"></i>
+														{% else %}
+														<i class="fa fa-times" aria-hidden="true"></i>
+														{% endif %}
+
+													</div>													
+												</div>
+												<div class="row">
+													<div class="col-6 "><b>T-Shirt</b> :</div>
+													<div class="col-6">
+														{% if Profile.accomodation %}
+														<i class="fa fa-check" aria-hidden="true"></i>
+														{% else %}
+														<i class="fa fa-times" aria-hidden="true"></i>
+														{% endif %}
+
+													</div>													
+												</div> -->
+												
+											</div>
+										</div>
+									</div>
+
+									<div class="col-sm-7">
+										<div class="card">
+											<div class="card-body" style="font-size: 1rem">
+												<div class="row container" style="padding-bottom: 30px; font-size: 1rem;">
+													<h3>Registration Status</h3>
+												</div>
+												<div class="row" style="">
+													<div class="col-4 "><b>Your Plan</b>:</div>
+													<div class="col-8">
+														{% if Profile.plan_locked %}
+														<i class="fa fa-check" aria-hidden="true"></i>
+														{{Profile.payment_plan}}
+														{% else %}
+														<i class="fa fa-times" aria-hidden="true"></i>
+														<a href="/dashboard/RegPlan">Click here</a> to choose your plan.
+														{% endif %}
+													</div>													
+												</div>
+												<div class="row" style="">
+													<div class="col-4 "><b>Payment Verification</b>:</div>
+													<div class="col-8">
+														{% if Profile.payment_verified %}
+														<i class="fa fa-check" aria-hidden="true"></i>
+														{% else %}
+														<i class="fa fa-times" aria-hidden="true"></i>
+														<a href="/dashboard/RegPlan">Click here</a> to complete your payment.
+														{% endif %}
+													</div>													
+												</div>
+												<div class="row">
+													<div class="col-4 "><b>Event Registration</b>:</div>
+													<div class="col-8">
+														{% if Profile.events_locked %}
+														<i class="fa fa-check" aria-hidden="true"></i>
+														<a href="/dashboard/event_reg">Click here</a> to view your event registration. 
+														{% else %}
+														<i class="fa fa-times" aria-hidden="true"></i>
+														<a href="/dashboard/event_reg">Click here</a> to complete your event registration.
+														{% endif %}
+													</div>													
+												</div>
+												
+											</div>
+										</div>
+									</div>
+								
+
+
+								</div>
+
+								<div class="row">
+									<div class="col-sm-12">
+										<div class="card">
+											<div class="card-body" style="font-size: 1rem">
+												<div class="row container" style="padding-bottom: 30px; font-size: 1rem;">
+													<h3>Team Registrations</h3>
+												</div>
+												<table class="table text-center  table-hover">
+														<thead>
+															<tr>
+																<td><b>Event Name</b></td>
+																<td><b>Team Name</b></td>
+																
+															</tr>
+														</thead>
+														<tbody>
+															{% for event,name in teams  %}
+															<tr>
+															<td>{{event}} </td>
+															<td>{{name}}</td>													
+														</tr>
+													
+												{% endfor %}
+														</tbody>
+													</table>
+
+															
+															
+											</div>
+										</div>
+									</div>
+								</div>
+
+								
+									
+
+								
+								<!-- END USER DATA-->
+								<div class="row" style="">
+						<div class="col-md-12">
+							<div class="copyright">
+								<p><a href="https://colorlib.com"></a>.</p>
+							</div>
+						</div>
+					</div>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+
+
+
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+
+<div id="SuccessModal" class="modal fade" role="dialog">
+	<div class="modal-dialog modal-lg">
+
+		<!-- Modal content-->
+		<div class="modal-content">
+
+			<div class="modal-body">
+				<div class="row text-aligncenter">
+					<div class="col-lg-4 text-center">
+						<i class="fa fa-check-circle" aria-hidden="true" style="font-size: 5rem; color: green;"></i>
+					</div>
+					<div class="col-lg-4">
+						<h4>Changes were succesful.</h4>	
+					</div>
+				</div>
+
+			</div>
+
+			<div class="modal-footer">
+				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+
+		</div>
+
+	</div>
+</div>
+
+<!-- Jquery JS-->
+<script src="{% static "vendor/jquery-3.2.1.min.js" %}"></script>
+<!-- Bootstrap JS-->
+<script src="{% static "vendor/bootstrap-4.1/popper.min.js" %}"></script>
+<script src="{% static "vendor/bootstrap-4.1/bootstrap.min.js" %}"></script>
+<!-- Vendor JS       -->
+<script src="{% static "vendor/slick/slick.min.js" %}">
+</script>
+<script src="{% static "vendor/wow/wow.min.js" %}"></script>
+<script src="{% static "vendor/animsition/animsition.min.js" %}"></script>
+<script src="{% static "vendor/bootstrap-progressbar/bootstrap-progressbar.min.js" %}">
+</script>
+<script src="{% static "vendor/counter-up/jquery.waypoints.min.js" %}"></script>
+<script src="{% static "vendor/counter-up/jquery.counterup.min.js" %}">
+</script>
+<script src="{% static "vendor/circle-progress/circle-progress.min.js" %}"></script>
+<script src="{% static "vendor/perfect-scrollbar/perfect-scrollbar.js" %}"></script>
+<script src="{% static "vendor/chartjs/Chart.bundle.min.js" %}"></script>
+<script src="{% static "vendor/select2/select2.min.js" %}">
+
+</script>
+
+<!-- Main JS-->
+<script src="{% static "js/main1.js" %}"></script>
+
+
+
+
+
+
+
+
+   		</body>
+
+   		</html>
+   		<!-- end document-->

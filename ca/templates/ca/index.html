@@ -1,0 +1,639 @@
+
+{% load static %}
+{% load staticfiles %}
+
+
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Shilp</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta content="" name="keywords">
+	<meta content="" name="description">
+
+	<!-- Favicons -->
+
+	<link href='{% static "ca/img/icon-logo.ico"%}' rel="icon">
+	<link href='{% static "ca/img/apple-touch-icon.png"%}' rel="apple-touch-icon">
+
+	<!-- Google Fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700|Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+	<!-- Bootstrap CSS File -->
+
+	<link href="{% static "ca/lib/bootstrap/css/bootstrap.min.css" %}" rel="stylesheet">
+
+	<!-- Libraries CSS Files -->
+	<link href="{% static "ca/lib/animate/animate.min.css" %}" rel="stylesheet">
+	<link href="{% static "ca/lib/font-awesome/css/font-awesome.min.css"%}" rel="stylesheet">
+	<link href="{% static "ca/lib/ionicons/css/ionicons.min.css"%}" rel="stylesheet">
+	<link href="{% static "ca/lib/magnific-popup/magnific-popup.css" %}" rel="stylesheet">
+
+
+	<!-- Main Stylesheet File -->
+	<link href='{% static "ca/css/style.css"%}' rel="stylesheet">
+
+  <!-- =======================================================
+    Theme Name: Avilon
+    Theme URL: https://bootstrapmade.com/avilon-bootstrap-landing-page-template/
+    Author: BootstrapMade.com
+    License: https://bootstrapmade.com/license/
+    ======================================================= -->
+
+
+  </head>
+
+  <body>
+
+  <!--==========================
+    Header
+    ============================-->
+    <header id="header">
+
+      <div class="container">
+
+        <div id="logo" class="pull-left">
+          <a href="/"><img src="https://res.cloudinary.com/shilp/image/upload/v1527310419/ShilpLogo.png" alt="" title="" style="max-width: 50px; height: auto; margin-top: -4%;"></a>
+          <h1><a href="/">Shilp 2018</a></h1>
+          <!-- Uncomment below if you prefer to use an image logo -->
+          
+        </div>
+
+        <nav id="nav-menu-container">
+          <ul class="nav-menu">
+            <li class="menu-active"><a href="#intro">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#features">Why Join Us</a></li>
+            <li><a href="#pricing">Beneficiaries</a></li>
+            <li><a href="#team">Contact Us</a></li>
+            <li><button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal" style="font-size: 14px; background-color: transparent; border:none;"><b>Leaderboard</b></button></li>
+            <li style="border:2px solid white; border-radius: 50px;  "><a href="{% url 'ca:register' %}" style="padding-bottom: 0px; padding-top: 0px; ">Register</a></li>
+          </ul>
+        </nav><!-- #nav-menu-container -->
+      </div>
+    </header><!-- #header -->
+
+
+  <!--==========================
+    Intro Section
+    ============================-->
+
+
+
+    <section id="intro">
+      <div class="intro-text">
+        <h2>CAMPUS AMBASSADOR PROGRAM</h2>
+        <p>SHILP 2018</p>
+        <a href="#about" class="btn-get-started scrollto">Get Started</a>
+      </div>
+
+      
+
+    </section><!-- #intro -->
+
+    <main id="main">
+
+    <!--==========================
+      About Us Section
+      ============================-->
+      <section id="about" class="section-bg">
+
+        <div class="container-fluid">
+          <div class="section-header">
+            <h3 class="section-title">About Us</h3>
+            <span class="section-divider"></span>
+            <p class="section-description">
+              Shilp is the annual festival of CES (Civil Engineering Society), IIT BHU. By far Shilp is the most constructive Civil Engineering fest of North India, <br> as precedence indicates, it has not just had a collaborative effect on the participants, but also promoted learning through practice, all of which has contributed to it's rich legacy. 
+            </p>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-6 about-img wow fadeInLeft">
+              <img src="https://res.cloudinary.com/shilp/image/upload/v1532451945/CA/about-img.jpg" alt="">
+            </div>
+
+            <div class="col-lg-6 content wow fadeInRight">
+              <h3 style="font-style: normal; font-weight: bold;">The Campus Ambassadorship Program by SHILP’18 is a nationwide programme which
+                explores, innovates, shapes and exposes the students nationwide from various colleges
+              as efficient managers and creative leaders</h3>
+              <p>
+                Members not only acquire leadership and
+                entrepreneurial qualities but also gain a social streak with a good character. We call
+                upon our ambassadors to educate their constituents about the powerful role of socioinitiatives.
+              </p>
+
+              <p>
+                Shilp, the Annual All India Civil Engineering Fest, organized by the Civil Engineering Society, IIT BHU, Varanasi offers you a opportunity to be a part of Team Shilp’18 and represent your college by becoming its Campus Ambassador.  We assure you, working as a CA you’ll have an incomparable work experience and will learn a lot in the process. The work would be least time consuming with flexible working hours to not in any way interfere with your academics or extracurricular activities.Team Shilp will always make sure to back you up and step in to help you in any way possible. 
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section><!-- #about -->
+
+    <!--==========================
+      Product Featuress Section
+      ============================-->
+      <section id="features">
+
+        <div class="container">
+
+          <div class="row">
+
+            <div class="col-lg-8 offset-lg-4">
+              <div class="section-header wow fadeIn" data-wow-duration="1s">
+                <h3 class="section-title">Why Join Us</h3>
+                <span class="section-divider"></span>
+              </div>
+            </div>
+
+            <div class="col-lg-4 col-md-5 features-img">
+              <img src="https://res.cloudinary.com/shilp/image/upload/v1532451935/CA/product-features.png" alt="" class="wow fadeInLeft">
+            </div>
+
+            <div class="col-lg-8 col-md-7 ">
+
+              <div class="row">
+                <div class="col-lg-12 content wow fadeInRight">
+                  <h3 style="font-style: normal; font-weight: bold; font-size: 24px;">  SHILP AMBASSADORSHIPS are for young,
+                  proliferating and individuals who have effective communication skills.</h3>
+                  <p>
+                    What we look in a Campus Ambassador is innovation, leadership,
+                    enthusiasm and creativity. We look for students who are leaders in their campus,
+                    leaders who can inspire their peers, collaborate with administrators and organize
+                    campus events to leave impact. This is for those who are having keen
+                    interest in updating people about various SHILP’18 events through public meets,
+                    announcements, notices, social-media, webpages, etc.
+                  </p>
+
+                </div>
+
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section><!-- #features -->
+
+    <!--==========================
+      Product Advanced Featuress Section
+      ============================-->
+      <section id="advanced-features">
+
+
+        <div class="features-row section-bg" id="prerequisites">
+          <div class="container">
+            <div class="row">
+              <div class="col-12">
+                <img class="advanced-feature-img-right wow fadeInRight" src="https://res.cloudinary.com/shilp/image/upload/v1532451963/CA/checklist.jpg" alt="" style="width: 555px; height: 371px;">
+                <div class="wow fadeInLeft">
+
+                  <h2>Prerequisites</h2>
+                  <i class="ion-android-checkbox-outline" class="wow fadeInRight" data-wow-delay="0s" data-wow-duration="0.5s"></i>
+                  <p class="wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.5s">All applicants must be college/university students irrespective of their fields</p>
+                  <i class="ion-android-checkbox-outline wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.5s"></i>
+                  <p class="wow fadeInRight" data-wow-delay="0.4s" data-wow-duration="0.5s">Must be able to arrange, conduct meetings and should be able to handle the crowd</p>
+                  <i class="ion-android-checkbox-outline wow fadeInRight" data-wow-delay="0.4" data-wow-duration="0.5s"></i>
+                  <p class="wow fadeInRight" data-wow-delay="0.6s" data-wow-duration="0.5s">Should be thorough with their official procedures and Must be able to provide
+                  strong motivation</p>
+                  <i class="ion-android-checkbox-outline wow fadeInRight" data-wow-delay="0.6" data-wow-duration="0.5s"></i>
+                  <p class="wow fadeInRight" data-wow-delay="0.8s" data-wow-duration="0.5s">Capable of appreciably representing the views and policies of an ambassador during campaigns</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="features-row">
+          <div class="container">
+
+            <div class="row">
+              <div class="col-12">
+                <img class="advanced-feature-img-left" src="https://res.cloudinary.com/shilp/image/upload/v1532451942/CA/advanced-feature-2.jpg" alt="">
+                <div class="wow fadeInRight">
+                  <h2>Responsibilities </h2>
+                  <i class="ion-ios-chatboxes-outline" class="wow fadeInRight" data-wow-delay="0s" data-wow-duration="0.5s"></i>
+                  <p class="wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.5s">Creating brand awareness for Shilp 2018 in and around your campus.</p>
+                  <i class="ion-ios-color-filter-outline wow fadeInRight" data-wow-delay="0.2s" data-wow-duration="0.5s"></i>
+                  <p class="wow fadeInRight" data-wow-delay="0.4s" data-wow-duration="0.5s">Informing the students in your institute about our events and activities through various means.</p>
+                  <i class="ion-ios-paper-outline wow fadeInRight" data-wow-delay="0.4" data-wow-duration="0.5s"></i>
+                  <p class="wow fadeInRight" data-wow-delay="0.6s" data-wow-duration="0.5s">Putting up posters, flexes and any other promotional materials in your college.</p>
+                  <i class="ion-ios-camera-outline wow fadeInRight" data-wow-delay="0.6" data-wow-duration="0.5s"></i>
+                  <p class="wow fadeInRight" data-wow-delay="0.8s" data-wow-duration="0.5s">Submit photographs of the activities done in your college under CAP.</p>
+                  <i class="ion-ios-people-outline wow fadeInRight" data-wow-delay=".8" data-wow-duration="0.5s"></i>
+                  <p class="wow fadeInRight" data-wow-delay="1s" data-wow-duration="0.5s">Ensure maximum participation from your college under CAP.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+            <!--==========================
+      Pricing Section
+      ============================-->
+      <section id="pricing" class="section-bg">
+        <div class="container">
+
+          <div class="section-header">
+            <h3 class="section-title" style="font-style: normal; color: #111; font-size: 32px; font-weight: 400">Beneficiaries</h3>
+            <span class="section-divider"></span>
+          </div>
+
+          <div class="row">
+
+            <div class="col-lg-5 col-md-5 offset-md-1">
+              <div class="box wow fadeInLeft ">
+
+                <h4>7 or more Participants</h4>
+                <ul>
+                  <li><i class="ion-android-checkmark-circle"></i> Free registration to the events of SHILP’18</li>
+                  <li><i class="ion-android-checkmark-circle"></i> Free Accommodation</li>
+                  <li><i class="ion-android-checkmark-circle"></i> Shilp goodies</li>
+                  <li><i class="ion-android-checkmark-circle"></i> Guest Lectures Passes</li>
+                  <li><i class="ion-android-checkmark-circle"></i> Certificate of Merit</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="col-lg-5 col-md-5">
+              <div class="box wow fadeInRight">
+
+                <h4>10 or more Participants</h4>
+                <ul>
+                  <li><i class="ion-android-checkmark-circle"></i> Free registration to the events of SHILP’18</li>
+                  <li><i class="ion-android-checkmark-circle"></i> Free Accommodation</li>
+                  <li><i class="ion-android-checkmark-circle"></i> Shilp goodies</li>
+                  <li><i class="ion-android-checkmark-circle"></i> Guest Lectures Passes</li>
+                  <li><i class="ion-android-checkmark-circle"></i> Certificate of Merit</li>
+                  <li><i class="ion-android-checkmark-circle"></i> <b>Reimbursement of one way travel expense (Sleeper Class)</b></li>
+
+
+                </ul>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section><!-- #pricing -->
+
+    </section><!-- #advanced-features -->
+
+          <!--==========================
+      More Features Section
+      ============================-->
+      <section id="more-features" class="section-bg">
+        <div class="container">
+
+          <div class="section-header">
+            <h3 class="section-title">Ranking Criteria</h3>
+            <span class="section-divider"></span>
+
+          </div>
+
+          <div class="row">
+
+            <div class="col-lg-12">
+              <div class="box wow fadeInLeft">
+
+
+                <div class="row">
+                  <div class="col-lg-1">
+                    <div class="icon"><i class="ion-ios-stopwatch-outline"></i></div>
+                  </div>
+                  <div class="col-lg-11">
+                    <h4 class="title" style="margin-left: 0px;"><a href="">Rules</a></h4>
+                    <ul class="description">
+                      <li>Ranking will be done on the basis of total points earned</li>
+                      <li>Points will be allotted to particular task which will be communicated to all the
+                      contingents</li>
+
+                      <li>Campus ambassadors can check the leaderboard <a data-toggle="modal" data-target="#myModal" href="">HERE</a> </li></ul>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+
+              <div class="col-lg-12">
+                <div class="box wow fadeInLeft">
+
+
+                  <div class="row">
+                    <div class="col-lg-1">
+                      <div class="icon"><i class="ion-ios-medical-outline"></i></div>
+                    </div>
+                    <div class="col-lg-11">
+                      <h4 class="title" style="margin-left: 0px;"><a href="">Beneficiaries</a></h4>
+                      <ul class="description">
+                        <li>TOP-10 Campus Ambassadors will get certificate of Hon’ble mention</li>
+                        <li>TOP-3 Campus Ambassadors will get attractive prizes from SHILP’18</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+
+              <div class="col-lg-12">
+                <div class="box wow fadeInLeft">
+
+
+                  <div class="row">
+                    <div class="col-lg-1">
+                      <div class="icon"><i class="ion-ios-bookmarks-outline"></i></div>
+                    </div>
+                    <div class="col-lg-11">
+                      <h4 class="title" style="margin-left: 0px;"><a href="">Prerequisites</a></h4>
+                      <ul class="description">
+                        <li>To claim the beneficiaries of ranking criteria, the Campus Ambassadors need to
+                          claim at least <b>7</b> participation from their college</li>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </section><!-- #more-features -->
+
+    <!--==========================
+      Call To Action Section
+      ============================-->
+      <section id="call-to-action">
+
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-9 text-center text-lg-left">
+              <h3 class="cta-title">Well, what are you waiting for?</h3>
+              <p class="cta-text"> Be a part of this Engineering Extravaganza. You dream it, You design it, You build it, You test it!</div>
+                <div class="col-lg-3 cta-btn-container text-center">
+                  <a class="cta-btn align-middle" href="#">Register now</a>
+                </div>
+              </div>
+
+            </div>
+          </section><!-- #call-to-action -->
+
+
+
+
+
+
+    <!--==========================
+      Our Team Section
+      ============================-->
+      <section id="team" class="section-bg">
+
+        <div class="container">
+          <div class="section-header">
+            <h3 class="section-title">Contact Us</h3>
+            <span class="section-divider"></span>
+            
+          </div>
+          <div class="row wow fadeInUp">
+            <div class="col-lg-3 col-md-6 offset-lg-3">
+              <div class="member">
+                <div class="pic"><img src="http://res.cloudinary.com/shilp/image/upload/v1532424585/CA/DSC_1969.jpg" alt=""></div>
+                <h4>Shobhit Tiwari</h4>
+                <span>Publicity Head</span>
+                <div class="social">
+
+                  <a href="https://www.facebook.com/shobhit.tiwari.58910?ref=br_rs"><i class="ion-social-facebook"></i></a>
+                  
+                  <a href="https://www.linkedin.com/in/shobhit-tiwari-114997161/"><i class="ion-social-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+              <div class="member">
+                <div class="pic"><img src="https://res.cloudinary.com/shilp/image/upload/v1532424588/CA/Suman_Saurabh_Mishra.jpg" alt=""></div>
+                <h4>Suman Saurabh Mishra</h4>
+                <span>Publicity Head</span>
+                <div class="social">
+
+                  <a href="https://www.facebook.com/profile.php?id=100010244014969&ref=br_rs"><i class="ion-social-facebook"></i></a>
+                  
+                  
+                </div>
+              </div>
+            </div>
+
+
+          </div>
+
+
+        </div>
+      </section><!-- #team -->
+
+
+
+    <!--==========================
+      Contact Section
+      ============================-->
+      <section id="contact">
+
+        <div class="container">
+          <div class="row wow fadeInUp">
+
+            <div class="col-lg-4 col-md-4">
+              <div class="contact-about">
+                <h3>Shilp 2018</h3>
+                <p>Technical Fest of Civil Engineering Department,<br>
+                Indian Institute of Technology Varanasi</p>
+                <div class="social-links">
+                  <a href="http://www.shilpiitbhu.org/" class="facebook"><i class="ion-android-globe"></i></a>
+                  <a href="https://www.facebook.com/shilpiitbhu/" class="facebook"><i class="ion-social-facebook"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3 col-md-4">
+              <div class="info">
+
+                <div>
+                  <i class="ion-ios-location-outline"></i>
+                  <p>IIT(BHU)<br>Varanasi, 221005</p>
+                </div>
+
+                <div>
+                  <i class="ion-ios-email-outline"></i>
+                  <p>shilp@itbhu.ac.in</p>
+                </div>
+
+                <div>
+                  <i class="ion-ios-telephone-outline"></i>
+                  <p>9696358440</p>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="col-lg-5 col-md-8">
+              <div class="form">
+                <div id="sendmessage">Your message has been sent. Thank you!</div>
+                <div id="errormessage"></div>
+                <form action="{%url 'ca:postmessage'%}" method="post" role="form" class="contactForm">
+                  {%csrf_token%}
+                  <div class="form-row">
+                    <div class="form-group col-lg-6">
+                      <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                      <div class="validation"></div>
+                    </div>
+                    <div class="form-group col-lg-6">
+                      <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                      <div class="validation"></div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                    <div class="validation"></div>
+                  </div>
+                  <div class="form-group">
+                    <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+                    <div class="validation"></div>
+                  </div>
+                  <div class="text-center"><button type="submit" title="Send Message">Send Message</button></div>
+                </form>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section><!-- #contact -->
+
+    </main>
+
+    <div id="SuccessModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          
+          <div class="modal-body">
+          	<div class="row">
+          		<div class="col-lg-4 text-center">
+          			<i class="ion-ios-checkmark-outline" style="font-size: 5rem;"></i>
+          		</div>
+          		<div class="col-lg-8">
+          			<p>Congratulations! Your Registration was successful. <br> Please check your email for confirmation.</p>	
+          		</div>
+          	</div>
+
+          </div>
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+          
+        </div>
+
+      </div>
+    </div>
+
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog modal-lg">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Leaderboard</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            
+          </div>
+          <div class="modal-body">
+            <p>Ranking will be displayed here once we have chosen the ambassadors.</p>
+<!--             <div class="row">
+              <div class="col-lg-12">
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th> Rank </th>
+                      <th> name </th>
+                      <th> college </th>
+                      <th> points </th>
+
+
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {% for leader in leaderList  %}
+                    <tr>
+                      <td>
+                        {{forloop.counter}}
+                      </td>
+                      <td>
+                        {{leader.name}}
+                      </td>
+                      <td>
+                        {{leader.college}}
+                      </td>
+                      <td>
+                        {{leader.points}}
+                      </td>
+
+                    </tr>
+                    {% endfor %}
+                  </tbody>
+                </table>
+
+
+
+              </div>
+            </div> -->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  <!--==========================
+    Footer
+    ============================-->
+    
+
+    <a href="#" class="back-to-top"><i class="ion-chevron-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="{% static "ca/lib/jquery/jquery.min.js"%}"></script>
+    <script src="{% static "ca/lib/jquery/jquery-migrate.min.js"%}"></script>
+    <script src="{% static "ca/lib/bootstrap/js/bootstrap.bundle.min.js"%}"></script>
+    <script src="{% static "ca/lib/easing/easing.min.js"%}"></script>
+    <script src="{% static "ca/lib/wow/wow.min.js"%}"></script>
+    <script src="{% static "ca/lib/superfish/hoverIntent.js"%}"></script>
+    <script src="{% static "ca/lib/superfish/superfish.min.js"%}"></script>
+    <script src="{% static "ca/lib/magnific-popup/magnific-popup.min.js"%}"></script>
+
+    <!-- Contact Form JavaScript File -->
+    <script src="{% static "ca/contactform/contactform.js" %}"></script>
+
+    <!-- Template Main Javascript File -->
+    <script src="{% static "ca/js/main.js" %}"></script>
+
+
+{% if  checkreg %}
+  <script>
+  $("#SuccessModal").modal('show');
+  </script>
+  
+{% endif %}
+
+
+
+
+  </body>
+  </html>

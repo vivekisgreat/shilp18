@@ -1,0 +1,9 @@
+{% extends 'ca/base.html' %}
+
+{% block content %}
+    <h1>New CA</h1>
+    <form method="CA" class="ca-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+{% endblock %}

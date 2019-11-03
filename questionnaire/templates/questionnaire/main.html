@@ -1,0 +1,555 @@
+{% load static %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Questionnaire | Shilp 2018</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald" rel="stylesheet">
+  <link href="{% static 'main/normalize.min.css' %}" rel='stylesheet' type='text/css'>
+  <link rel="icon" type="image/ico" href="https://res.cloudinary.com/shilp/image/upload/v1536338292/mobile/Asset.png"/ media="none" onload="if(media!='all')media='all'">
+
+  <link href="{% static 'main/main.css' %}" type="text/css" rel="stylesheet">
+
+</head>
+<body>
+  <div class="navbar" style="display: flex; align-items: center; justify-content: space-between; max-height: 10vh; flex-wrap: nowrap;">
+    <div id="logo" style="display: flex; align-items: center; justify-content: space-between; padding-left: 10px;">
+      <img src="https://res.cloudinary.com/shilp/image/upload/v1536338292/mobile/Asset.png" style=" max-width: 60px; height: auto;  ">
+      <span style="font-size:1.8rem; color:white; padding-left: 10px; font-family: 'Oswald', sans-serif; font-weight: 700; letter-spacing: 5px;">SHILP</span>
+    </div>
+    <div id="container-log-out">
+      <a id="log-out" href="/logout" style="text-decoration: none;">
+        <img src="{% static 'main/power.png' %}" style=" max-width: 20px; height: auto; transform: translateY(22%);"> 
+        <span style="padding-left: 5px; padding-right: 10px;">LOG OUT</span>
+      </a>
+    </div>
+  </div>
+  
+  <div id="main-body" style="display: flex; flex-wrap: nowrap;">
+
+    <div id="mySidenav" class="sidenav desktop">
+      <ul style="list-style:none; padding-left: 0px;">
+        <li id="q-nav-1" data-q="1" onclick="sendAnswer(this);"><a href="#">1</a></li>
+        <li id="q-nav-2" data-q="2" onclick="sendAnswer(this);"><a href="#">2</a></li>
+        <li id="q-nav-3" data-q="3" onclick="sendAnswer(this);"><a href="#">3</a></li>
+        <li id="q-nav-4" data-q="4" onclick="sendAnswer(this);"><a href="#">4</a></li>
+        <li id="q-nav-5" data-q="5" onclick="sendAnswer(this);"><a href="#">5</a></li>
+        <li id="q-nav-6" data-q="6" onclick="sendAnswer(this);"><a href="#">6</a></li>
+        <li id="q-nav-7" data-q="7" onclick="sendAnswer(this);"><a href="#">7</a></li>
+        <li id="q-nav-8" data-q="8" onclick="sendAnswer(this);"><a href="#">8</a></li>
+        <li id="q-nav-9" data-q="9" onclick="sendAnswer(this);"><a href="#">9</a></li>
+        <li id="q-nav-10" data-q="10" onclick="sendAnswer(this);"><a href="#">10</a></li>
+      </ul>
+    </div>
+
+    <div id="mobileSidenav" class="sidenav mobile" onclick="closeNav()"style="" >
+      <div style="width: 66%; background-color: #111;">
+        <a href="javascript:void(0)" id="close-btn" onclick="closeNav()" style="margin-bottom: 3%; margin-top: 0; border: 0px; font-size: 4rem; ">&#x2716;</a>
+        <ul style="list-style:none; padding-left: 0px; margin-bottom: 0px; padding-bottom: 15px;">
+          <li id="q-nav-m-1" data-q="1" onclick="sendAnswer(this);"><a href="#">Question 1</a></li>
+          <li id="q-nav-m-2" data-q="2" onclick="sendAnswer(this);"><a href="#">Question 2</a></li>
+          <li id="q-nav-m-3" data-q="3" onclick="sendAnswer(this);"><a href="#">Question 3</a></li>
+          <li id="q-nav-m-4" data-q="4" onclick="sendAnswer(this);"><a href="#">Question 4</a></li>
+          <li id="q-nav-m-5" data-q="5" onclick="sendAnswer(this);"><a href="#">Question 5</a></li>
+          <li id="q-nav-m-6" data-q="6" onclick="sendAnswer(this);"><a href="#">Question 6</a></li>
+          <li id="q-nav-m-7" data-q="7" onclick="sendAnswer(this);"><a href="#">Question 7</a></li>
+          <li id="q-nav-m-8" data-q="8" onclick="sendAnswer(this);"><a href="#">Question 8</a></li>
+          <li id="q-nav-m-9" data-q="9" onclick="sendAnswer(this);"><a href="#">Question 9</a></li>
+          <li id="q-nav-m-10" data-q="10" onclick="sendAnswer(this);" style="margin-bottom: 0px"><a href="#">Question 10</a></li>
+        </ul>
+      </div>
+    </div>
+
+
+
+    <div id="main-content" style="background-image: url(https://res.cloudinary.com/shilp/image/upload/v1537728413/what-the-hex-min.png); background-repeat: repeat; width: 100%; min-height: 100vh;">
+
+      <div class="second-navbar" style="">
+        <!-- DESKTOP -->
+        <div id="nav-btn" onclick="toggleNav()" class="desktop sidenav-btn">
+          <img src="{% static 'main/right-arrow.png' %}" id="right-arrow" style="padding: 0px 5px; transition: transform .5s ease-out"> 
+
+          Questions
+        </div>
+        <!-- MOBILE -->
+        <div id="nav-btn-mob" onclick="openNav()" class="mobile sidenav-btn" > 
+          <img src="{% static 'main/right-arrow.png' %}" id="right-arrow" style="padding-right: 5px;"> 
+          Questions
+        </div>
+        <div >
+          <div class="timer" id="main-timer">
+          </div>
+        </div> 
+      </div>
+
+      <br><br>
+      <div id="main" class="main" style="width: 100%;">
+        <div id="footer">
+          <button id="instruction-btn" class="footer-btn" onclick="document.getElementById(this.getAttribute('modal-id')).style.display='block';" modal-id="gen-instructions" style="padding: 1%">General Instructions</button>
+          <button id="help-btn" class="footer-btn" onclick="document.getElementById(this.getAttribute('modal-id')).style.display='block';" modal-id="help" style="padding: 1%">Help</button>
+        </div>
+
+        {% if start_timer != 0 %}
+        <div class="general-card" style="" id="final-submit-card">
+
+          <br>
+          <h2 >General Instructions</h2>
+
+        <p>All questions have only one correct answer</p>
+        <p>There is no negative marking</p>
+        <p>All questions have equal weightage</p>
+        <p>Your answers will be saved automatically.The questions in the question tab turn green on succesful submission.</p>
+        <p><b>Please click on "Final Submission" only after completing the quiz.<b></p>
+          
+          <h2 >Please wait. The Quiz will begin automatically in</h2>
+          <br>
+          <div style="">
+            <div class="timer" id="start-timer">
+            </div>
+          </div> 
+          
+          
+        </div>
+        {% else %}
+
+        {% if end_timer != 0 %}
+        <div id="question-card" class="general-card" style="text-align: center;">
+          <br>
+          <h2><u>Question #<span id="q-no" data-uid=" " data-q="1">1</span></u></h2>
+          <p style="padding: 0 5%; font-family: 'Montserrat',sans-serif;" id="q-text"></p>
+          <br>
+          <form >
+            <div id="options-wrapper">
+              <div class="option">
+                <input type="radio" name="answer" value="1"><span class="options"></span>
+              </div>
+              <div class="option">
+                <input type="radio" name="answer" value="2"><span class="options"></span>
+              </div>
+              <div class="option">
+                <input type="radio" name="answer" value="3"><span class="options"></span>
+              </div>
+              <div class="option">
+                <input type="radio" name="answer" value="4"><span class="options"></span>
+              </div>
+              <div class="option" style="background:unset; display: flex;    justify-content: center;">
+                  <div  id="uncheck"  class="question-btn" onclick="uncheck();" style="">
+                    <a href="#" style="color: inherit; ">Uncheck</a>
+                  </div>
+              </div>
+
+            </div>
+
+
+          </form>
+          <div class="btns-wrapper">
+            <div  id="prev" class="question-btn" data-q="1" onclick="sendAnswer(this);">
+              <a href="#" style="font-size: inherit; color: inherit;"> &lt; Previous</a>
+            </div>
+            <div  id="next"  class="question-btn" data-q="2" onclick="sendAnswer(this);">
+              <a style="font-size: inherit; color: inherit;" href="#">Next &gt;</a>
+            </div>
+
+          </div>
+          <div  onclick="sendAnswer(this)" id="final-btn" class="question-btn" data-q="100" style="">
+            <a href="#" style="font-size: inherit; color: inherit;">Final Submission</a>
+          </div>
+        </div>
+        
+        <div class="general-card" style="display: none;" id="final-submit-card">
+
+          <br>
+          <h2 >Final Submission. Changes cannot be made once you click 'OK'.</h2>
+          <br>
+          <div class="btns-wrapper">
+            <div onclick="changeQuestion('1')"  id="third" class="question-btn" >
+              <a href="#" style="font-size: inherit; color: inherit;">Go Back</a>
+            </div>
+            <div id="fourth" onclick="finalSubmit()" class="question-btn" >
+              <a href="#"  style="font-size: inherit; color: inherit;">OK</a>
+            </div>
+          </div>
+          
+        </div>
+        <br><br>
+        
+        {% else %}
+        <div class="general-card" style="margin-bottom: 5%" id="complete-card" >
+
+          <br>
+          <h2 style="padding: 0 3%;">Quiz has Ended. Results will be announced within this week. See you at the Finals</h2>
+          <br>
+          
+          
+        </div>
+        {% endif %}
+
+        {% endif %}
+
+        
+        
+      </div>
+      
+    </div>
+
+  </div>
+  
+
+  <!-- The Modal -->
+  <div id="gen-instructions" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close" onclick="document.getElementById(this.getAttribute('modal-id')).style.display='none';" modal-id="gen-instructions">&times;</span>
+        <h2>General Instructions</h2>
+      </div>
+      <div class="modal-body">
+        <p>All questions have only one correct answer</p>
+        <p>There is no negative marking</p>
+        <p>All questions have equal weightage</p>
+        <p>Your answers will be saved automatically.The questions in the question tab turn green on succesful submission.</p>
+        <p><b>Please click on "Final Submission" only after completing the quiz.<b></p>
+      </div>
+    </div>
+
+  </div>
+  <div id="help" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close" onclick="document.getElementById(this.getAttribute('modal-id')).style.display='none';" modal-id="help">&times;</span>
+        <h2>Help</h2>
+      </div>
+      <div class="modal-body">
+        <p>Please Mention Your Email Id or Team Id while contacting </p>
+        <p>Vivek - +91 8847001367</p>
+        <p>Sakir Khan - +91 9072868657</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script async>
+    function openNav() {
+      document.getElementById("mobileSidenav").style.width = "100%";
+
+    }
+
+    function closeNav() {
+      document.getElementById("mobileSidenav").style.width = "0";
+
+    }
+
+    function toggleNav() {
+      sidenav=document.getElementById("mySidenav");
+      if (sidenav.classList.contains("collapsed")===false){
+        sidenav.classList.add("collapsed");
+        document.getElementById("right-arrow").style.transform = "rotate(-180deg)";
+      }
+      else {
+        sidenav.classList.remove("collapsed");
+        document.getElementById("right-arrow").style.transform = "rotate(0deg)";
+      }
+    }
+
+    function showFinal() {
+      document.getElementById('final-submit-card').style.display="block";
+      document.getElementById('question-card').style.display="none";
+      // body...
+    }
+
+  </script>
+
+  <!-- MODAL SCRIPT -->
+  <script type="text/javascript" async="">
+    window.onclick = function(event) {
+      modals=document.getElementsByClassName('modal');
+      for (var i = 0; i < modals.length; i++) {
+        if(event.target == modals[i]){
+          modals[i].style.display='none';
+        }
+      }
+    }
+  </script>
+
+  {% if start_timer != 0 %}
+  <!-- For initial timer -->
+  <script type="text/javascript">
+
+// Set the date we're counting down to
+// var countDownDate = new Date().getTime()+1000*30*60;
+
+var distance={{start_timer}};
+
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+
+  // Find the distance between now and the count down date
+
+  distance=distance-1000;
+  
+
+  // Time calculations for days, hours, minutes and seconds
+
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Output the result in an element with id="timer"
+  document.getElementById("start-timer").innerHTML = hours + "h "+ minutes + "m " + seconds + "s ";
+
+  // If the count down is over, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("start-timer").style.opacity = ".6";
+    document.getElementById("start-timer").innerHTML = "Initializing...";
+    document.location.reload(true);
+  }
+}, 1000);
+
+
+</script>
+
+<script type="text/javascript">
+  function sendAnswer(button){
+    alert('Sorry. This action is forbidden at the moment.')
+  }
+</script>
+
+
+{% else %}
+
+{% if end_timer != 0 %}
+
+<script type="text/javascript" >
+
+
+  
+    Questions = {{ questionList|safe }} ;
+
+
+
+  function changeQuestion(question_no) {
+    question_no=parseInt(question_no);
+
+    if(question_no<=Questions.length){
+
+      document.getElementById('final-submit-card').style.display="none";
+      document.getElementById('question-card').style.display="block";
+
+      curr_q=document.getElementById('q-no').getAttribute('data-q')
+      document.getElementById('q-nav-'+curr_q).firstChild.classList.remove('selected');
+      document.getElementById('q-nav-m-'+curr_q).firstChild.classList.remove('selected');
+
+      
+
+      document.getElementById('q-no').innerHTML=question_no.toString();
+      document.getElementById('q-no').setAttribute('data-q',question_no.toString());
+      document.getElementById('q-no').setAttribute('data-uid',Questions[question_no-1].id);
+      
+
+      document.getElementById('q-text').innerHTML=Questions[question_no-1].question;
+
+      options=document.getElementsByClassName('options');
+
+        Array.from(options).forEach(function (option,index){    //Convert to array
+          option.innerHTML=Questions[question_no-1].options[index];
+        })
+        answer=document.querySelectorAll('input[name="answer"]')
+        
+        for (var i = 0; i < answer.length; i++) {
+
+          if(answer[i].value === Questions[question_no-1].ans)
+            answer[i].checked=true;
+          else
+            answer[i].checked = false;
+
+        }
+
+
+        document.getElementById('q-nav-'+question_no.toString()).firstChild.classList.remove('correct');
+        document.getElementById('q-nav-m-'+question_no.toString()).firstChild.classList.remove('correct');
+        document.getElementById('q-nav-'+question_no.toString()).firstChild.classList.add('selected');
+        document.getElementById('q-nav-m-'+question_no.toString()).firstChild.classList.add('selected');
+        
+        if(question_no===1){
+          document.getElementById('prev').style.visibility="hidden";
+          document.getElementById('next').style.visibility="visible";
+
+
+          document.getElementById('next').setAttribute('data-q',(question_no+1).toString());
+        }
+        else if(question_no===Questions.length){
+          document.getElementById('prev').style.visibility="visible";
+          document.getElementById('next').style.visibility="hidden";
+
+          document.getElementById('prev').setAttribute('data-q',(question_no-1).toString());
+
+        }
+        else {
+          document.getElementById('prev').style.visibility="visible";
+          document.getElementById('next').style.visibility="visible";
+
+          document.getElementById('next').setAttribute('data-q',(question_no+1).toString());
+          document.getElementById('prev').setAttribute('data-q',(question_no-1).toString());
+
+        }
+      }
+      else{
+        showFinal();
+      }
+    }
+
+    function sendAnswer(button){
+      q_id=document.getElementById('q-no').getAttribute('data-uid');
+      q_no=document.getElementById('q-no').getAttribute('data-q');
+      if(document.querySelector('input[name="answer"]:checked')==null){
+        q_ans=0;
+
+      }
+      else{
+        q_ans=document.querySelector('input[name="answer"]:checked').value;
+
+      }
+      Questions[Number(q_no)-1].ans=q_ans.toString();
+      ajax_dict={'q_id':q_id,'q_ans':q_ans};
+
+      var xhttp = new XMLHttpRequest();
+      
+      xhttp.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+          ansSubmitted();
+          changeQuestion(button.getAttribute('data-q'));
+          
+          //alert(this.responseText);
+
+        }
+        //else {
+          //alert(this.status);
+        //alert("Error has occured, please try again or refresh your page");
+        //}
+      };
+      xhttp.open("POST", "/questionnaire/anssubmit_ajax", true);
+      xhttp.setRequestHeader('Content-Type', 'application/json');
+      xhttp.setRequestHeader('X-CSRFToken','{{csrf_token}}');
+
+      xhttp.send(JSON.stringify(ajax_dict));
+    }
+
+    function uncheck() {
+      radio=document.querySelectorAll('input[name="answer"]:checked')
+      if (radio.length>0) {
+        radio[0].checked=false;
+      }
+    }
+
+    function ansSubmitted() {
+      for (var i = 1; i <= Questions.length; i++) {
+        if(Number(Questions[i-1].ans)===0){
+        document.getElementById('q-nav-'+i.toString()).firstChild.classList.remove('correct');
+        document.getElementById('q-nav-m-'+i.toString()).firstChild.classList.remove('correct');
+        }
+        else{
+        document.getElementById('q-nav-'+i.toString()).firstChild.classList.add('correct');
+        document.getElementById('q-nav-m-'+i.toString()).firstChild.classList.add('correct');
+        }
+      }
+      // body...
+    }
+
+    function finalSubmit(argument) {
+      ajax_dict={'q_id':-1,'q_ans':-1};
+      var xhttp = new XMLHttpRequest();
+        
+        xhttp.onreadystatechange = function() {
+          if (this.readyState == 4 && this.status == 200) {
+
+        document.location.reload(true);
+          }
+          //else {
+            //alert(this.status);
+          //alert("Error has occured, please try again or refresh your page");
+          //}
+        };
+        xhttp.open("POST", "/questionnaire/anssubmit_ajax", true);
+        xhttp.setRequestHeader('Content-Type', 'application/json');
+        xhttp.setRequestHeader('X-CSRFToken','{{csrf_token}}');
+
+        xhttp.send(JSON.stringify(ajax_dict));
+
+      }
+
+      ansSubmitted();
+    changeQuestion('1');
+
+
+
+  
+  </script>
+
+
+
+
+
+
+  <!-- For main timer -->
+  <script type="text/javascript" >
+
+// Set the date we're counting down to
+
+var distance={{end_timer}};
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+
+  // Find the distance between now and the count down date
+
+  distance = distance-1000;
+
+  // Time calculations for days, hours, minutes and seconds
+
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Output the result in an element with id="timer"
+  document.getElementById("main-timer").innerHTML = hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is over, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("main-timer").style.opacity = ".6";
+    document.getElementById("main-timer").innerHTML = "Ending...";
+    document.location.reload(true);
+  }
+}, 1000);
+
+</script>
+
+{% else %}
+
+<script type="text/javascript">
+  function sendAnswer(button){
+    alert('Sorry. This action is forbidden at the moment.')
+  }
+</script>
+
+{% endif %}
+
+{% endif %}
+
+
+
+
+</body>
+</html>

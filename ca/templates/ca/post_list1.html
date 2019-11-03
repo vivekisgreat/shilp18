@@ -1,0 +1,86 @@
+{% extends 'ca/base.html' %}
+{% load staticfiles %}
+<html>
+    <head>
+        <title>campus ambassador</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="{% static 'css/ca.css' %}">
+    </head>
+    <body>
+
+
+        <div>
+            <h1><a href="/">DIVYANSHU</a></h1>
+        </div>
+                <h1><a href="{% url 'post_detail' pk=ca.pk %}">{{ ca.name }}</a></h1>
+       
+        {% block content %}
+
+        {% for ca in cas %}
+            <div>
+                
+                <h1><a href="">{{ ca.name }}</a></h1>
+                <p>{{ ca.email|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
+        
+       {% endblock %}
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

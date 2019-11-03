@@ -1,0 +1,1682 @@
+{% load static %}
+{% load staticfiles %}
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<title>
+		SHILP 2018 | IIT BHU Varanasi
+	</title>
+
+	<!-------------------------------------------------------------------------------------meta tags-------------------------------------------------------------------------------------------------------->
+	<meta name="language" 				   content="en-us" />
+	<meta name="description" 			   content="Shilp is the Annual Fest of Civil Engineering IIT (BHU) Varanasi ">
+	<meta http-equiv="Content-Type" 	   content="text/html; charset=UTF-8">
+	<meta name="keywords" 				   content="shilp18,shilp2018,Shilp, Shilp 2018, Civil Engineering, IIT (BHU), IIT">
+	<meta name="distribution" 			   content="Global" />
+	<meta name="rating" 				   content="General" />
+	<meta name="author" 				   content="Shilp Tech Team" >
+
+	<!----------------------------------------------------------------------------------------- open graph meta tags---------------------------------------------------------------------------------------->
+	<meta property="og:url"                content="http://shilpiitbhu.org/" />
+	<meta property="og:title"              content="Shilp 2018" />
+	<meta property="og:description"        content="Shilp is the Annual Fest of Civil Engineering IIT (BHU) Varanasi" />
+	<meta property="og:image"              content="https://res.cloudinary.com/shilp/image/upload/v1527310423/background.jpg" />
+	<meta property="og:type" 			   content="website">
+
+
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	<link rel="icon" type="image/ico" href="https://res.cloudinary.com/shilp/image/upload/v1536338292/mobile/Asset.png"/ media="none" onload="if(media!='all')media='all'">
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700" rel="stylesheet" type="text/css" media="none" onload="if(media!='all')media='all'">
+	<link rel="stylesheet" type="text/css" href="{% static "index/main.css" %}">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="{% static "index/hexagons.css" %}" media="none" onload="if(media!='all')media='all'">
+    <!--[if lt IE 10]>
+    <link rel="stylesheet" href="/css/pages/style-ie9-d986b2abbdca6b37ecf9b38f132b73e8.css">
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="{% static "index/main1.css" %}" media="none" onload="if(media!='all')media='all'">
+<!---------------------------------------links for icons------------------------------------------------------------------------------------------->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" media="none" onload="if(media!='all')media='all'">
+
+
+    	<style type="text/css">
+    	.hexLink img {
+    		position: absolute;
+
+    	}
+
+    	.hexLink h1{
+    		margin-bottom: 0px;
+    		padding-bottom: 0px;
+    		font-size: 1.5rem;
+    		bottom: 45%;
+    	}
+    </style>
+    <style type="text/css">
+    /* Firefox old*/
+@-moz-keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:.6;
+    }
+    100% {
+        opacity:1;
+    }
+} 
+
+@-webkit-keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:.6;
+    }
+    100% {
+        opacity:1;
+    }
+}
+/* IE */
+@-ms-keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:.6;
+    }
+    100% {
+        opacity:1;
+    }
+} 
+/* Opera and prob css3 final iteration */
+@keyframes blink {
+    0% {
+        opacity:1;
+    }
+    50% {
+        opacity:.6;
+    }
+    100% {
+        opacity:1;
+    }
+} 
+.blink-image {
+    -moz-animation: blink normal 2.5s infinite ease-in-out; /* Firefox */
+    -webkit-animation: blink normal 2.5s infinite ease-in-out; /* Webkit */
+    -ms-animation: blink normal 2.5s infinite ease-in-out; /* IE */
+    animation: blink normal 2.5s infinite ease-in-out; /* Opera and prob css3 final iteration */
+}
+
+#register-div:hover, #register-div:active{
+	filter: brightness(70%);
+}
+
+    @media only screen and (min-width: 426px) {
+    	#landing{
+
+    		background-image: url("https://res.cloudinary.com/shilp/image/upload/v1536401530/home2.jpg");
+    		background-repeat: no-repeat;
+    		background-size: cover;
+    		background-position: center top;
+    		height: 98vh;
+
+
+    	}
+
+    	#register-div {
+    		top: 80vh;
+    		transform: translateY(-5px);
+    	}
+
+    	#register-div img{
+    		max-width: 25%;
+    	}
+
+    	.hexLink h1{
+    		font-size: 1.5rem;
+    	}
+
+    }
+
+    @media only screen and (max-width: 425px) {
+    	#landing{
+
+    		background-image: url("https://res.cloudinary.com/shilp/image/upload/v1536401530/home2.jpg");
+    		background-repeat: no-repeat;
+    		background-size: cover;
+    		background-position: center top;
+    		height: 105vh;
+
+    	}
+
+    	#register-div {
+    		top: 80vh;
+    	}
+
+    	#register-div img{
+    		max-width: 75%;
+    	}
+
+    	.hexLink h1{
+    		font-size: 1rem;
+    	}	
+    }
+
+
+</style>
+
+<style type="text/css">
+.banner:active, .banner:hover {
+	filter: brightness(70%);
+}
+</style>
+
+<style type="text/css">
+
+html,body
+{
+	overflow-x: hidden; 
+}
+
+
+
+
+
+
+.global-template h1,
+.global-template h2,
+.global-template h3,
+.global-template h4,
+.global-template h5 {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.global-template h2 {
+	color: #1565c0
+}
+
+.global-template h1 {
+	color: #ffffff
+}
+
+.global-template p {
+	color: #b0b0b0
+}
+
+.global-template ul {
+	color: #b0b0b0
+}
+
+.global-template ol {
+	color: #b0b0b0
+}
+.custom-font {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.color-0,
+.color-0.custom-color {
+	color: #1565c0;
+}
+
+.color-0-background,
+.color-0-background.custom-color {
+	background-color: #1565c0;
+}
+
+.color-0-hover-opacity:hover,
+.color-0-hover-opacity.custom-color:hover {
+	background-color: rgba(254, 209, 54, 0.8)
+}
+
+.color-0-border,
+.color-0-border.custom-color {
+	border-color: #1565c0;
+}
+
+.color-0-border-important,
+.color-0-border-important.custom-color {
+	border-color: #1565c0;
+}
+
+.color-0-hover:hover,
+.color-0-hover.custom-color:hover {
+	color: #1565c0;
+}
+
+.color-1,
+.dropdown-menu > li > a.color-1,
+.color-1.custom-color,
+.dropdown-menu > li > a.color-1.custom-color {
+	color: #1565c0;
+}
+
+.color-1-background,
+.color-1-background.custom-color {
+	background-color: #1565c0;
+}
+
+.color-1-hover-opacity:hover,
+.color-1-hover-opacity.custom-color:hover {
+	background-color: rgba(254, 209, 54, 0.8)
+}
+
+.color-1-background-opacity,
+.color-1-background-opacity.custom-color {
+	background-color: rgba(254, 209, 54, 0.2);
+}
+
+.color-1-border,
+.color-1-border.custom-color {
+	border-color: #1565c0;
+}
+
+.color-1-border-important,
+.color-1-border-important.custom-color {
+	border-color: #1565c0;
+}
+
+.color-1-selected.selected,
+.color-1-selected.custom-color.selected,
+.dropdown-menu > li > a.color-1,
+.dropdown-menu > li > a.color-1.custom-color {
+	color: #1565c0;
+}
+
+.color-1-hover:hover,
+.color-1-hover.custom-color:hover,
+.dropdown-menu > li > a.color-1-hover:hover,
+.dropdown-menu > li > a.color-1-hover.custom-color:hover {
+	color: #1565c0;
+}
+
+.me-menu-button:hover i {
+	color: #1565c0;
+}
+
+.color-2,
+.color-2.custom-color,
+.dropdown-menu > li > a.color-2,
+.dropdown-menu > li > a.color-2.custom-color {
+	color: #121212;
+}
+
+.color-2-background,
+.color-2-background.custom-color {
+	background-color: #121212;
+}
+
+.color-2-selected.selected,
+.color-2-selected.custom-color.selected,
+.dropdown-menu > li > a.color-2-selected.selected,
+.dropdown-menu > li > a.color-2-selected.custom-color.selected {
+	color: #121212;
+}
+
+.color-2-border,
+.color-2-border.custom-color {
+	border-color: #121212;
+}
+
+.color-3,
+.color-3.custom-color,
+.color-3-selected.selected,
+.color-3-selected.custom-color.selected,
+.dropdown-menu > li > a.color-3,
+.dropdown-menu > li > a.color-3.custom-color {
+	color: #b0b0b0;
+}
+
+.color-3-background,
+.color-3-background.custom-color,
+.color-3-background-selected.selected,
+.color-3-background-selected.custom-color.selected {
+	background-color: #b0b0b0;;
+}
+
+.color-3-border,
+.color-3-border.custom-color {
+	border-color: #b0b0b0;
+}
+
+.color-4,
+.color-4.custom-color {
+	color: #f2f2f2;
+}
+
+.color-4-background,
+.color-4-background.custom-color {
+	background-color: #f2f2f2;
+}
+
+.color-4-border,
+.color-4-border.custom-color {
+	border-color: #f2f2f2;
+}
+
+.color-4-left-triangle:before,
+.color-4-left-triangle.custom-color:before {
+	border-color: transparent;
+	border-top-color: #f2f2f2;
+}
+
+.color-4-left-triangle:after,
+.color-4-left-triangle.custom-color:after {
+	border-color: transparent;
+	border-left-color: #f2f2f2;
+}
+
+.color-4-right-triangle:before,
+.color-4-right-triangle.custom-color:before {
+	border-color: transparent;
+	border-bottom-color: #f2f2f2;
+}
+
+.color-4-right-triangle:after,
+.color-4-right-triangle.custom-color:after {
+	border-color: transparent;
+	border-right-color: #f2f2f2;
+}
+
+.color-5,
+.color-5.custom-color,
+.dropdown-menu > li > a.color-5,
+.dropdown-menu > li > a.color-5.custom-color {
+	color: #ffffff;
+}
+
+.color-5-background,
+.color-5-background.custom-color {
+	background-color: #ffffff;
+}
+
+.color-5-border,
+.color-5-border.custom-color {
+	border-color: #ffffff;
+}
+
+.color-5-background-opacity,
+.color-5-background-opacity.custom-color {
+	background-color: rgba(255, 255, 255, 0.85)
+}
+
+.color-5-left-triangle:before,
+.color-5-left-triangle.custom-color:before {
+	border-color: transparent;
+	border-top-color: #ffffff;
+}
+
+.color-5-left-triangle:after,
+.color-5-left-triangle.custom-color:after {
+	border-color: transparent;
+	border-left-color: #ffffff;
+}
+
+.color-5-right-triangle:before,
+.color-5-right-triangle.custom-color:before {
+	border-color: transparent;
+	border-bottom-color: #ffffff;
+}
+
+.color-5-right-triangle:after,
+.color-5-right-triangle.custom-color:after {
+	border-color: transparent;
+	border-right-color: #ffffff;
+}
+
+.widget-main-view,
+.ticket-form label:not(.error),
+.ticket-form h2,
+.ticket-form h5,
+.registration-footer label:not(.error) {
+	color: #b0b0b0;
+}
+
+.navColors .color-0,
+.navColors .color-0.custom-color {
+	color: #000000;
+}
+
+.navColors .color-0-background,
+.navColors .color-0-background.custom-color {
+	background-color: #000000;
+}
+
+.navColors .color-0-hover-opacity:hover,
+.navColors .color-0-hover-opacity.custom-color:hover {
+	background-color: rgba(0, 0, 0, 0.8)
+}
+
+.navColors .color-0-border,
+.navColors .color-0-border.custom-color {
+	border-color: #000000;
+}
+
+.navColors .color-0-border-important,
+.navColors .color-0-border-important.custom-color {
+	border-color: #000000;
+}
+
+.navColors .color-0-hover:hover,
+.navColors .color-0-hover.custom-color:hover {
+	color: #000000;
+}
+
+.navColors .color-1,
+.navColors .dropdown-menu > li > a.color-1,
+.navColors .color-1.custom-color,
+.navColors .dropdown-menu > li > a.color-1.custom-color {
+	color: #000000;
+}
+
+.navColors .color-1-background,
+.navColors .color-1-background.custom-color {
+	background-color: #000000;
+}
+
+.navColors .color-1-hover-opacity:hover,
+.navColors .color-1-hover-opacity.custom-color:hover {
+	background-color: rgba(0, 0, 0, 0.8)
+}
+
+.navColors .color-1-background-opacity,
+.navColors .color-1-background-opacity.custom-color {
+	background-color: rgba(0, 0, 0, 0.2);
+}
+
+.navColors .color-1-border,
+.navColors .color-1-border.custom-color {
+	border-color: #1565c0;
+}
+
+.navColors .color-1-border-important,
+.navColors .color-1-border-important.custom-color {
+	border-color: #000000;
+}
+
+.navColors .color-1-selected.selected,
+.navColors .color-1-selected.custom-color.selected,
+.navColors .dropdown-menu > li > a.color-1,
+.navColors .dropdown-menu > li > a.color-1.custom-color {
+	color: #1565c0;
+}
+
+.navColors .color-1-hover:hover,
+.navColors .color-1-hover.custom-color:hover,
+.navColors .dropdown-menu > li > a.color-1-hover:hover,
+.navColors .dropdown-menu > li > a.color-1-hover.custom-color:hover {
+	color: #1565c0;
+}
+
+.navColors .me-menu-button:hover i {
+	color: #000000;
+}
+
+.navColors .color-2,
+.navColors .color-2.custom-color,
+.navColors .dropdown-menu > li > a.color-2,
+.navColors .dropdown-menu > li > a.color-2.custom-color {
+	color: #ffffff;
+}
+
+.navColors .color-2-background,
+.navColors .color-2-background.custom-color {
+	background-color: #ffffff;
+}
+
+.navColors .color-2-selected.selected,
+.navColors .color-2-selected.custom-color.selected,
+.navColors .dropdown-menu > li > a.color-2-selected.selected,
+.navColors .dropdown-menu > li > a.color-2-selected.custom-color.selected {
+	color: #ffffff;
+}
+
+.navColors .color-2-border,
+.navColors .color-2-border.custom-color {
+	border-color: #ffffff;
+}
+
+.navColors .color-3,
+.navColors .color-3.custom-color,
+.navColors .color-3-selected.selected,
+.navColors .color-3-selected.custom-color.selected,
+.navColors .dropdown-menu > li > a.color-3,
+.navColors .dropdown-menu > li > a.color-3.custom-color {
+	color: #000000;
+}
+
+.navColors .color-3-background,
+.navColors .color-3-background.custom-color,
+.navColors .color-3-background-selected.selected,
+.navColors .color-3-background-selected.custom-color.selected {
+	background-color: #000000;;
+}
+
+.navColors .color-3-border,
+.navColors .color-3-border.custom-color {
+	border-color: #000000;
+}
+
+.navColors .color-4,
+.navColors .color-4.custom-color {
+	color: #fccd00;
+}
+
+.navColors .color-4-background,
+.navColors .color-4-background.custom-color {
+	background-color: #fccd00;
+}
+
+.navColors .color-4-border,
+.navColors .color-4-border.custom-color {
+	border-color: #fccd00;
+}
+
+.navColors .color-4-left-triangle:before,
+.navColors .color-4-left-triangle.custom-color:before {
+	border-color: transparent;
+	border-top-color: #fccd00;
+}
+
+.navColors .color-4-left-triangle:after,
+.navColors .color-4-left-triangle.custom-color:after {
+	border-color: transparent;
+	border-left-color: #fccd00;
+}
+
+.navColors .color-4-right-triangle:before,
+.navColors .color-4-right-triangle.custom-color:before {
+	border-color: transparent;
+	border-bottom-color: #fccd00;
+}
+
+.navColors .color-4-right-triangle:after,
+.navColors .color-4-right-triangle.custom-color:after {
+	border-color: transparent;
+	border-right-color: #fccd00;
+}
+
+.navColors .color-5,
+.navColors .color-5.custom-color,
+.navColors .dropdown-menu > li > a.color-5,
+.navColors .dropdown-menu > li > a.color-5.custom-color {
+	color: #000000;
+}
+
+.navColors .color-5-background,
+.navColors .color-5-background.custom-color {
+	background-color: #1565c0;
+}
+
+.navColors .color-5-border,
+.navColors .color-5-border.custom-color {
+	border-color: #1565c0;
+}
+
+.navColors .color-5-background-opacity,
+.navColors .color-5-background-opacity.custom-color {
+	background-color: rgba(255, 205, 0, 0.85)
+}
+
+.navColors .color-5-left-triangle:before,
+.navColors .color-5-left-triangle.custom-color:before {
+	border-color: transparent;
+	border-top-color: #1565c0;
+}
+
+.navColors .color-5-left-triangle:after,
+.navColors .color-5-left-triangle.custom-color:after {
+	border-color: transparent;
+	border-left-color: #1565c0;
+}
+
+.navColors .color-5-right-triangle:before,
+.navColors .color-5-right-triangle.custom-color:before {
+	border-color: transparent;
+	border-bottom-color: #1565c0;
+}
+
+.navColors .color-5-right-triangle:after,
+.navColors .color-5-right-triangle.custom-color:after {
+	border-color: transparent;
+	border-right-color: #1565c0;
+}
+
+.navColors .widget-main-view,
+.navColors .ticket-form label:not(.error),
+.navColors .ticket-form h2,
+.navColors .ticket-form h5,
+.navColors .registration-footer label:not(.error) {
+	color: #000000;
+}
+		/* Contact Section
+		--------------------------------*/
+		#contact {
+			box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.1);
+			padding: 60px 0;
+			overflow: hidden;
+			background-color: #333333;
+		}
+
+		#contact .contact-about h3 {
+			font-size: 36px;
+			margin: 0 0 10px 0;
+			padding: 0;
+			line-height: 1;
+			font-family: "Montserrat", sans-serif;
+			font-weight: 300;
+			letter-spacing: 3px;
+			text-transform: uppercase;
+
+		}
+
+		#contact .contact-about p {
+			font-size: 14px;
+			line-height: 24px;
+			font-family: "Montserrat", sans-serif;
+			color: #fff;
+		}
+
+		#contact .social-links {
+			padding-bottom: 20px;
+		}
+
+		#contact .social-links a {
+			font-size: 18px;
+			display: inline-block;
+			background: #888;
+
+			line-height: 1;
+			padding: 8px 0;
+			margin-right: 4px;
+			border-radius: 50%;
+			text-align: center;
+			width: 36px;
+			height: 36px;
+			transition: 0.3s;
+			border: 1px solid white;
+		}
+
+		#contact .social-links a:hover {
+
+			color: #888;
+		}
+
+		#contact .info {
+			color: #fff;
+		}
+
+		#contact .info i {
+			font-size: 32px;
+
+			float: left;
+			line-height: 1;
+		}
+
+		#contact .info p {
+			padding: 0 0 10px 42px;
+			line-height: 28px;
+			font-size: 14px;
+		}
+	</style>
+
+	<style class="js-sections-style">
+	/*.section-244893 .custom-space-top { padding-top: 250px; }*/
+	.section-244893 .custom-space-bottom { padding-bottom: 10px; }
+	.element-729494,a.element-729494,p.element-729494,.element-729494 p,.element-729494 h1,.element-729494 h2,.element-729494 h3,.element-729494 h4,.element-729494 h5,.element-729494 h6,.element-729494 .btn,.element-729494 .custom-font,.element-729494.count-number { font-family: 'Open Sans', sans-serif; font-weight: bold; font-size: 50px; }
+	.element-729495,a.element-729495,p.element-729495,.element-729495 p,.element-729495 h1,.element-729495 h2,.element-729495 h3,.element-729495 h4,.element-729495 h5,.element-729495 h6,.element-729495 .btn,.element-729495 .custom-font,.element-729495.count-number { font-family: 'Open Sans', sans-serif; font-weight: normal; font-style: normal; font-size: 20px; }
+	.element-729499,a.element-729499,p.element-729499,.element-729499 p,.element-729499 h1,.element-729499 h2,.element-729499 h3,.element-729499 h4,.element-729499 h5,.element-729499 h6,.element-729499 .btn,.element-729499 .custom-font,.element-729499.count-number { font-family: 'Open Sans', sans-serif; font-weight: normal; font-style: normal; font-size: 20px; }
+	.element-729500,a.element-729500,p.element-729500,.element-729500 p,.element-729500 h1,.element-729500 h2,.element-729500 h3,.element-729500 h4,.element-729500 h5,.element-729500 h6,.element-729500 .btn,.element-729500 .custom-font,.element-729500.count-number { font-family: 'Open Sans', sans-serif; font-weight: normal; font-size: 28px; }
+	.section-270037 .custom-space-top { padding-top: 10px; }
+	.section-270037 .custom-space-bottom { padding-bottom: 0px; }
+	.element-819333,a.element-819333,p.element-819333,.element-819333 p,.element-819333 h1,.element-819333 h2,.element-819333 h3,.element-819333 h4,.element-819333 h5,.element-819333 h6,.element-819333 .btn,.element-819333 .custom-font,.element-819333.count-number { font-family: 'Open Sans', sans-serif; font-weight: normal; font-size: 36px; }
+	.section-270028 .custom-space-top { padding-top: 0px; }
+	.section-270028 .custom-space-bottom { padding-bottom: 0px; }
+	.element-819306,a.element-819306,p.element-819306,.element-819306 p,.element-819306 h1,.element-819306 h2,.element-819306 h3,.element-819306 h4,.element-819306 h5,.element-819306 h6,.element-819306 .btn,.element-819306 .custom-font,.element-819306.count-number { font-family: 'Open Sans', sans-serif; font-weight: normal; font-size: 36px; }
+	.section-270051 .custom-space-top { padding-top: 0px; }
+	.section-270051 .custom-space-bottom { padding-bottom: 0px; }
+	.section-285253 .custom-space-top { padding-top: 0px; }
+	.section-285253 .custom-space-bottom { padding-bottom: 0px; }
+	.element-874896,a.element-874896,p.element-874896,.element-874896 p,.element-874896 h1,.element-874896 h2,.element-874896 h3,.element-874896 h4,.element-874896 h5,.element-874896 h6,.element-874896 .btn,.element-874896 .custom-font,.element-874896.count-number { font-family: 'Open Sans', sans-serif; font-weight: normal; font-size: 36px; }
+	.section-276311 .custom-space-top { padding-top: 40px; }
+	.section-276311 .custom-space-bottom { padding-bottom: 40px; }
+	.element-842594,a.element-842594,p.element-842594,.element-842594 p,.element-842594 h1,.element-842594 h2,.element-842594 h3,.element-842594 h4,.element-842594 h5,.element-842594 h6,.element-842594 .btn,.element-842594 .custom-font,.element-842594.count-number { font-family: 'Open Sans', sans-serif; font-weight: normal; font-size: 36px; }
+	.section-284516 .custom-space-top { padding-top: 0px; }
+	.section-284516 .custom-space-bottom { padding-bottom: 0px; }
+	.element-872152,a.element-872152,p.element-872152,.element-872152 p,.element-872152 h1,.element-872152 h2,.element-872152 h3,.element-872152 h4,.element-872152 h5,.element-872152 h6,.element-872152 .btn,.element-872152 .custom-font,.element-872152.count-number { font-family: 'Open Sans', sans-serif; font-weight: normal; font-size: 36px; }
+	.section-284643 .custom-space-top { padding-top: 0px; }
+	.section-284643 .custom-space-bottom { padding-bottom: 0px; }
+	.section-284577 .custom-space-top { padding-top: 0px; }
+	.section-284577 .custom-space-bottom { padding-bottom: 0px; }
+	.element-872370,a.element-872370,p.element-872370,.element-872370 p,.element-872370 h1,.element-872370 h2,.element-872370 h3,.element-872370 h4,.element-872370 h5,.element-872370 h6,.element-872370 .btn,.element-872370 .custom-font,.element-872370.count-number { font-family: 'Open Sans', sans-serif; font-weight: normal; font-size: 36px; }
+	.section-299207 .custom-space-top { padding-top: 45px; }
+	.section-299207 .custom-space-bottom { padding-bottom: 45px; }
+
+
+	.section-244893 .element-729494 .atom-main { color: rgba(255,255,255,0); }
+	.section-244893 .element-729495 .atom-main { color: rgba(255,255,255,0); }
+
+
+
+	.section-244893 .element-729499 .atom-header1 { color: rgba(255,255,255,1); }
+	.section-244893 .element-729499 .atom-header2 { color: rgba(255,255,255,1); }
+	.section-244893 .element-729500 .atom-main { background-color: #1565c0; color: rgba(0,0,0,1); }
+
+	.section-270037 .atom-sectionMain { background-color: #1565c0; }
+	.section-270037 .element-819333 .atom-main { color: rgba(0,0,0,1); }
+
+
+
+
+	.section-270028 .atom-sectionMain { background-color: rgba(255,255,255,1); }
+	.section-270028 .element-819306 .atom-main { color: rgba(0,0,0,1); }
+
+
+
+
+	.section-270051 .atom-sectionMain { background-color: rgba(255,255,255,1); }
+	.section-270051 .element-819383 .atom-main { color: #b0b0b0; }
+
+
+
+
+	.section-285253 .atom-sectionMain { background-color: rgba(155,155,155,0.03); }
+	.section-285253 .element-874896 .atom-main { color: rgba(0,0,0,1); }
+
+
+
+
+	.section-276311 .atom-sectionMain { background-color: #1565c0; }
+	.section-276311 .element-842594 .atom-main { color: rgba(0,0,0,1); }
+	.section-276311 .element-842595 .atom-main { background-color: #b0b0b0; }
+	.section-276311 .element-842595 .atom-fullname { color: #ffffff; }
+	.section-276311 .element-842595 .atom-text1 { color: #ffffff; }
+	.section-276311 .element-842595 .atom-text2 { color: #ffffff; }
+	.section-284516 .atom-sectionMain { background-color: rgba(155,155,155,0); }
+	.section-284516 .element-872152 .atom-main { color: rgba(0,0,0,1); }
+
+
+
+
+	.section-284643 .atom-sectionMain { background-color: rgba(255,255,255,1); }
+	.section-284643 .element-872596 .atom-main { color: rgba(255,255,255,1); }
+
+
+
+
+	.section-284577 .atom-sectionMain { background-color: rgba(255,204,0,1); }
+	.section-284577 .element-872370 .atom-main { color: rgba(0,0,0,1); }
+
+
+
+
+	.section-299207 .atom-sectionMain { background-color: #b0b0b0; }
+	.section-299207 .atom-text { color: #1565c0; }
+	.section-299207 .atom-highlight { color: #1565c0; }
+/*
+.header .main-app-container {
+  padding-top: 770px;
+  height: 1080px;
+}
+*/
+
+</style>
+
+
+
+
+</head>
+
+
+
+<body class="home color-4-background"
+data-server-rendered="true">
+
+<header class="navColors">
+	<div class="global-template section-206801" data-server-rendered="true" data-model-id="206801">
+		<nav class="template-nav navbar navbar-default  custom-color color-2-background">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header make-relative">
+					<div class="header-top-me hidden-sm hidden-md hidden-lg   hide ">
+
+						<div class="more-tabs-dropdown dropdown-tip me-btn-holder">
+							<button data-toggle="dropdown" class="link-button" aria-haspopup="true">
+								<div class="noselect">
+									<div class="me-messages">
+										<div class="me-messages-badge notifications hide"></div>
+										<div class="me-menu-button me-menu-notifications">
+											<i class="fa icon-notification"></i>
+										</div>
+									</div>
+								</div>
+							</button>
+
+							<ul class="dropdown-menu me-dropdown-notifications" role="menu">
+								<li><a class="navigation-dropdown-li notifications-list">
+									<span class="notifications-message-empty-text ">No notifications yet.</span>
+								</a></li>
+							</ul>
+						</div>
+
+
+						<div class="more-tabs-dropdown dropdown-tip me-btn-holder">
+							<button data-toggle="dropdown" class="link-button" aria-haspopup="true">
+								<div class="me-menu-show-dropdown noselect">
+									<img alt="user photo"
+									src="{% static "index/avatar_1.png" %}"
+									class="me-menu-button me-menu-photo">
+									<b class="caret"></b>
+								</div>
+							</button>
+
+							<ul class="dropdown-menu" role="menu">
+								<li><a tabindex="0" class="navigation-dropdown-li"
+									href="/settings/profile">Edit
+								Profile</a></li>
+								<li><a tabindex="0" class="navigation-dropdown-li"
+									href="/settings">Settings</a>
+								</li>
+								<li><a tabindex="0" class="navigation-dropdown-li me-menu-invite" target="_blank">Invite Friends</a></li>
+								<li><a tabindex="0" class="navigation-dropdown-li me-menu-tutorial">See Tutorial</a></li>
+								<li><a tabindex="0" class="navigation-dropdown-li me-menu-sign-out">Sign Out</a></li>
+							</ul>
+						</div>                </div>
+						<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar custom-color color-5-background"></span>
+							<span class="icon-bar custom-color color-5-background"></span>
+							<span class="icon-bar custom-color color-5-background"></span>
+						</button>
+						<span class="navbar-brand visible-xs visible-sm custom-color color-5 col-xs-7 navbar-brand-logo" style="height: 65px; width: 80px;">
+							<div class="image-container-item">
+								<a href="/">
+									<img name="logo-url" src="{% static "index/Asset.png" %}" alt="logo image">
+								</a>
+							</div>		
+						</span>
+						<div class="hidden-lg hidden-md hidden-sm">
+							<a href="/">
+								<h4 style="padding-top: 15px; padding-right:0px; padding-left: 25px;"><b>SHILP 2018</b></h4>
+							</a>
+						</div>
+					</div>
+
+					<div class="collapse navbar-collapse custom-color color-1-border" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav show-more-tab">
+							<li class="hidden-sm hidden-xs" style="padding-right: 0px; padding-top: 7px;">
+								<div id="logo" class="pull-left">
+									<a href="/">
+										<img name="logo-url" src="{% static "index/Asset.png" %}" alt="logo image" style="max-width: 50px; height: auto;">
+									</a>
+								</div>
+							</li>
+							<li class="hidden-sm hidden-xs">
+								<a href="/" style="padding: 0px;">
+									<h4 style="padding-top: 15px; padding-right:45px; padding-left: 25px;"><b>SHILP 2018</b></h4>
+								</a>
+							</li>
+							<li>
+								<a class="nav-button-wrapper " href="/">
+									<div class="nav-menu-btn custom-color color-5 color-1-border color-5-hover color-1-selected  selected ">Home</div>
+								</a>
+							</li>
+							<li>
+								<a class="nav-button-wrapper " href="/allevents#comp">
+									<div class="nav-menu-btn custom-color color-5 color-1-border color-5-hover color-1-selected ">Competitions</div>
+								</a>
+							</li>
+							  <li>
+								<a class="nav-button-wrapper " href="https://res.cloudinary.com/shilp/image/upload/v1538678765/schedule-min.jpg" target="_blank">
+									<div class="nav-menu-btn custom-color color-5 color-1-border color-5-hover color-1-selected selected">Schedule</div>
+								</a>
+							</li>
+               <!-- <li>
+                    <a class="nav-button-wrapper " href="/allevents#panel">
+                        <div class="nav-menu-btn custom-color color-5 color-1-border color-5-hover color-1-selected ">Panel Discussion</div>
+                    </a> 
+                </li> -->
+            	<li>
+                    <a class="nav-button-wrapper " href="/allevents#work">
+                        <div class="nav-menu-btn custom-color color-5 color-1-border color-5-hover color-1-selected ">Workshop</div>
+                    </a>
+                </li>
+                <li>
+                   <!-- <a class="nav-button-wrapper " href="/allevents#lec">
+                        <div class="nav-menu-btn custom-color color-5 color-1-border color-5-hover color-1-selected ">Lecture series</div>
+                    </a> 
+                </li>-->
+                <li style="background-color: white;">
+                    <a class="nav-button-wrapper " href="/hospi">
+                        <div class="nav-menu-btn custom-color color-5 color-1-border color-5-hover color-1-selected ">Hospitality</div>
+                    </a>
+                </li> 
+
+                <li style="background-color: white;">
+                	<a class="nav-button-wrapper " href="/team">
+                		<div class="nav-menu-btn custom-color color-5 color-1-border color-5-hover color-1-selected ">Team</div>
+                	</a>
+                </li>
+                <li style="background-color: white;">
+                	<a class="nav-button-wrapper " href="/ca">
+                		<div class="nav-menu-btn custom-color color-5 color-1-border color-5-hover color-1-selected ">CA Portal</div>
+                	</a>
+                </li>
+
+                <!-- 
+                <li style="background-color: white;">
+                    <a class="nav-button-wrapper " href="/page/1322451/speakers">
+                        <div class="nav-menu-btn custom-color color-5 color-1-border color-5-hover color-1-selected ">Sponsors</div>
+                    </a>
+                </li> -->
+                <li style="background-color: white;">
+                	<a class="nav-button-wrapper " href="/login">
+                		<div class="nav-menu-btn custom-color color-5 color-1-border color-5-hover color-1-selected " style="border-radius: 10px; padding: 0px 10px; background-color: #1565c0; color: #fff;">{%if if_auth %} Dashboard {%else%}Log in {%endif%}</div>
+                	</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav></div>
+</header>
+
+
+
+<div class="tutorial-popup"></div>
+<div class="auth-view hide">
+	<div data-iframe-height class="auth-view-box ">
+		<div class="auth-view-box-join-view">    <div class="sign-up-wrapper expand-box expand-box-open ">
+
+			<div class="auth-wrapper-signin">
+				Registered User? <a><span class="switch-sign-up-login-link custom-color color-1">Login</span></a>
+			</div>
+
+			<section class="auth-view-box-join">
+
+
+				<div class="welcome-message-container">
+
+				</div>
+
+				<div class="sign-up-box expand-box sign-up-email-password expand-box-open sign-up-cls">
+					<input type="text" name="primaryEmail" placeholder="Email Address"
+					value="" title="primary email">
+					<span class="standard-form-error error-primaryEmail margin-left-none"></span>
+					<input type="password" name="password" placeholder="Set Password" title="password">
+					<span class="standard-form-error error-password margin-left-none"></span>
+					<div class="login-box-midsize-text forgot-password">
+						<a class="forgot-password-link custom-color color-1">Forgot Password?</a>
+					</div>
+					<a class="button ladda-button button-big-blue sign-up-email-password-button custom-color color-1-background"
+					data-style="slide-up"><span class="ladda-label">Sign Up</span></a>
+				</div>
+
+				<div class="login-error-wrapper"></div>
+
+			</section>
+		</div>
+
+	</div>
+</div>
+</div>
+
+
+<div class="main-view footer-padding no-loader" style="opacity: 1;padding-bottom: 0px;">
+	<div class="home-page home-custom-css 1322449-custom-css " data-server-rendered="true">
+		<ul class="sections-holder" data-server-rendered="true">
+			<div class="global-template section-244893" data-server-rendered="true" data-model-id="244893">    
+				<div class="header rowHolder no-background">
+					<div class="header-inside-container">
+						<div id="landing"  class="main-app-container custom-space-top custom-space-bottom">
+							<!-- <img src="https://res.cloudinary.com/shilp/image/upload/v1535638396/landpage3.jpg" class=""> -->
+						</div>
+						<div class="col-xs-12 col-sm-9 col-md-8 left">
+
+						</div>
+						<div style="position:absolute; left: 0; right: 0; margin:0 auto;" id="register-div" class="blink-image" >
+							<a href="/login" target="_blank" style="" class="register-btn-holder  ">
+								<img src="https://res.cloudinary.com/shilp/image/upload/v1536312065/new%20icons/Asset_2-8.png" >
+							</a>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+		<!----------------------------------------------------------------------------------------info about shilp '18------------------------------------------------------------------------------------->
+		<div class="global-template section-270037" data-server-rendered="true" data-model-id="270037">   
+			<div class="atom-sectionMain rowHolder html-container  fr-view" style="background-color: #2F5C8f; padding: 0 15%;">
+				<div class="
+				atom-sectionSecondary
+				main-app-container
+				custom-space-top
+				custom-space-bottom
+				html-container
+				image-containimage-contain-padding
+				">
+				<div class="element-819333 col-xs-12 text-center form-group wow fadeInUp margin-top-medium">
+					<h2 class="atom-main custom-font" style="color:white;"><b>SHILP 2018</b></h2>
+				</div>
+				<div class="element-819338  margin-bottom-medium col-xs-12 col-sm-12 ">
+					<div class="atom-main col-xs-12 global-template">
+						<p style="text-align: center;"><strong><span style="color: white; font-size: 16px;"><i>ANNUAL TECHNICAL FEST OF CIVIL ENGINEERING DEPARTMENT IIT (BHU)</span>
+						</strong></p>
+						<p style="text-align: center;"><span style="font-size: 16px;"><span style="color:white;">Having a rich legacy of conducting expert event management, covering various perspectives that promote Civil Engineering culture across the masses, Shilp is one of the most constructive Civil Engineering fests of India. As precedence indicates, we've not just had a collaborative effect on the participants, but also promoted learning through practice, all of which has contributed to its rich legacy. </span></span></p>
+						<p style="text-align: center;"><span style="color: white; font-size: 16px;">Intriguing guest talks are held every year to enrich the student with knowledge of some of the most raging topics of Civil engineering of the decade. </span></p>
+						<p style="text-align: center;"><span style="color: white; font-size: 16px;">This year, we also bring an illustrious panel constituting of prominent personalities of the core engineering start-up world to discuss with the participants the key factors of being an entrepreneur. Intellect floats around like never before as the participants build their ideas to overcome challenges presented by our events. The idea we promote is simple - "Build Better".</span></p>
+					</div>
+				</div>
+				<div class="element-819335  margin-bottom-medium col-xs-12 col-sm-12 hide">
+					<div class="atom-main col-xs-12 global-template">
+
+					</div>
+				</div>
+
+				<div class="col-xs-12 "></div>
+			</div>
+		</div>
+	</div>
+
+	<!---------------------------------------------------------------------------------------------events---------------------------------------------------------------------------------------------->
+	<div class="global-template section-270028" data-server-rendered="true" data-model-id="270028">    
+		<div class="atom-sectionMain rowHolder html-container  fr-view" style="    padding: 0px 15%;">
+			<div class="
+			atom-sectionSecondary
+			main-app-container
+			custom-space-top
+			custom-space-bottom
+			html-container
+			image-containimage-contain-padding
+			">
+			<div class="element-819306 col-xs-12 text-center form-group wow fadeInUp margin-top-medium">
+				<h2 class="atom-main custom-font">EVENTS</h2>
+			</div>
+			<ul id="hexGrid">
+				<li class="hex">
+					<div class="hexIn">
+						<a class="hexLink" href="/indiv/beat_the_wind">
+							<img src="https://res.cloudinary.com/shilp/image/upload/v1536331664/n%20Icons/4.png" alt="" />
+							<!-- <h1>Beat The Wind</h1> -->
+							
+						</a>
+					</div>
+				</li>
+				<li class="hex">
+					<div class="hexIn">
+						<a class="hexLink" href="/indiv/icreate">
+							<img src="https://res.cloudinary.com/shilp/image/upload/v1536331663/n%20Icons/2.png" alt="" />
+							<!-- <h1>iCreate</h1> -->
+							
+						</a>
+					</div>
+				</li>
+				<li class="hex">
+					<div class="hexIn">
+						<a class="hexLink" href="/indiv/this_way_that_way">
+							<img src="https://res.cloudinary.com/shilp/image/upload/v1536331663/n%20Icons/8.png" alt="" />
+							<!-- <h1>This Way That Way</h1> -->
+							
+						</a>
+					</div>
+				</li>
+				<li class="hex">
+					<div class="hexIn">
+						<a class="hexLink" href="/indiv/questionnaire">
+							<img src="https://res.cloudinary.com/shilp/image/upload/v1536334792/n%20Icons/51.png" alt="" />
+							<!-- <h1>Questionnaire</h1> -->
+							
+						</a>
+					</div>
+				</li>
+				<li class="hex">
+					<div class="hexIn">
+						<a class="hexLink" href="/indiv/enviro">
+							<img src="https://res.cloudinary.com/shilp/image/upload/v1536331663/n%20Icons/1.png" alt="" />
+							<!-- <h1>Enviro</h1> -->
+							
+						</a>
+					</div>
+				</li>
+				<li class="hex">
+					<div class="hexIn">
+						<a class="hexLink" href="/indiv/IDP">
+							<img src="https://res.cloudinary.com/shilp/image/upload/v1536401557/n%20Icons/3_1.png" alt="" />
+							<!-- <h1>IDP</h1> -->
+							
+						</a>
+					</div>
+				</li>
+				<li class="hex">
+					<div class="hexIn">
+						<a class="hexLink" href="/indiv/colloquium">
+							<img src="https://res.cloudinary.com/shilp/image/upload/v1536331663/n%20Icons/6.png" alt="" />
+							<!-- <h1>Colloquium</h1> -->
+							
+						</a>
+					</div>
+				</li>
+				<li class="hex">
+					<div class="hexIn">
+						<a class="hexLink" href="/indiv/delta">
+							<img src="https://res.cloudinary.com/shilp/image/upload/v1536334792/n%20Icons/71.png" alt="" />
+							<!-- <h1>Delta</h1> -->
+							
+
+						</a>
+					</div>
+				</li>
+
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+<!-- <div class="global-template section-270051" data-server-rendered="true" data-model-id="270051">    
+	<div class="atom-sectionMain rowHolder html-container  fr-view" style="padding: 0px 15%;">
+		<div class="
+		atom-sectionSecondary
+		main-app-container
+		custom-space-top
+		custom-space-bottom
+		html-container
+		image-containimage-contain-padding
+		">
+		<div class="element-819383 col-xs-12 text-center form-group wow fadeInUp ">
+			<h2 class="atom-main custom-font"></h2>
+		</div>
+
+
+		<div class="element-819386  margin-bottom-medium col-xs-12 col-sm-3 ">
+			<div class="atom-main col-xs-12 global-template">
+				<p><a href="/indiv/enviro" title="Enviro"><img src="https://res.cloudinary.com/shilp/image/upload/v1535801003/Icons/Envio.png" style="width: 150px; height: 150px;" class="fr-fic fr-dib" /></a></p>
+				<p dir="ltr" style="text-align: center;"><span style="font-family: &quot;Open Sans&quot;, sans-serif; color: rgb(18, 18, 18);">Enviro</span></p>
+			</div>
+		</div>
+		<div class="element-819388  margin-bottom-medium col-xs-12 col-sm-3	 ">
+			<div class="atom-main col-xs-12 global-template">
+				<p><a href="/indiv/this_way_that_way" title="Guest Lectures"><img src="https://res.cloudinary.com/shilp/image/upload/v1535801204/Icons/This_or_That_Way.png" style="width: 150px; height: 150px;" class="fr-fic fr-dib" /></a></p>
+				<p dir="ltr" style="text-align: center;"><span style="color: rgb(18, 18, 18); font-family: &quot;Open Sans&quot;, sans-serif;">This Way That Way</span></p>
+			</div>
+		</div>
+		<div class="element-819386  margin-bottom-medium col-xs-12 col-sm-3 ">
+			<div class="atom-main col-xs-12 global-template">
+				<p><a href="/indiv/icreate" title="Enviro"><img src="https://res.cloudinary.com/shilp/image/upload/v1535802947/Icons/i.create.png" style="width: 150px; height: 150px;" class="fr-fic fr-dib" /></a></p>
+				<p dir="ltr" style="text-align: center;"><span style="font-family: &quot;Open Sans&quot;, sans-serif; color: rgb(18, 18, 18);">iCreate</span></p>
+			</div>
+		</div>
+		<div class="element-819386  margin-bottom-medium col-xs-12 col-sm-3 ">
+			<div class="atom-main col-xs-12 global-template">
+				<p><a href="/indiv/IDP" title="Enviro"><img src="https://res.cloudinary.com/shilp/image/upload/v1535973643/Icons/idp.png" style="width: 150px; height: 150px;" class="fr-fic fr-dib" /></a></p>
+				<p dir="ltr" style="text-align: center;"><span style="font-family: &quot;Open Sans&quot;, sans-serif; color: rgb(18, 18, 18);">Industry Defined Problem</span></p>
+			</div>
+		</div>
+
+	</div>
+</div>
+</div> -->
+<div class="global-template section-270051" data-server-rendered="true" data-model-id="270051">    
+	<div class="atom-sectionMain rowHolder html-container  fr-view" style="    padding: 0px 15%;">
+		<div class="
+		atom-sectionSecondary
+		main-app-container
+		custom-space-top
+		custom-space-bottom
+		html-container
+		image-containimage-contain-padding
+		">
+		<div class="element-819383 col-xs-12 text-center form-group wow fadeInUp ">
+			<h2 class="atom-main custom-font"></h2>
+		</div>
+
+
+	</div>
+</div>
+</div>
+<div class="global-template section-270051" data-server-rendered="true" data-model-id="270051">    
+	<div class="atom-sectionMain rowHolder html-container  fr-view">
+		<div class="
+		atom-sectionSecondary
+		main-app-container
+		custom-space-top
+		custom-space-bottom
+		html-container
+		image-containimage-contain-padding
+		">
+		<div class="element-819383 col-xs-12 text-center form-group wow fadeInUp ">
+			<h2 class="atom-main custom-font"></h2>
+		</div>
+
+
+
+	</div>
+</div>
+</div>
+
+<!---------------------------------------------------------------------------------------------guests---------------------------------------------------------------------------------------------->
+<div class="global-template section-285253" data-server-rendered="true" data-model-id="285253" style="">    
+	<div class="atom-sectionMain rowHolder html-container cover-image-background fr-view" style="padding-bottom: 20px"
+	>
+	<a href="/allevents#lec" class="">
+		<img class="atom-main banner" src="https://res.cloudinary.com/shilp/image/upload/v1536338296/mobile/banner_1-1.jpg" %}" style="width: 100%; height:auto;"alt="" >
+	</a>
+
+	                    <!-- <div class="
+	                        atom-sectionSecondary
+	                        main-app-container
+	                        custom-space-top
+	                        custom-space-bottom
+	                        html-container
+	                        image-containimage-contain-padding
+	                    ">
+	                        <div class="element-874896 col-xs-12 text-center form-group wow fadeInUp margin-top-medium">
+	                            <h2 class="atom-main custom-font">GUESTS</h2>
+	                        </div>
+	                            <div class="element-887274 text-center margin-bottom-medium col-xs-12 col-sm-12 " >
+	                            	<div>
+	                            		<a href="/login" target="_blank" style="" class="register-btn-holder  ">
+	                                <button 
+	                                    type="button" 
+	                                    class="atom-main btn btn-register global-header-button custom-font" style="color: white; background-color: #1565c0; border:3px solid #1565c0; padding: 10px 50px 10px; border-radius: 20px; font-size: 1.5rem; ">
+	                                    <b>REGISTER NOW!</b>
+	                                  </button>
+	                            </a>	
+	                            		
+	                            	</div>
+	                            	<!-- <img class="atom-main" src="{% static "index/banner_1.jpg" %}" alt=""> -->
+	                            </div>
+	                        </div> 
+	                        <div class="global-template section-285253" data-server-rendered="true" data-model-id="285253" style="">    
+	                        	<div class="atom-sectionMain rowHolder html-container cover-image-background fr-view" style="padding-bottom: 20px" 
+	                        	>
+	                        	<a href="/indiv/colloquium" class="banner">
+	                        		<img class="atom-main" src="https://res.cloudinary.com/shilp/image/upload/v1536338295/mobile/banner2.jpg" style="width: 100%; height:auto;"alt="">
+	                        	</a>
+
+
+	                        </div>
+	                    </div> 
+	                    <div class="global-template section-285253" data-server-rendered="true" data-model-id="285253" style="">    
+	                    	<div class="atom-sectionMain rowHolder html-container cover-image-background fr-view" style="padding-bottom: 20px"
+	                    	>
+	                    	<a href="/allevents#alum" class="banner">
+	                    		<img class="atom-main" src="https://res.cloudinary.com/shilp/image/upload/v1536338296/mobile/banner3.jpg" style="width: 100%; height:auto;"alt="">
+	                    	</a>
+
+
+	                    </div>
+	                </div> 
+                    <!-- <div class="global-template section-285253" data-server-rendered="true" data-model-id="285253" style="">    
+                <div class="atom-sectionMain rowHolder html-container cover-image-background fr-view"
+                     >
+                     <a href="" class="banner">
+                     <img class="atom-main" src="{% static "index/banner4.jpg" %}" style="width: 100%; height:auto;"alt="">
+                     </a>
+
+                    
+                            </div>
+                        </div>  -->
+                        <div class="global-template section-285253" data-server-rendered="true" data-model-id="285253" style="">    
+                        	<div class="atom-sectionMain rowHolder html-container cover-image-background fr-view" style=""
+                        	>
+                        	<a href="/allevents#panel" class="banner">
+                        		<img class="atom-main" src="https://res.cloudinary.com/shilp/image/upload/v1536338304/mobile/banner5.jpg" style="width: 100%; height:auto;"alt="">
+                        	</a>
+
+
+                        </div>
+                    </div> 
+
+                    
+                </div>
+            </div>
+
+            <!---------------------------------------------------------------------------------------------alumni---------------------------------------------------------------------------------------------->
+           <!--  <div class="global-template section-276311" data-server-rendered="true" data-model-id="276311">
+                <div class="atom-sectionMain rowHolder speakers">
+                    <div class="main-app-container custom-space-top custom-space-bottom text-center attendees-faces">
+                        <div class="element-842594 col-xs-12 text-center form-group wow fadeInUp">
+                            <h2 class="atom-main header custom-font" style="color:white;">ALUMNI</h2>
+                         </div>
+
+                    <div class="col-xs-12 clearfix text-center attendees-faces-holder">
+                        <div class="row clearfix speakers-faces-inner">
+                                <div class="speaker-photo-holder wow fadeInUp" data-wow-delay="0.1s">
+                                    <a href="/agenda/speakers/283037">
+                                        <div class="img-circle center-block"
+                                             style="background-image: url(https://res.cloudinary.com/bizzaboprod/image/upload/c_crop,g_custom,f_auto/w_270,h_270,c_fill,g_face,fl_any_format,q_auto:best/hbrmfzneov48ye20p4st.jpg);">
+                                        </div>
+                                        <div class="speaker-details">
+                                            <div class="element-842595">
+                                                <div class="atom-main inner">
+                                                    <div class="inner-holder">
+                                                        <div class="atom-fullname custom-font speaker-name">Janette Kosior</div>
+                                                        <div class="atom-text1 custom-font speaker-title">Head of Product Marketing</div>
+                                                        <div class="atom-text2 custom-font speaker-company"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="speaker-photo-holder wow fadeInUp" data-wow-delay="0.2s">
+                                    <a href="/agenda/speakers/269474">
+                                        <div class="img-circle center-block"
+                                             style="background-image: url(https://res.cloudinary.com/bizzaboprod/image/upload/w_270,h_270,c_fill,g_face,fl_any_format,q_auto:best/s2qciyxpxykjpn1wd5q6.jpg);">
+                                        </div>
+                                        <div class="speaker-details">
+                                            <div class="element-842595">
+                                                <div class="atom-main inner">
+                                                    <div class="inner-holder">
+                                                        <div class="atom-fullname custom-font speaker-name">Richard Koe</div>
+                                                        <div class="atom-text1 custom-font speaker-title">Managing Director</div>
+                                                        <div class="atom-text2 custom-font speaker-company">WINGX Advance</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="speaker-photo-holder wow fadeInUp" data-wow-delay="0.30000000000000004s">
+                                    <a href="/agenda/speakers/277053">
+                                        <div class="img-circle center-block"
+                                             style="background-image: url(https://res.cloudinary.com/bizzaboprod/image/upload/w_270,h_270,c_fill,g_face,fl_any_format,q_auto:best/esb7ynhpaqym9maedj2e.png);">
+                                        </div>
+                                        <div class="speaker-details">
+                                            <div class="element-842595">
+                                                <div class="atom-main inner">
+                                                    <div class="inner-holder">
+                                                        <div class="atom-fullname custom-font speaker-name">Dale Bradman</div>
+                                                        <div class="atom-text1 custom-font speaker-title">Data Engineer</div>
+                                                        <div class="atom-text2 custom-font speaker-company">Profusion</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="speaker-photo-holder wow fadeInUp" data-wow-delay="0.4s">
+                                    <a href="/agenda/speakers/252539">
+                                        <div class="img-circle center-block"
+                                             style="background-image: url(https://res.cloudinary.com/bizzaboprod/image/upload/c_crop,g_custom,f_auto/w_270,h_270,c_fill,g_face,fl_any_format,q_auto:best/txlidp9zy50d2puufbic.jpg);">
+                                        </div>
+                                        <div class="speaker-details">
+                                            <div class="element-842595">
+                                                <div class="atom-main inner">
+                                                    <div class="inner-holder">
+                                                        <div class="atom-fullname custom-font speaker-name">TJ Houk</div>
+                                                        <div class="atom-text1 custom-font speaker-title">Chief Data Officer</div>
+                                                        <div class="atom-text2 custom-font speaker-company">Trupanion</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="speaker-photo-holder wow fadeInUp" data-wow-delay="0.1s">
+                                    <a href="/agenda/speakers/277989">
+                                            <div class="img-circle center-block"
+                                                 style="background-image: url(https://res.cloudinary.com/bizzaboprod/image/upload/w_270,h_270,c_fill,g_face,fl_any_format,q_auto:best/ohhy1ogj0a5imhd8mqpx.jpg);"></div>
+                                        <div class="speaker-details">
+                                            <div class="element-842595">
+                                                <div class="atom-main inner">
+                                                    <div class="inner-holder">
+                                                        <div class="atom-fullname custom-font speaker-name">PeggySue Werthessen</div>
+                                                        <div class="atom-text1 custom-font speaker-title">VP, Product Go-to-Market Stategy</div>
+                                                        <div class="atom-text2 custom-font speaker-company">Sisense</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="speaker-photo-holder wow fadeInUp" data-wow-delay="0.2s">
+                                    <a href="/agenda/speakers/249024">
+                                            <div class="img-circle center-block"
+                                                 style="background-image: url(https://res.cloudinary.com/bizzaboprod/image/upload/w_270,h_270,c_fill,g_face,fl_any_format,q_auto:best/ciciqfflt1bondoszgvs.jpg);">
+                                            </div>
+                                        <div class="speaker-details">
+                                            <div class="element-842595">
+                                                <div class="atom-main inner">
+                                                    <div class="inner-holder">
+                                                        <div class="atom-fullname custom-font speaker-name">Sham Sokka</div>
+                                                        <div class="atom-text1 custom-font speaker-title">Head of Radiology Solutions</div>
+                                                        <div class="atom-text2 custom-font speaker-company">Philips</div>
+                                                    </div>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="speaker-photo-holder wow fadeInUp" data-wow-delay="0.30000000000000004s">
+                                    <a href="/agenda/speakers/264914">
+                                            <div class="img-circle center-block"
+                                                 style="background-image: url(https://res.cloudinary.com/bizzaboprod/image/upload/c_crop,g_custom,f_auto/w_270,h_270,c_fill,g_face,fl_any_format,q_auto:best/uozixuwylotpxgtl2t71.jpg);"></div>
+                                        <div class="speaker-details">
+                                            <div class="element-842595">
+                                                <div class="atom-main inner">
+                                                    <div class="inner-holder">
+                                                        <div class="atom-fullname custom-font speaker-name">Gali Kedar</div>
+                                                        <div class="atom-text1 custom-font speaker-title">VP, Customer Success</div>
+                                                        <div class="atom-text2 custom-font speaker-company">Sisense</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="speaker-photo-holder wow fadeInUp" data-wow-delay="0.4s">
+                                    <a href="/agenda/speakers/253586">
+                                            <div class="img-circle center-block"
+                                                 style="background-image: url(https://res.cloudinary.com/bizzaboprod/image/upload/w_270,h_270,c_fill,g_face,fl_any_format,q_auto:best/a6ciggwanskgjcpqy7ua.jpg);"></div>
+                                        <div class="speaker-details">
+                                            <div class="element-842595">
+                                                <div class="atom-main inner">
+                                                    <div class="inner-holder">
+                                                        <div class="atom-fullname custom-font speaker-name">John Jakovich</div>
+                                                        <div class="atom-text1 custom-font speaker-title">Vice President, Business Intelligence</div>
+                                                        <div class="atom-text2 custom-font speaker-company">Tessitura Network</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="speaker-photo-holder wow fadeInUp" data-wow-delay="0.1s">
+                                    <a href="/agenda/speakers/249034">
+                                            <div class="img-circle center-block"
+                                                 style="background-image: url(https://res.cloudinary.com/bizzaboprod/image/upload/c_crop,g_custom,f_auto/w_270,h_270,c_fill,g_face,fl_any_format,q_auto:best/vlo2n6kuciqgnnd4os8e.jpg);"></div>
+                                        <div class="speaker-details">
+                                            <div class="element-842595">
+                                                <div class="atom-main inner">
+                                                    <div class="inner-holder">
+                                                        <div class="atom-fullname custom-font speaker-name">Jen Underwood</div>
+                                                        <div class="atom-text1 custom-font speaker-title">Founder</div>
+                                                        <div class="atom-text2 custom-font speaker-company">Impact Analytix, LLC</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </a>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        -->
+        <!--------------------------------------------------------------------------------------------sponsors--------------------------------------------------------------------------------------------->
+            <!-- <div class="global-template section-284516" data-server-rendered="true" data-model-id="284516">    
+                <div class="atom-sectionMain rowHolder html-container  fr-view">
+                    <div class="
+                        atom-sectionSecondary
+                        main-app-container
+                        custom-space-top
+                        custom-space-bottom
+                        html-container
+                        image-containimage-contain-padding
+                    ">
+                        <div class="element-872152 col-xs-12 text-center form-group wow fadeInUp margin-top-medium">
+                            <h2 class="atom-main custom-font">SPONSORS</h2>
+                        </div>
+                        <div class="element-872153 text-center margin-bottom-medium col-xs-12 col-sm-12 hide">
+                                <img class="atom-main" src="" alt="">
+                        </div>
+                        <div class="element-872380 text-center margin-bottom-medium col-xs-12 col-sm-12 ">
+                                <img class="atom-main" src="https://res.cloudinary.com/bizzaboprod/image/upload/c_crop,g_custom,f_auto/v1524665179/bqlqy2d8nmjxqhoous3b.png" alt="">
+                        </div>
+                        <div class="element-872155  margin-bottom-medium col-xs-12 col-sm-12 hide">
+                                <div class="atom-main col-xs-12 global-template">
+                                    
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        -->
+        <!--------------------------------------------------------------------------------------------contact us------------------------------------------------------------------------------------------> 
+
+
+    </ul>
+    <button id="instruction-btn" class="footer-btn" onclick="document.getElementById(this.getAttribute('modal-id')).style.display='block';" modal-id="gen-instructions" style="padding: 1%; display: none;">General Instructions</button>
+
+    <!-- The Modal -->
+  <div id="gen-instructions" class="modal" >
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-header">
+        <span class="close" onclick="document.getElementById(this.getAttribute('modal-id')).style.display='none';" modal-id="gen-instructions">&times;</span>
+        <h2 style="text-align: center;">Instructions for Participants</h2>
+      </div>
+      <div class="modal-body" >
+<ul>
+	<li style="text-align: center; list-style: none;"><a href="https://res.cloudinary.com/shilp/image/upload/v1538678765/schedule-min.jpg" target="_blank" style="font-size: 1.5rem">Download the schedule here.</a></li> 
+	<li style="text-align: center; list-style: none;"><a href="https://drive.google.com/file/d/1qFtlSa1IDo9Yvqoi_-_dPaF5MvViZc-e/view?usp=sharing" target="_blank" style="font-size: 1.5rem">View SHILP undertaking.</a></li> 
+	<li>Everyone is required to carry a screenshot of your payment.</li>
+	<li>You’re required to report at the hospitality desk at Visvesvaraya Hostel as soon as you arrive at the campus.</li>
+	<li>All student participants must carry their valid College photo ID card. Others must bring their valid photo identity for the purpose of entry. People without valid photo identity card will not be allowed inside the campus during Shilp.</li>
+	<!--<li>The fee for hospitality registration is INR 300 for 3 days And INR 100 per day for meal (including breakfast , lunch ,dinner).This in not applicable for workshop participants.</li>-->
+	<li>Please bring 2 passport sized photographs.</li>
+	<li>Facilities provided: Lodging from 4th to 7th of october</li>
+	<li>Security of laptops and other belongings will be the responsibility of participants only. Shilp will not be responsible for any loss or damage to the belongings of the participants.</li>
+	<li>Participants are to bring along all the material required for the respective events.</li>
+	<li>Kindly note that the accommodation is strictly on a shared basis and any requests for individual rooms or any complaints in this regard shall not be entertained.</li>
+	<li>Random checks would be made to avoid any illegal stay at the campus. Any team failing to produce their receipts of accommodation would be heavily fined and disqualified.</li>
+	<li>Alcohol, Cigarettes, drugs, any intoxicants, sharp objects and explosives of any kind are strictly prohibited inside the campus. Any other item if deemed unsafe will be prohibited. The decision of Shilp team will be final in case of any disputes.</li>
+	<li>There are SBI and Bank of Baroda ATMs inside the campus. There’s also an AXIS bank ATM just outside the campus, near Hyderabad Gate. </li>
+	<li>All gates except the main gate (Lanka gate) will close by 10PM. So you are advised to reach your hostel before 10PM.</li>
+	<li>In case of disputes, final decision rests with SHILP team</li>
+</ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div>
+<!--==========================Contact Section ============================-->
+<section id="contact">
+
+	<div class="container">
+		<div class="row wow fadeInUp">
+
+			<div class="col-lg-4 col-md-4 text-center">
+				<div class="contact-about">
+					<h3>Shilp 2018</h3>
+					<p>Technical Fest of Civil Engineering Department,<br>
+					Indian Institute of Technology Varanasi</p>
+					<div >
+						<a href="http://www.shilpiitbhu.org/" class="facebook"><i class="fa fa-globe" style="font-size:28px;"></i></a>
+						<a href="https://www.facebook.com/shilpiitbhu/" class="facebook"><i class="fa fa-facebook" style="font-size:28px; padding-left: 20px;"></i></a>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-lg-8 col-md-8" style="padding-top: 20px;">
+				<div class="info row" >
+
+					<div class="col-md-4 text-center">
+						<i class="fa fa-map-marker" aria-hidden="true"></i>
+						<p>IIT(BHU)<br>Varanasi, 221005</p>
+					</div>
+
+					<div class="col-md-4 text-center">
+						<i class="fa fa-envelope" aria-hidden="true"></i>
+						<p>shilp@iitbhu.ac.in</p>
+					</div>
+
+					<div class="col-md-4 text-center">
+						<i class="fa fa-phone" aria-hidden="true"></i>
+						<p>+91 9696358440</p>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- <script type="text/javascript" src="{% static "index/bzconf" %}"></script>
+-->
+<!-- 
+<script type="text/javascript" src="{% static "index/script1.js" %}" charset="utf-8"></script>
+
+<script type="text/javascript" src="{% static "index/script2.js" %}" charset="utf-8"></script> -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<style type="text/css">
+	.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 80%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+</style>
+<script type="text/javascript" async="">
+    window.onclick = function(event) {
+      modals=document.getElementsByClassName('modal');
+      for (var i = 0; i < modals.length; i++) {
+        if(event.target == modals[i]){
+          modals[i].style.display='none';
+        }
+      }
+    }
+
+    document.getElementById('instruction-btn').click();		
+  </script>
+
+</body>
+</html>

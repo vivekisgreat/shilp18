@@ -1,0 +1,502 @@
+{% load static %}
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<meta name="language"                  content="en-us" />
+    <meta name="description"               content="Shilp is the Annual Fest of Civil Engineering IIT (BHU) Varanasi ">
+    <meta http-equiv="Content-Type"        content="text/html; charset=UTF-8">
+    <meta name="keywords"                  content="Shilp, Shilp 2018, Civil Engineering, IIT (BHU), IIT">
+    <meta name="distribution"              content="Global" />
+    <meta name="rating"                    content="General" />
+    <meta name="author"                    content="Shilp Tech Team" >
+
+    <!----------------------------------------------------------------------------------------- open graph meta tags---------------------------------------------------------------------------------------->
+    <meta property="og:url"                content="http://shilpiitbhu.org/" />
+    <meta property="og:title"              content="Shilp 2018" />
+    <meta property="og:description"        content="Shilp is the Annual Fest of Civil Engineering IIT (BHU) Varanasi" />
+    <meta property="og:image"              content="https://res.cloudinary.com/shilp/image/upload/v1527310423/background.jpg" />
+    <meta property="og:type"               content="website">
+
+    <link rel="icon" type="image/ico" href="{% static "images/Asset.png" %}"/>
+    <link rel="shortcut icon" type="image/ico" href="{% static "images/Asset.png" %}"/> 
+    <!-- Required meta tags-->
+
+    <!-- Title Page-->
+    <title>Team Registration</title>
+
+	<!-- Fontfaces CSS-->
+	<link href="{% static "css/font-face.css" %}" rel="stylesheet" media="all">
+	<link href="{% static "vendor/font-awesome-4.7/css/font-awesome.min.css" %}" rel="stylesheet" media="all">
+	<link href="{% static "vendor/font-awesome-5/css/fontawesome-all.min.css" %}" rel="stylesheet" media="all">
+	<link href="{% static "vendor/mdi-font/css/material-design-iconic-font.min.css" %}" rel="stylesheet" media="all">
+
+	<!-- Bootstrap CSS-->
+	<link href="{% static "vendor/bootstrap-4.1/bootstrap.min.css" %}" rel="stylesheet" media="all">
+
+	<!-- Vendor CSS-->
+	<link href="{% static "vendor/animsition/animsition.min.css" %}" rel="stylesheet" media="all">
+	<link href="{% static "vendor/bootstrap-progressbar/bootstrap-progressbar-3.3.4.min.css" %}" rel="stylesheet" media="all">
+	<link href="{% static "vendor/wow/animate.css" %}" rel="stylesheet" media="all">
+	<link href="{% static "vendor/css-hamburgers/hamburgers.min.css" %}" rel="stylesheet" media="all">
+	<link href="{% static "vendor/slick/slick.css" %}" rel="stylesheet" media="all">
+	<link href="{% static "vendor/select2/select2.min.css" %}" rel="stylesheet" media="all">
+	<link href="{% static "vendor/perfect-scrollbar/perfect-scrollbar.css" %}" rel="stylesheet" media="all">
+
+	<!-- Main CSS-->
+	<link href="{% static "css/theme.css" %}" rel="stylesheet" media="all">
+
+
+
+</style>
+
+</head>
+
+<body class="animsition">
+	<div class="page-wrapper">
+		<!-- HEADER MOBILE-->
+		<header class="header-mobile d-block d-lg-none">
+            <div class="header-mobile__bar">
+                <div class="container-fluid">
+                    <div class="header-mobile-inner">
+                        <button class="hamburger hamburger--slider" type="button">
+                            <span class="hamburger-box">
+                                <span class="hamburger-inner"></span>
+                            </span>
+                        </button>
+                        <a class="logo" href="/" style="margin: 0px 25%;">
+                            <img src="https://res.cloudinary.com/shilp/image/upload/v1535811762/Icons/nn.png" alt="Shilp18" style="max-width: 70%;">
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar-mobile">
+                <div class="container-fluid">
+                    <ul class="navbar-mobile__list list-unstyled" >
+                        <li >
+                            <a href="/dashboard">
+                                <i class="fa fa-user" aria-hidden="true"></i>Profile</a>
+
+                            </li>
+                            <li>
+                                <a href="/dashboard/RegPlan">
+                                    <i class="fa fa-credit-card" aria-hidden="true"></i>Choose your Plan
+                                    {% if Profile.plan_locked %}
+                                    <i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+
+                                    {% else %}
+                                    <span class="badge badge-warning">!</span>                                  
+                                    {% endif %}
+
+
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/dashboard/event_reg">
+                                    <i class="fa fa-calendar-o" aria-hidden="true"></i></i>Event Registration
+                                    {% if Profile.plan_locked %}
+                                    {% if Profile.events_locked %}
+                                    <i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                                    {% else %}
+                                    <span class="badge badge-warning">!</span>
+                                    {% endif %}         
+                                    {% endif %}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/dashboard/payment">
+                                    <i class="fa fa-credit-card" aria-hidden="true"></i></i>Payment
+                                    {% if Profile.events_locked %}
+                                    {% if Profile.payment_verified %}
+                                        <i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+
+                                        {% else %}
+                                        <span class="badge badge-warning">!</span>                                  
+                                        {% endif %}
+                                        {% endif %}
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/dashboard/team_reg">
+                                    <i class="fa fa-users" aria-hidden="true"></i>Team Registration
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/dashboard/help">
+                                    <i class="fa fa-info-circle" aria-hidden="true"></i>Help
+                                </a>
+                            </li>
+                            
+                            <li >
+                                <a href="/logout/">
+                                    <i class="fa fa-info-circle" aria-hidden="true"></i>Logout
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <!-- END HEADER MOBILE-->
+
+            <!-- MENU SIDEBAR-->
+            <aside class="menu-sidebar d-none d-lg-block">
+                <div class="logo">
+                    <a href="/">
+                        <img src="https://res.cloudinary.com/shilp/image/upload/v1535811762/Icons/nn.png" style="width:65%;" alt="{{User.email}}
+                        {{Profile.college_name}}" />
+                    </a>
+                </div>
+                <div class="menu-sidebar__content js-scrollbar1">
+                    <nav class="navbar-sidebar">
+                        <ul class="list-unstyled navbar__list">
+                            <li >
+                                <a href="/dashboard">
+                                    <i class="fa fa-user" aria-hidden="true"></i>Profile</a>
+
+                                </li>
+                                <li>
+                                    <a href="/dashboard/RegPlan">
+                                        
+                                        <i class="fa fa-calendar-plus-o" aria-hidden="true"></i>Choose your plan
+                                        {% if Profile.plan_locked %}
+                                        <i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+
+                                        {% else %}
+                                        <span class="badge badge-warning">!</span>                                  
+                                        {% endif %}
+
+
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/dashboard/event_reg">
+                                        <i class="fa fa-calendar-o" aria-hidden="true"></i></i>Event Registration
+                                        {% if Profile.plan_locked %}
+                                        {% if Profile.events_locked %}
+                                        <i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+                                        {% else %}
+                                        <span class="badge badge-warning">!</span>
+                                        {% endif %}         
+                                        {% endif %}
+                                    </a>
+                                </li>
+                                <li>
+                                <a href="/dashboard/payment">
+                                    <i class="fa fa-credit-card" aria-hidden="true"></i></i>Payment
+                                    {% if Profile.events_locked %}
+                                    {% if Profile.payment_verified %}
+                                        <i class="fa fa-check" aria-hidden="true" style="color: green;"></i>
+
+                                        {% else %}
+                                        <span class="badge badge-warning">!</span>                                  
+                                        {% endif %}
+                                        {% endif %}
+                                </a>
+                            </li>
+                                <li>
+                                    <a href="/dashboard/team_reg">
+                                        <i class="fa fa-users" aria-hidden="true"></i>Team Registration
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="/dashboard/help">
+                                        <i class="fa fa-info-circle" aria-hidden="true"></i>Help
+                                    </a>
+                                </li>
+                                <li style="padding-top: 30px;">
+                                    <a href="/logout/" >
+                                        <i class="fa fa-info-circle" aria-hidden="true"></i>Logout
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </nav>
+                    </div>
+                </aside>
+		
+		
+				<!-- END MENU SIDEBAR-->
+
+				<!-- PAGE CONTAINER-->
+				<div class="page-container">
+					<!-- HEADER DESKTOP-->
+
+					<!-- END HEADER DESKTOP-->
+
+					<!-- MAIN CONTENT-->
+					<div class="main-content">
+						<div class="section__content section__content--p30">
+							<div class="container-fluid">
+
+								<div class="row">
+									<div class="col-lg-12">
+										<div class="alert alert-danger" role="alert">
+											<b>Only team leader has to register the team</b>
+										</div>
+									</div>
+								</div>
+								<div class="sufee-alert alert with-close alert-warning fade show">
+									Before registering your team, ensure all members have completed <a href="/dashboard/RegPlan">payment verification</a> </span>
+									<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+										<span aria-hidden="true">×</span>
+									</button>
+								</div>
+
+
+								<div class="row">
+									<div class="col-lg-12">
+										<div class="card">
+											<div class="card-header">
+												<strong> Team Registration</strong>
+											</div>
+											<div class="card-body card-block">
+												<form action="/dashboard/team_regajax/" method="post" enctype="multipart/form-data" class="form-horizontal" id="team-reg">
+													{%csrf_token%}
+													<div class="row">
+														<div class="col-md-8 offset-md-2" id="form_grp_parent">
+
+															<div class="row form-group">
+																<div class="col-md-3">
+																	<label for="select" class=" form-control-label">Select event</label>
+																</div>
+																<div class="col-md-9">
+																	<select name = "event" id="event_select" class="form-control" onchange="gen_members()">
+																		<option value="0">Please select</option>
+																		{% for  event in events  %}
+																			<option value="{{event}}"
+                                                                            >{% if  event == 'Nirman'%}
+                                                                                Beat the Wind
+                                                                                 {% else %} 
+                                                                                 {{event}}
+                                                                            {% endif %}</option>
+																		{% endfor %}
+																		
+																	</select>
+																</div>
+															</div>
+
+														</div>
+													</div>
+												</div>
+												<div class="card-footer" style="text-align: center;">
+													<button type="submit" class="btn btn-primary btn-sm" onclick="$(this).html('Please wait...')" id="team-submit">
+														<i class="fa fa-dot-circle-o"></i> Submit
+													</button>
+													
+												</div>
+
+
+
+											</form>
+										</div>
+
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+
+					
+					<div id="SuccessModal" class="modal fade" role="dialog">
+						<div class="modal-dialog modal-lg">
+
+							<!-- Modal content-->
+							<div class="modal-content">
+
+								<div class="modal-body">
+									<div class="row">
+										<div class="col-lg-4 text-center">
+											<i class="fa fa-check-circle" aria-hidden="true" style="font-size: 5rem; color: green;"></i>
+										</div>
+										<div class="col-lg-8">
+											Changes were succesful. 
+										</div>
+									</div>
+
+								</div>
+
+								<div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+
+					<div id="ErrorModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-lg">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+
+                            <div class="modal-body">
+                                <div class="row">
+                                    <div class="col-lg-8 container">
+                                        The following ID were found to invalid:
+                                        <ul id="error-member">
+                                        	
+                                        </ul>
+                                        <br>
+                                        <br>
+                                        ID may be invalid because of the following reasons:
+                                        <ul>
+                                        	<li>Invalid SHILP ID</li>
+                                        	<li>Member has not completed payment verification</li>
+                                        	<li>Member has already registered in another team</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+
+
+
+<!-- Jquery JS-->
+<script src="{% static "vendor/jquery-3.2.1.min.js" %}"></script>
+<!-- Bootstrap JS-->
+<script src="{% static "vendor/bootstrap-4.1/popper.min.js" %}"></script>
+<script src="{% static "vendor/bootstrap-4.1/bootstrap.min.js" %}"></script>
+<!-- Vendor JS       -->
+<script src="{% static "vendor/slick/slick.min.js" %}">
+</script>
+<script src="{% static "vendor/wow/wow.min.js" %}"></script>
+<script src="{% static "vendor/animsition/animsition.min.js" %}"></script>
+<script src="{% static "vendor/bootstrap-progressbar/bootstrap-progressbar.min.js" %}">
+</script>
+<script src="{% static "vendor/counter-up/jquery.waypoints.min.js" %}"></script>
+<script src="{% static "vendor/counter-up/jquery.counterup.min.js" %}">
+</script>
+<script src="{% static "vendor|safe/circle-progress/circle-progress.min.js" %}"></script>
+<script src="{% static "vendor/perfect-scrollbar/perfect-scrollbar.js" %}"></script>
+<script src="{% static "vendor/chartjs/Chart.bundle.min.js" %}"></script>
+<script src="{% static "vendor/select2/select2.min.js" %}" >
+</script>
+
+<!-- Main JS-->
+<script src="{% static "js/main1.js" %}"></script>
+<script type="text/javascript">
+		//let x be the json response
+		//x={mudmarine:'3',delta:'2',thiswaythatway:'4'};
+		x = {{participants|safe}};
+
+		var events=document.getElementById("event_select");
+		var form=document.getElementById("form_grp_parent")
+
+		function gen_members() {
+
+			// Remove pre-existing generated elements
+			gen_elem=document.getElementsByClassName("gen");
+
+			if(gen_elem.length!==0){
+				for (var i = 0; i < gen_elem.length; ) { //Element length reduces each time
+					gen_elem[0].remove();
+				}
+			}
+
+			
+			if(events.value!=="0"){
+				num_mem=parseInt(x[events.value]);
+				//alert(num_mem);
+				var team_name = document.createElement('div');
+				team_name.classList.add("row");
+				team_name.classList.add("form-group");
+				team_name.classList.add("gen");
+				team_name.innerHTML ='<div class="col col-md-3">                                                    <label for="text-input" class=" form-control-label">Team Name</label>                                                </div>                                                <div class="col-12 col-md-9">                                                    <input type="text" id="text-input" required name="team-name" placeholder="" class="form-control"></div>';
+				form.insertBefore(team_name, form.children[0].nextSibling);
+
+				var leader_id = document.createElement('div');
+				leader_id.classList.add("row");
+				leader_id.classList.add("form-group");
+				leader_id.classList.add("gen");
+				leader_id.innerHTML ='<div class="col col-md-3">                                                    <label for="text-input" class=" form-control-label">Team Leader&#8217;s SHILP ID</label>                                                </div>                                                <div class="col-md-5 col-8">                                                    <input readonly = "readonly" type="text" id="text-input" name="member1" value="{{Profile.shilpid}}" class="form-control"></div>';
+				form.insertBefore(leader_id, form.children[1].nextSibling);
+
+				var mem_id=[];
+
+				for (var i = 1; i <= num_mem-1; i++) {
+					mem_id[i]=	document.createElement('div');
+
+					mem_id[i].classList.add("row");
+					mem_id[i].classList.add("form-group");
+					mem_id[i].classList.add("gen");
+					mem_id[i].innerHTML ='<div class="col col-md-3">                                                    <label for="text-input" class=" form-control-label">Team Members&#8217;s SHILP ID</label>                                                </div>                                                <div class="col-md-5 col-12">                                                    <input type="text" id="text-input'+parseInt(i)+'" name="member'+parseInt(i+1)+'" placeholder="" class="form-control"></div><div class="col-md-4 col-4">                                                	';
+					form.insertBefore(mem_id[i], form.children[i+1].nextSibling);
+
+
+				}
+				
+			}
+
+		}
+
+
+
+	</script>
+
+	<script type="text/javascript">
+		$("#team-reg").submit(function(e) {
+
+			var form = $(this);
+
+			$.ajax({
+				type: "POST",
+                   data: form.serialize(), // serializes the form's elements.
+                   url:"/dashboard/team_regajax/",
+                   success: function(response)
+                   {
+	              	parse_error=response.memberError;
+	              	if (parse_error.length==0) {
+                   	$('#SuccessModal').modal('show');
+                    $('#team-submit').html('<i class="fa fa-dot-circle-o"></i> Submit')
+                   }
+                   else{
+                        $('#error-member').html(" ");
+                   		for (var i = 0; i < parse_error.length; i++) {
+                   			mem_li=$('<li></li>').text(parse_error[i])
+                   			$('#error-member').append(mem_li);
+
+                   		}
+                   		$('#ErrorModal').modal('show');
+                        $('#team-submit').html('<i class="fa fa-dot-circle-o"></i> Submit')
+                   }
+                   },
+                   error: function()
+                   {
+                   	alert('An error occured. Please try again.');
+                   }
+               });
+
+                 e.preventDefault(); // avoid to execute the actual submit of the form.
+             });
+         </script>
+
+     </body>
+
+     </html>
+     <!-- end document-->

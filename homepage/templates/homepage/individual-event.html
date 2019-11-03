@@ -1,0 +1,172 @@
+{% load static %}
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SHILP 2018 | </title>
+
+  <meta name="language"            content="en-us" />
+  <meta name="description"         content="Shilp is the Annual Fest of Civil Engineering IIT (BHU) Varanasi ">
+  <meta http-equiv="Content-Type"      content="text/html; charset=UTF-8">
+  <meta name="keywords"            content="Shilp, Shilp 2018, Civil Engineering, IIT (BHU), IIT">
+  <meta name="distribution"          content="Global" />
+  <meta name="rating"            content="General" />
+  <meta name="author"            content="Shilp Tech Team" >
+
+  <!----------------------------------------------------------------------------------------- open graph meta tags---------------------------------------------------------------------------------------->
+  <meta property="og:url"                content="http://shilpiitbhu.org/" />
+  <meta property="og:title"              content="Shilp 2018" />
+  <meta property="og:description"        content="Shilp is the Annual Fest of Civil Engineering IIT (BHU) Varanasi" />
+  <meta property="og:image"              content="https://res.cloudinary.com/shilp/image/upload/v1527310423/background.jpg" />
+  <meta property="og:type"         content="website">
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" type="image/ico" href="{% static "index/Asset.png" %}"/>
+  <link rel="shortcut icon" type="image/ico" href="{% static "index/Asset.png" %}"/> 
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700" rel="stylesheet" type="text/css">  
+
+  <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet"> 
+
+
+  <link href="{% static "individual-event/individual-event.css" %}" type="text/css" rel="stylesheet">
+</head>
+<body>
+  <div class="header">
+    <div class="head same container">
+      <ul>
+        <li><a href="/"><img  src="https://res.cloudinary.com/shilp/image/upload/v1527310419/ShilpLogo.png" style="width: 30px; height: auto; padding-right: 5px;"><span style="font-size: 1.2rem;" >SHILP 2018</span></a></li>
+        <li><a href="/">Home</a></li>
+        <li><a href="/allevents#comp">Competitions</a></li>
+        <li><a href="/allevents#work">Workshops</a></li>
+        <li><a href="/ca">CA Portal</a></li>
+        <li><a href="/login" style="border-radius: 10px; padding: 5px 10px; background-color: #1565c0; color: #fff;">{%if if_auth %} Dashboard {%else%}Log in {%endif%}</a></li>
+      </ul>
+    </div>
+    <div class="navbar navbar-inverse" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myidname" style="border-color: #fff;">
+          <span class="icon-bar" style="background-color: #1565c0"></span>
+          <span class="icon-bar" style="background-color: #1565c0"></span>
+          <span class="icon-bar" style="background-color: #1565c0"></span>
+        </button>
+      </div>
+      <div class="navbar-collapse collapse same" id="myidname" style="margin-top: 10px;">
+        <ul>
+         <li><a href="/">Home</a></li>
+         <li><a href="/allevents#comp">Competitions</a></li>
+         <li><a href="/allevents#work">Workshops</a></li> 
+         <li><a href="/questionnaire/registration">Quiz Registration</a></li>
+         <li><a href="/ca">CA Portal</a></li>
+         <li><a href="/login" style="border-radius: 10px; padding: 0px 10px; background-color: #1565c0; color: #fff;">{%if if_auth %} Dashboard {%else%}Log in {%endif%}</a></li>
+
+       </ul>
+     </div>
+   </div>
+ </div>
+ <div class="main">
+  <br><br>
+  <div class="container-fluid">
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-10">
+      <div class="box-shp box-bgd box-posi" style="background-color: #1565c0"><a href="/allevents">< Back</a></div><br><br>
+      <div class="row well" >
+        
+        {% if event.is_workshop %}
+        <div class="col-lg-3 col-md-5 col-xs-12 img text-center" style="background-color: rgb(51,122,183); padding:1%;">
+          <img src="{{event.image}}" class="">
+        </div>
+        {% else %}
+        <div class="col-lg-3 col-md-5 col-xs-12 img text-center" >
+          <img src="{{event.image}}" class="">
+        </div>
+        {% endif %}
+
+        <div class="col-lg-9 col-md-7 col-xs-12"  >
+          <div class="row" >
+            <div class="col-sm-6">
+              <h2 style="font-family: 'Playfair Display', serif; font-size: 4.5rem;"><b>{{event.name}}</b></h2>
+            </div>
+            
+          </div>
+          <div class="row" >
+            
+            <div class="col-sm-6" >
+              <a class="btn btn-primary" href="{{event.pslink}}" style="font-family: 'Open Sans', san-serif" target="_blank">
+                <i class="fa fa-cloud-download" aria-hidden="true"></i>
+                {% if event.is_workshop %}
+                Download Workshop Brochure
+                {% else %}
+                Download Problem Statement
+                {% endif %}
+              </a>
+
+            </div>
+          </div>
+          <p style="padding: 10px 0px; font-size: 1.7rem;"><strong>Specialization :</strong> {{event.specialization}}</p>
+
+          <!-- <div class="row text-center" >
+            <div class="col-sm-3">
+              <button class="btn">
+                <i class="fa fa-trophy" aria-hidden="true"></i>
+                &#8377; 1000
+                
+              </button>
+            </div>
+            <div class="col-sm-3">
+              <button class="btn">
+                <i class="fa fa-trophy" aria-hidden="true"></i>
+                &#8377; 1000
+                
+              </button>
+            </div>
+            <div class="col-sm-3">
+              <button class="btn">
+                <i class="fa fa-trophy" aria-hidden="true"></i>
+                &#8377; 1000
+                
+              </button>
+            </div>
+          </div> -->
+          </div>
+        </div>
+        {% for details in detailsList  %}
+        <div class="row well">
+
+          <div class="col-sm-12">
+
+
+
+            <div class="box-shape box-bgd box-posn"></div>
+
+            {{details|safe}}
+
+          </div>
+
+        </div>
+        {% endfor %}
+        
+      </div>
+      <div class="col-sm-1" style="min-height:50px;">
+      </div>
+    </div>
+
+
+
+  </div>
+
+  <!-- Quick Fix for double scrollbars -->
+  <script type="text/javascript">
+   $('html').css('overflow', 'hidden');
+ </script>
+</body>
+</html>
